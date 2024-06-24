@@ -23,7 +23,7 @@
         }
 
         .question {
-            padding: 10px;
+            padding: 15px;
             background-color: #007BFF;
             color: #fff;
             cursor: pointer;
@@ -31,8 +31,11 @@
             text-align: left;
             width: 100%;
             outline: none;
-            font-size: 18px;
-            transition: background-color 0.3s;
+            font-size: 20px;
+            font-weight: bold;
+            transition: background-color 0.3s, font-size 0.3s;
+            margin-bottom: 10px;
+            border-radius: 5px;
         }
 
         .question:hover {
@@ -40,10 +43,12 @@
         }
 
         .answer {
-            padding: 10px;
+            padding: 15px;
             display: none;
             background-color: #f9f9f9;
             border-top: 1px solid #ddd;
+            border-radius: 5px;
+            margin-bottom: 10px;
         }
     </style>
     <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
@@ -53,7 +58,7 @@
 <body>
     <div class="container">
         <!-- Pytanie 1 -->
-        <button class="question">Pytanie 1: Wyjaśnić pojęcia: pole elektrostatyczne, ładunek oraz wytrzymałość
+        <button class="question">1: Wyjaśnić pojęcia: pole elektrostatyczne, ładunek oraz wytrzymałość
             elektryczna. Podać przykładowe dielektryki i ich zastosowania.</button>
         <div class="answer">
             <p><strong>Pole elektrostatyczne:</strong> Pole elektryczne wytwarzane przez nieruchome ładunki.</p>
@@ -70,7 +75,7 @@
                 światłowody).</p>
         </div>
         <!-- Pytanie 2 -->
-        <button class="question">Pytanie 2: Jak, pod względem właściwości elektrycznych, możemy podzielić ciała
+        <button class="question"> 2: Jak, pod względem właściwości elektrycznych, możemy podzielić ciała
             fizyczne? Podaj przykłady ciał należących do poszczególnych grup oraz wybrane zastosowania.</button>
         <div class="answer">
             <p><strong>Podział ciał pod względem właściwości elektrycznych:</strong></p>
@@ -90,7 +95,7 @@
                 scalone.</p>
         </div>
         <!-- Pytanie 3 -->
-        <button class="question">Pytanie 3: Wyjaśnić pojęcia: element obwodu, schemat obwodu, sygnał i jego rodzaje, w
+        <button class="question"> 3: Wyjaśnić pojęcia: element obwodu, schemat obwodu, sygnał i jego rodzaje, w
             tym sygnał cyfrowy, kierunek odniesienia, stowarzyszone kierunki odniesienia. W jaki sposób zwykle
             traktowane są połączenia między poszczególnymi elementami.</button>
         <div class="answer">
@@ -112,7 +117,7 @@
                 wprowadzają dodatkowych oporów ani zakłóceń do obwodu.</p>
         </div>
         <!-- Pytanie 4 -->
-        <button class="question">Pytanie 4: Wyjaśnić pojęcia: moc i energia, podać definicję mocy chwilowej, jednostki
+        <button class="question"> 4: Wyjaśnić pojęcia: moc i energia, podać definicję mocy chwilowej, jednostki
             oraz związki między tymi wielkościami. W jaki sposób, dysponując kilkoma bateriami, możemy uzyskać wyższe
             napięcie, pożądane przez zasilane urządzenie, a w jaki sposób większy prąd?</button>
         <div class="answer">
@@ -126,7 +131,7 @@
                 zacisk z dodatnim itd.).</p>
         </div>
         <!-- Pytanie 5 -->
-        <button class="question">Pytanie 5: Wyjaśnij pojęcie opornika liniowego. Określ najważniejsze parametry
+        <button class="question"> 5: Wyjaśnij pojęcie opornika liniowego. Określ najważniejsze parametry
             rzeczywistego rezystora, podaj podstawowe zależności, w tym prawo Ohma, zależność od wymiarów i temperatury
             oraz moc. Co się dzieje z energią dostarczaną do opornika?</button>
         <div class="answer">
@@ -155,7 +160,7 @@
             <p><strong>Energia dostarczana do opornika:</strong> Zamieniana jest na energię cieplną.</p>
         </div>
         <!-- Pytanie 6 -->
-        <button class="question">Pytanie 6: Wyjaśnić proces formułowania praw Kirchhoffa, w tym podać oba prawa,
+        <button class="question"> 6: Wyjaśnić proces formułowania praw Kirchhoffa, w tym podać oba prawa,
             wyjaśnić kwestię znaków oraz pojęć związanych, np. pętli i oczka. Jaka jest maksymalna liczba niezależnych
             praw każdego rodzaju w danym obwodzie?</button>
         <div class="answer">
@@ -184,7 +189,7 @@
             </ul>
         </div>
         <!-- Pytanie 7 -->
-        <button class="question">Pytanie 7: Omówić połączenie szeregowe i równoległe oporników, wyprowadzić wzory na
+        <button class="question"> 7: Omówić połączenie szeregowe i równoległe oporników, wyprowadzić wzory na
             rezystancję zastępczą oraz omówić dzielnik napięcia i prądu.</button>
         <div class="answer">
             <p><strong>Połączenie szeregowe:</strong></p>
@@ -204,7 +209,7 @@
             <p><strong>Zwarcie w połączeniu równoległym:</strong> Cały prąd płynie przez zwarcie.</p>
         </div>
         <!-- Pytanie 8 -->
-        <button class="question">Pytanie 8: Wyjaśnić pojęcia: graf, graf zorientowany. Podać twierdzenie Tellegena i
+        <button class="question"> 8: Wyjaśnić pojęcia: graf, graf zorientowany. Podać twierdzenie Tellegena i
             wnioski z niego wypływające.</button>
         <div class="answer">
             <p><strong>Graf:</strong> Zbiór węzłów i gałęzi, gdzie każda gałąź łączy się z odpowiednim węzłem.</p>
@@ -219,8 +224,8 @@
             <p>gdzie \(b\) to liczba gałęzi grafu.</p>
             <p><strong>Wnioski:</strong> Suma mocy chwilowych dla wszystkich gałęzi obwodu jest równa zeru.</p>
         </div>
-        <!-- Pytanie 9 -->
-        <button class="question">Pytanie 9: Wyjaśnić pojęcia: zasada superpozycji oraz układy równoważne.</button>
+        <!--  9 -->
+        <button class="question"> 9: Wyjaśnić pojęcia: zasada superpozycji oraz układy równoważne.</button>
         <div class="answer">
             <p><strong>Zasada superpozycji:</strong> W obwodach liniowych odpowiedź na kilka wymuszeń jednocześnie jest
                 sumą odpowiedzi na każde wymuszenie działające oddzielnie.</p>
@@ -234,7 +239,7 @@
                 style="width:100%;max-width:600px;">
         </div>
         <!-- Pytanie 10 -->
-        <button class="question">Pytanie 10: Podać treść twierdzenia Thevenina i Nortona oraz sposób wyznaczania
+        <button class="question"> 10: Podać treść twierdzenia Thevenina i Nortona oraz sposób wyznaczania
             parametrów występujących w tych twierdzeniach. Dlaczego do opisu układów wykorzystuje się najczęściej metodę
             napięć węzłowych, a nie prawa Kirchhoffa?</button>
         <div class="answer">
@@ -260,7 +265,7 @@
             <p>Radzi sobie dobrze ze źródłami prądowymi.</p>
         </div>
         <!-- Pytanie 11 -->
-        <button class="question">Pytanie 11: Wyjaśnić różnice (ilościowe/jakościowe) występujące pomiędzy
+        <button class="question"> 11: Wyjaśnić różnice (ilościowe/jakościowe) występujące pomiędzy
             półprzewodnikiem, przewodnikiem i izolatorem. Jakie nośniki wyróżnia się w materiale półprzewodnikowym.
             Omówić pojęcia półprzewodnik samoistny i domieszkowany.</button>
         <div class="answer">
@@ -284,7 +289,7 @@
             <p><strong>Domieszki akceptorowe (typ p):</strong> Przyjmują elektrony, tworząc dziury, np. bor.</p>
         </div>
         <!-- Pytanie 12 -->
-        <button class="question">Pytanie 12: Omówić złącze p-n, w tym pojęcie warstwy zaporowej, rodzaje prądów
+        <button class="question"> 12: Omówić złącze p-n, w tym pojęcie warstwy zaporowej, rodzaje prądów
             płynących przez złącze i ich znaczenie przy polaryzacji zaporowej i w kierunku przewodzenia, charakterystyka
             złącza p-n i podstawowe równanie.</button>
         <div class="answer">
@@ -312,7 +317,7 @@
                 \( q \) to ładunek jednostkowy, a \( T \) to temperatura w kelwinach.</p>
         </div>
         <!-- Pytanie 13 -->
-        <button class="question">Pytanie 13: Wyjaśnić pojęcia: układ logiczny, układ kombinacyjny i sekwencyjny. Co to
+        <button class="question"> 13: Wyjaśnić pojęcia: układ logiczny, układ kombinacyjny i sekwencyjny. Co to
             są specyfikacje standardowe i po co je stosujemy. Narysować przykładową reprezentację standardów napięć dla
             zasilania powyżej 3V (np. 5V), zaznaczając odpowiednie poziomy oraz marginesy zakłóceń.</button>
         <div class="answer">
@@ -335,7 +340,7 @@
             <p><img src="./img/13.png" alt="Reprezentacja standardów napięć" style="width:100%;max-width:600px;"></p>
         </div>
         <!-- Pytanie 14 -->
-        <button class="question">Pytanie 14: Omówić model typu S oraz SR tranzystora MOS oraz podać charakterystykę
+        <button class="question"> 14: Omówić model typu S oraz SR tranzystora MOS oraz podać charakterystykę
             prądowo-napięciową każdego modelu. Porównać działanie bramki NOT (inwertera) oraz narysować charakterystykę
             przejściową w obydwu przypadkach.</button>
         <div class="answer">
@@ -366,7 +371,7 @@
             </ul>
         </div>
         <!-- Pytanie 15 -->
-        <button class="question">Pytanie 15: Narysować fizyczną, uproszczoną strukturę tranzystora MOS z długim kanałem,
+        <button class="question"> 15: Narysować fizyczną, uproszczoną strukturę tranzystora MOS z długim kanałem,
             wyjaśnić pojęcie kanału i jego rezystancji. Narysować rodzinę charakterystyk \(i_{DS} - u_{DS}\) tranzystora
             MOS z kanałem typu n (długi kanał) i zaznaczyć na niej obszar odcięcia, triodowy i nasycenia. Jak zachowuje
             się tranzystor MOS w obszarze nasycenia i jaki model należy wówczas zastosować?</button>
@@ -398,8 +403,46 @@
                 Current Source).</p>
         </div>
         <!-- Pytanie 16 -->
+        <!--  16 -->
+        <button class="question">Pytanie 16: Wyjaśnić pojęcie kondensator liniowy. Podać poglądowy rysunek kondensatora
+            płaskiego, stosowany symbol, podstawowe zależności między prądem, napięciem i ładunkiem (w tym wykres
+            ładunek-napięcie), uzasadnić własność pamięci, podać wzory na połączenie szeregowe i równoległe. Wyjaśnić
+            pojęcie cewka liniowa. Podać stosowany symbol, podstawowe zależności między prądem, napięciem i strumieniem
+            (w tym wykres strumień - prąd), uzasadnić własność pamięci, połączenie szeregowe i równoległe.</button>
+        <div class="answer">
+            <p><strong>Kondensator liniowy:</strong> Kondensator liniowy to element elektroniczny, który przechowuje
+                energię w postaci pola elektrycznego. Składa się z dwóch równoległych płytek przewodzących (okładek)
+                oddzielonych dielektrykiem o przenikalności elektrycznej \(\varepsilon\).</p>
+            <p><strong>Podstawowe zależności:</strong></p>
+            <ul>
+                <li>\( q = C \cdot u \) (ładunek \(q\) jest proporcjonalny do napięcia \(u\) przez pojemność \(C\))</li>
+                <li>\( i = C \cdot \frac{du}{dt} \) (prąd \(i\) jest proporcjonalny do szybkości zmiany napięcia)</li>
+            </ul>
+            <p><strong>Własność pamięci:</strong> Kondensator pamięta poprzednie stany napięcia, ponieważ ładunek
+                zgromadzony na okładkach nie zmienia się natychmiastowo.</p>
+            <p><strong>Połączenie szeregowe:</strong> \[ \frac{1}{C_{sz}} = \frac{1}{C_1} + \frac{1}{C_2} + \ldots +
+                \frac{1}{C_n} \]</p>
+            <p><strong>Połączenie równoległe:</strong> \[ C_{r} = C_1 + C_2 + \ldots + C_n \]</p>
+            <p><strong>Symbol kondensatora:</strong></p>
+            <p><img src="./img/16.1.png"></p>
+            <p><strong>Cewka liniowa:</strong> Cewka liniowa to element elektroniczny, który przechowuje energię w
+                postaci pola magnetycznego. Składa się z nawiniętego drutu, przez który przepływa prąd.</p>
+            <p><strong>Podstawowe zależności:</strong></p>
+            <ul>
+                <li>\( \phi = L \cdot i \) (strumień magnetyczny \(\phi\) jest proporcjonalny do prądu \(i\) przez
+                    indukcyjność \(L\))</li>
+                <li>\( u = L \cdot \frac{di}{dt} \) (napięcie \(u\) jest proporcjonalne do szybkości zmiany prądu)</li>
+            </ul>
+            <p><strong>Własność pamięci:</strong> Cewka pamięta poprzednie stany prądu, ponieważ strumień magnetyczny
+                nie zmienia się natychmiastowo.</p>
+            <p><strong>Połączenie szeregowe:</strong> \[ L_{sz} = L_1 + L_2 + \ldots + L_n \]</p>
+            <p><strong>Połączenie równoległe:</strong> \[ \frac{1}{L_{r}} = \frac{1}{L_1} + \frac{1}{L_2} + \ldots +
+                \frac{1}{L_n} \]</p>
+            <p><strong>Symbol cewki:</strong></p>
+            <p><img src=" ./img/16.2.png" alt="Symbol cewki"></p>
+        </div>
         <!-- Pytanie 17 -->
-        <button class="question">Pytanie 17: Wyjaśnić najważniejsze pojęcia z zakresu stanów nieustalonych: komutacja,
+        <button class="question"> 17: Wyjaśnić najważniejsze pojęcia z zakresu stanów nieustalonych: komutacja,
             stan ustalony, nieustalony, warunki początkowe, stała czasowa. Jaką postać przyjmują równania opisujące
             układ w stanie nieustalonym, jakie składowe zawiera rozwiązanie i w jaki sposób możemy je
             wyznaczyć?</button>
@@ -420,21 +463,132 @@
                 operatorowa (przekształcenie Laplace’a).</p>
             <img src="./img/17.png" alt="Obrazek do pytania 17" style="width:100%;max-width:600px;">
         </div>
-
         <!-- Pytanie 18 -->
+        <button class="question"> 18: Narysować układ całkujący RC i wykazać, że realizuje on swoją funkcję. Jak
+            wpływają układy RC (w tym pasożytnicze) na kształt sygnałów w układach elektronicznych?</button>
+        <div class="answer">
+            <p>Układ całkujący RC składa się z rezystora \(R\) i kondensatora \(C\) połączonych szeregowo. Realizuje on
+                swoją funkcję, ponieważ napięcie wyjściowe \(u_{wy}\) jest proporcjonalne do całki napięcia wejściowego
+                \(u_{we}\) w czasie:</p>
+            <p>\[ u_{wy}(t) = \frac{1}{RC} \int_0^t u_{we}(\tau) d\tau + K \]</p>
+            <p>gdzie \(K\) jest stałą. Układy RC, w tym pasożytnicze, mogą wpływać na kształt sygnałów poprzez zmianę
+                amplitudy, zniekształcenia, zmienne częstotliwości, opóźnienia czasowe i wprowadzenie szumów.</p>
+            <img src="./img/18.png" alt="Obrazek do pytania 18" style="width:100%;max-width:600px;">
+        </div>
         <!-- Pytanie 19 -->
-
-
-
-
-
-
+        <button class="question"> 19: Wyjaśnić działanie elementarnej komórki pamięci (dynamicznej).</button>
+        <div class="answer">
+            <p>Działanie komórki pamięci dynamicznej opiera się na kondensatorze, który przechowuje ładunek przez pewien
+                czas. Kondensator jest połączony z liniami bitowymi, umożliwiając zapis i odczyt bitów informacji.
+                Podczas zapisu tranzystor włącza się, pozwalając na przepływ prądu i zapis ładunku na kondensatorze.
+                Podczas odczytu tranzystor ponownie się włącza, a ładunek kondensatora jest odczytywany jako napięcie na
+                linii bitowej. Bufor jest stosowany, aby zapobiec utracie ładunku kondensatora z powodu wycieku prądu,
+                co zapewnia dłuższe przechowywanie informacji.</p>
+            <img src="./img/19.png" alt="Obrazek do pytania 19" style="width:100%;max-width:600px;">
+        </div>
         <!-- Pytanie 20 -->
+        <button class="question"> 20: Moc rozpraszana w bramkach logicznych. Jakie rodzaje mocy wyróżniamy i od
+            czego one zależą? Jakie korzyści przynosi stosowanie układów CMOS w porównaniu do układów NMOS w tym
+            kontekście?</button>
+        <div class="answer">
+            <p><strong>Rodzaje mocy rozpraszanej:</strong></p>
+            <p><strong>Moc statyczna (\(p_s\)):</strong> Straty mocy wynikające z przepływu prądu pobieranego ze źródła
+                zasilania. Niezależna od szybkości zmian sygnału, ale może zależeć od stanu sygnałów wejściowych.
+                Rozpraszana tylko, gdy bramki są włączone. Obliczana jako:
+                \[
+                p_s = \frac{U_z^2}{R_L + R_{ON}}
+                \]
+            </p>
+            <p><strong>Moc dynamiczna (\(p_d\)):</strong> Moc rozpraszana w wyniku przepływu prądu w stanie nieustalonym
+                (ładowania i rozładowania kondensatorów). Zależy od szybkości zmian sygnału.</p>
+            <p><strong>Korzyści stosowania układów CMOS w porównaniu do NMOS:</strong></p>
+            <ul>
+                <li>Niskie zużycie energii.</li>
+                <li>Wyższa odporność na zakłócenia.</li>
+                <li>Szeroki zakres napięć zasilania.</li>
+                <li>Mniejsza temperatura pracy.</li>
+                <li>Wyższa gęstość integracji.</li>
+            </ul>
+        </div>
         <!-- Pytanie 21 -->
+        <button class="question"> 21: Podać definicję wartości średniej i skutecznej, impedancji i admitancji
+            oraz zależności między wartościami symbolicznymi napięcia i prądu dla rezystora, cewki i
+            kondensatora.</button>
+        <div class="answer">
+            <p><strong>Wartość średnia:</strong> Średnia arytmetyczna wartości danej wielkości w określonym przedziale
+                czasowym. Dla przebiegów okresowych, wartość średnia napięcia lub prądu wynosi zero.</p>
+            <p><strong>Wartość skuteczna:</strong> Wartość prądu stałego, która dostarcza taką samą energię do
+                odbiornika jak prąd zmienny w jednym okresie. Jest równa wartości szczytowej podzielonej przez
+                pierwiastek z dwóch.</p>
+            <p><strong>Impedancja (Z):</strong> Iloraz wartości symbolicznych napięcia i prądu. Jest liczbą zespoloną,
+                obejmującą zarówno opór (rezystancję), jak i reaktancję.</p>
+            <p><strong>Admitancja (Y):</strong> Odwrotność impedancji. Wyraża zdolność przepływu prądu przez elementy
+                obwodu prądu zmiennego. Jest liczbą zespoloną, zawierającą przewodnictwo i reaktywność.</p>
+            <p><strong>Zależności między wartościami symbolicznymi napięcia (V) i prądu (I):</strong></p>
+            <ul>
+                <li><strong>Rezystor:</strong> \( V = I \cdot R \)</li>
+                <li><strong>Cewka:</strong> \( V = j\omega L \cdot I \)</li>
+                <li><strong>Kondensator:</strong> \( I = j\omega C \cdot V \) lub \( V = \frac{I}{j\omega C} \)</li>
+            </ul>
+        </div>
         <!-- Pytanie 22 -->
+        <button class="question"> 22: Omówić pojęcie mocy w układach prądu sinusoidalnie zmiennego - rodzaje
+            mocy, wzory definicyjne i obliczeniowe oraz jednostki.</button>
+        <div class="answer">
+            <p><strong>Rodzaje mocy:</strong></p>
+            <ul>
+                <li><strong>Moc chwilowa (p(t)):</strong> Funkcja czasu, iloczyn wartości chwilowych napięcia \(u(t)\) i
+                    prądu \(i(t)\). Wzór: \( p(t) = u(t) \cdot i(t) = U_m I_m \sin(\omega t + \varphi_u) \sin(\omega t +
+                    \varphi_i) \).</li>
+                <li><strong>Moc czynna (P):</strong> Średnia wartość mocy chwilowej w okresie. Wzór: \( P = \frac{1}{T}
+                    \int_0^T p(t) \, dt = |U| |I| \cos \varphi \). Jednostka: Wat (W).</li>
+                <li><strong>Moc bierna (Q):</strong> Miara energii wymienianej między źródłem a odbiornikami o
+                    charakterze reaktancyjnym. Wzór: \( Q = |U| |I| \sin \varphi \). Jednostka: Var (var).</li>
+                <li><strong>Moc pozorna (S):</strong> Iloczyn wartości skutecznych napięcia i prądu. Wzór: \( S = |U|
+                    |I| \). Jednostka: Volt-amper (VA).</li>
+                <li><strong>Moc symboliczna (S):</strong> Liczba zespolona, część rzeczywista to moc czynna, część
+                    urojona to moc bierna. Wzór: \( S = P + jQ \).</li>
+            </ul>
+            <p><strong>Podstawowe wzory:</strong></p>
+            <ul>
+                <li>\( P = |U| |I| \cos \varphi \)</li>
+                <li>\( Q = |U| |I| \sin \varphi \)</li>
+                <li>\( S = |U| |I| \)</li>
+                <li>\( |S| = \sqrt{P^2 + Q^2} \)</li>
+            </ul>
+            <p><strong>Jednostki:</strong></p>
+            <ul>
+                <li><strong>Moc czynna:</strong> Wat (W)</li>
+                <li><strong>Moc bierna:</strong> Var (var)</li>
+                <li><strong>Moc pozorna:</strong> Volt-amper (VA)</li>
+            </ul>
+        </div>
         <!-- Pytanie 23 -->
+        <button class="question"> 23: Omów szeregowy układ rezonansowy: schemat, charakterystyka, najważniejsze
+            parametry - częstotliwość rezonansowa, dobroć. Podaj przykładowe zastosowanie układów
+            rezonansowych.</button>
+        <div class="answer">
+            <p><strong>Schemat:</strong> Szeregowy układ rezonansowy składa się z rezystora (R), cewki (L) i
+                kondensatora (C) połączonych szeregowo.</p>
+            <img src="./img/23.1.png" style="width:100%;max-width:600px;">
+            <p><strong>Charakterystyka:</strong> Rezonans napięć występuje, gdy napięcia na cewce i kondensatorze
+                kompensują się, a wartości skuteczne tych napięć są znacznie większe od wartości skutecznej napięcia
+                zasilającego.</p>
+            <img src="./img/23.2.png" alt="Charakterystyka częstotliwości rezonansowej"
+                style="width:100%;max-width:600px;">
+            <p><strong>Najważniejsze parametry:</strong></p>
+            <ul>
+                <li><strong>Częstotliwość rezonansowa (\(\omega_r\)):</strong> \(\omega_r = \frac{1}{\sqrt{LC}}\)</li>
+                <li><strong>Dobroć (Q):</strong> Wskaźnik jakości układu rezonansowego, określający, jak dobrze układ
+                    przechowuje energię.</li>
+            </ul>
+            <p><strong>Zastosowania:</strong> Tunery radiowe, selektory kanałów w telefonach komórkowych i sieciach
+                bezprzewodowych.</p>
+            <img src="./img/23.3.png" alt="Zastosowania układów rezonansowych" style="width:100%;max-width:600px;">
+        </div>
+
         <!-- Pytanie 24 -->
-        <button class="question">Pytanie 24: Wyjaśnij pojęcia: modulacja, sygnał modulujący i modulowany. Wymień
+        <button class="question"> 24: Wyjaśnij pojęcia: modulacja, sygnał modulujący i modulowany. Wymień
             najważniejsze rodzaje modulacji. Podaj kilka zastosowań modulacji. Co to jest współczynnik DT w modulacji
             PWM?</button>
         <div class="answer">
