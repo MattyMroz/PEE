@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .container {
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 10px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .question {
+            padding: 10px;
+            background-color: #007BFF;
+            color: #fff;
+            cursor: pointer;
+            border: none;
+            text-align: left;
+            width: 100%;
+            outline: none;
+            font-size: 18px;
+            transition: background-color 0.3s;
+        }
+        .question:hover {
+            background-color: #0056b3;
+        }
+        .answer {
+            padding: 10px;
+            display: none;
+            background-color: #f9f9f9;
+            border-top: 1px solid #ddd;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <button class="question">Pytanie 1: Co to jest HTML?</button>
+        <div class="answer">
+            <p>HTML (HyperText Markup Language) to standardowy język znaczników używany do tworzenia stron internetowych.</p>
+        </div>
+        <button class="question">Pytanie 2: Co to jest CSS?</button>
+        <div class="answer">
+            <p>CSS (Cascading Style Sheets) to język używany do opisywania wyglądu i formatowania dokumentu napisanego w HTML.</p>
+        </div>
+        <button class="question">Pytanie 3: Co to jest JavaScript?</button>
+        <div class="answer">
+            <p>JavaScript to język programowania, który pozwala na tworzenie dynamicznych i interaktywnych elementów na stronach internetowych.</p>
+        </div>
+    </div>
+
+    <script>
+        document.querySelectorAll('.question').forEach(button => {
+            button.addEventListener('click', () => {
+                const answer = button.nextElementSibling;
+                answer.style.display = answer.style.display === 'block' ? 'none' : 'block';
+            });
+        });
+    </script>
+</body>
+</html>
