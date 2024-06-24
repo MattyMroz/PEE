@@ -233,7 +233,222 @@
             <img src="./img/9.png" alt="Ilustracja zasady superpozycji i układów równoważnych"
                 style="width:100%;max-width:600px;">
         </div>
+        <!-- Pytanie 10 -->
+        <button class="question">Pytanie 10: Podać treść twierdzenia Thevenina i Nortona oraz sposób wyznaczania
+            parametrów występujących w tych twierdzeniach. Dlaczego do opisu układów wykorzystuje się najczęściej metodę
+            napięć węzłowych, a nie prawa Kirchhoffa?</button>
+        <div class="answer">
+            <p><strong>Twierdzenie Thevenina:</strong></p>
+            <p>Obwód liniowy można zastąpić szeregowym połączeniem źródła napięcia <em>e<sub>z</sub></em> i rezystora
+                <em>R<sub>z</sub></em>.
+            </p>
+            <p><em>e<sub>z</sub></em> to napięcie na rozwartych zaciskach A, B.</p>
+            <p><em>R<sub>z</sub></em> to rezystancja widziana z zacisków A, B po przyrównaniu do zera wszystkich napięć
+                i prądów źródeł niezależnych.</p>
 
+            <p><strong>Twierdzenie Nortona:</strong></p>
+            <p>Obwód liniowy można zastąpić równoległym połączeniem źródła prądowego <em>j<sub>z</sub></em> i rezystora
+                o konduktancji <em>G<sub>z</sub></em>.</p>
+            <p><em>j<sub>z</sub></em> to prąd płynący w zwartej gałęzi AB.</p>
+            <p><em>G<sub>z</sub></em> to konduktancja widziana z zacisków AB po przyrównaniu do zera wszystkich napięć i
+                prądów źródeł niezależnych.</p>
+
+            <p><strong>Metoda napięć węzłowych:</strong></p>
+            <p>Używana zamiast praw Kirchhoffa, ponieważ prowadzi do mniejszej liczby równań i jest mniej czasochłonna.
+            </p>
+            <p>Równania na potencjały węzłowe układa się bezpośrednio z obwodu.</p>
+            <p>Radzi sobie dobrze ze źródłami prądowymi.</p>
+        </div>
+        <!-- Pytanie 11 -->
+        <button class="question">Pytanie 11: Wyjaśnić różnice (ilościowe/jakościowe) występujące pomiędzy
+            półprzewodnikiem, przewodnikiem i izolatorem. Jakie nośniki wyróżnia się w materiale półprzewodnikowym.
+            Omówić pojęcia półprzewodnik samoistny i domieszkowany.</button>
+        <div class="answer">
+            <p><strong>Różnice między półprzewodnikiem, przewodnikiem i izolatorem:</strong></p>
+            <p><strong>Przewodnik:</strong> Niski opór właściwy, swobodne elektrony walencyjne przewodzą prąd.</p>
+            <p><strong>Półprzewodnik:</strong> Opór właściwy większy niż przewodników, ale mniejszy niż izolatorów.
+                Właściwości elektryczne zależne od zanieczyszczeń i promieniowania zewnętrznego. Temperaturowy
+                współczynnik oporu jest ujemny (rezystywność maleje ze wzrostem temperatury).</p>
+            <p><strong>Izolator:</strong> Wysoki opór właściwy, elektrony walencyjne są silnie związane z atomami i nie
+                przewodzą prądu. Energia potrzebna do wyrwania elektronu z orbity walencyjnej jest większa niż w
+                półprzewodnikach.</p>
+
+            <p><strong>Nośniki w półprzewodnikach:</strong> Elektrony i dziury (nośniki dodatnie).</p>
+
+            <p><strong>Półprzewodnik samoistny:</strong> Idealnie czysty, bez domieszek i defektów sieci krystalicznej.
+            </p>
+
+            <p><strong>Półprzewodnik domieszkowany:</strong> Zawiera celowe zanieczyszczenia (domieszki) wprowadzone w
+                procesie produkcji.</p>
+            <p><strong>Domieszki donorowe (typ n):</strong> Dostarczają elektrony, np. fosfor.</p>
+            <p><strong>Domieszki akceptorowe (typ p):</strong> Przyjmują elektrony, tworząc dziury, np. bor.</p>
+        </div>
+        <!-- Pytanie 12 -->
+        <button class="question">Pytanie 12: Omówić złącze p-n, w tym pojęcie warstwy zaporowej, rodzaje prądów
+            płynących przez złącze i ich znaczenie przy polaryzacji zaporowej i w kierunku przewodzenia, charakterystyka
+            złącza p-n i podstawowe równanie.</button>
+        <div class="answer">
+            <p><strong>Złącze p-n:</strong> Złącze p-n to połączenie dwóch warstw półprzewodnika typu p i n, różniących
+                się rodzajem domieszkowania.</p>
+            <p><strong>Warstwa zaporowa:</strong> Obszar w złączu p-n, gdzie nie ma swobodnych nośników ładunku, tworzy
+                się po zetknięciu warstw typu p i n.</p>
+            <p><strong>Rodzaje prądów:</strong></p>
+            <ul>
+                <li><strong>Prąd dyfuzji:</strong> Przenoszenie nośników większościowych (elektronów z warstwy n do p i
+                    dziur z warstwy p do n).</li>
+                <li><strong>Prąd unoszenia:</strong> Przenoszenie nośników mniejszościowych (elektronów w warstwie p i
+                    dziur w warstwie n).</li>
+            </ul>
+            <p><strong>Polaryzacja zaporowa:</strong> Zewnętrzne napięcie zwiększa barierę potencjału, zmniejsza prąd
+                dyfuzji do zera, a prąd unoszenia pozostaje stały, co skutkuje niewielkim prądem nasycenia.</p>
+            <p><strong>Polaryzacja w kierunku przewodzenia:</strong> Zewnętrzne napięcie zmniejsza barierę potencjału,
+                zwiększa prąd dyfuzji nośników większościowych, co skutkuje znacznym wzrostem prądu.</p>
+            <p><strong>Charakterystyka prądowo-napięciowa:</strong> Opisuje zależność prądu od napięcia w złączu p-n,
+                wyrażona równaniem:</p>
+            <p style="text-align: center;">
+                \[ i = I_s \left( e^{\frac{u}{V_T}} - 1 \right) \]
+            </p>
+            <p>gdzie \( I_s \) to prąd nasycenia, \( V_T \) to potencjał elektrokinetyczny, \( k \) to stała Boltzmanna,
+                \( q \) to ładunek jednostkowy, a \( T \) to temperatura w kelwinach.</p>
+        </div>
+        <!-- Pytanie 13 -->
+        <button class="question">Pytanie 13: Wyjaśnić pojęcia: układ logiczny, układ kombinacyjny i sekwencyjny. Co to
+            są specyfikacje standardowe i po co je stosujemy. Narysować przykładową reprezentację standardów napięć dla
+            zasilania powyżej 3V (np. 5V), zaznaczając odpowiednie poziomy oraz marginesy zakłóceń.</button>
+        <div class="answer">
+            <p><strong>Układ logiczny:</strong> Układ elektroniczny, w którym sygnały napięciowe przyjmują dwa poziomy,
+                przypisywane cyframi 0 i 1, realizujący operacje zgodnie z algebrą Boole’a.</p>
+            <p><strong>Układ kombinacyjny:</strong> Układ logiczny, w którym sygnały wyjściowe zależą tylko od
+                aktualnego stanu wejść.</p>
+            <p><strong>Układ sekwencyjny:</strong> Układ logiczny, w którym stan wyjść zależy od aktualnego stanu wejść
+                oraz stanów poprzednich (posiada pamięć).</p>
+            <p><strong>Specyfikacje standardowe:</strong> Zasady zapewniające, że układy prawidłowo interpretują dane
+                wejściowe i generują prawidłowe sygnały wyjściowe zgodnie z obraną reprezentacją.</p>
+            <p><strong>Reprezentacja standardów napięć dla zasilania 5V:</strong></p>
+            <ul>
+                <li><strong>VOH:</strong> Logiczna wartość "1"</li>
+                <li><strong>VIH:</strong> Margines zakłóceń dla "1"</li>
+                <li><strong>VIL:</strong> Obszar zabroniony</li>
+                <li><strong>VOL:</strong> Logiczna wartość "0"</li>
+                <li><strong>VIL:</strong> Margines zakłóceń dla "0"</li>
+            </ul>
+            <p><img src="./img/13.png" alt="Reprezentacja standardów napięć" style="width:100%;max-width:600px;"></p>
+        </div>
+        <!-- Pytanie 14 -->
+        <button class="question">Pytanie 14: Omówić model typu S oraz SR tranzystora MOS oraz podać charakterystykę
+            prądowo-napięciową każdego modelu. Porównać działanie bramki NOT (inwertera) oraz narysować charakterystykę
+            przejściową w obydwu przypadkach.</button>
+        <div class="answer">
+            <p><strong>Model typu S tranzystora MOS:</strong></p>
+            <ul>
+                <li><strong>Stan ON:</strong> Tranzystor NMOS jest włączony, gdy napięcie \(u_{GS}\) przekracza napięcie
+                    progowe \(u_{t0}\) (1 V). W stanie ON, prąd płynie między drenem (D) a źródłem (S).</li>
+                <li><strong>Stan OFF:</strong> Tranzystor jest wyłączony, gdy \(u_{GS}\) jest mniejsze niż \(u_{t0}\).
+                    Prąd \(i_G = 0\).</li>
+            </ul>
+            <p><strong>Inwerter (bramka NOT) w modelu typu S:</strong></p>
+            <ul>
+                <li><strong>Stan High (1):</strong> MOSFET w stanie ON, napięcie wyjściowe niskie (0 V).</li>
+                <li><strong>Stan Low (0):</strong> MOSFET w stanie OFF, napięcie wyjściowe wysokie (Uz).</li>
+            </ul>
+            <p><strong>Model typu SR tranzystora MOS:</strong></p>
+            <ul>
+                <li><strong>Stan ON:</strong> Tranzystor zachowuje się jak rezystor \(R_{ON}\) między D i S.</li>
+                <li><strong>Stan OFF:</strong> Tranzystor wyłączony, prąd nie płynie.</li>
+                <li><strong>Charakterystyka prądowo-napięciowa:</strong> Uwzględnia rezystancję \(R_{ON}\) i efekty
+                    pojemnościowe.</li>
+            </ul>
+            <p><strong>Porównanie bramki NOT:</strong></p>
+            <ul>
+                <li><strong>Model typu S:</strong> Jeden tranzystor MOS, prosta charakterystyka przejściowa.</li>
+                <li><strong>Model typu SR:</strong> Dwa tranzystory MOS, bardziej złożona charakterystyka przejściowa z
+                    uwzględnieniem dodatkowych efektów.</li>
+            </ul>
+        </div>
+        <!-- Pytanie 15 -->
+        <button class="question">Pytanie 15: Narysować fizyczną, uproszczoną strukturę tranzystora MOS z długim kanałem,
+            wyjaśnić pojęcie kanału i jego rezystancji. Narysować rodzinę charakterystyk \(i_{DS} - u_{DS}\) tranzystora
+            MOS z kanałem typu n (długi kanał) i zaznaczyć na niej obszar odcięcia, triodowy i nasycenia. Jak zachowuje
+            się tranzystor MOS w obszarze nasycenia i jaki model należy wówczas zastosować?</button>
+        <div class="answer">
+            <p><strong>Struktura tranzystora MOS:</strong></p>
+            <p>Tranzystor MOS z długim kanałem składa się z dwóch regionów domieszkowanych n+ (źródło i dren) oraz
+                bramki oddzielonej od kanału warstwą tlenku. Kanał przewodzący typu n formowany jest między źródłem a
+                drenem, jego rezystancja \(R_{on}\) zależy od geometrii kanału (długości \(L\) i szerokości \(W\)).</p>
+            <img src="./img/15.1.png" alt="Struktura tranzystora MOS" style="width:100%;max-width:600px;">
+            <p><strong>Rezystancja kanału:</strong></p>
+            <p>Rezystancja kanału \(R_{on}\) jest proporcjonalna do długości kanału \(L\) i odwrotnie proporcjonalna do
+                szerokości \(W\):</p>
+            <p>\[ R_{on} = R_{\text{unit}} \frac{L}{W} \]</p>
+            <p>gdzie \(R_{\text{unit}}\) to jednostkowa rezystancja na kwadrat powierzchni.</p>
+            <p><strong>Rodzina charakterystyk \(i_{DS} - u_{DS}\):</strong></p>
+            <p>Charakterystyki pokazują zależność prądu drenu \(i_{DS}\) od napięcia drenu \(u_{DS}\) dla różnych
+                wartości napięcia bramki \(u_{GS}\). Obszary:</p>
+            <ul>
+
+                <li><strong>Odcięcia:</strong> \(u_{GS} < u_{T}\)</li>
+                <li><strong>Triodowy:</strong> \(u_{GS} \geq u_{T}\) i \(u_{DS} < u_{GS} - u_{T}\)</li>
+                <li><strong>Nasycenia:</strong> \(u_{DS} \geq u_{GS} - u_{T}\)</li>
+
+            </ul>
+            <img src="./img/15.2.png" alt="Charakterystyki tranzystora MOS" style="width:100%;max-width:600px;">
+            <p><strong>Zachowanie w obszarze nasycenia:</strong></p>
+            <p>W obszarze nasycenia prąd drenu \(i_{DS}\) jest niezależny od \(u_{DS}\) i zależy głównie od \(u_{GS}\).
+                Model: W obszarze nasycenia stosuje się model źródła prądowego sterowanego napięciem (model SCS - Switch
+                Current Source).</p>
+        </div>
+        <!-- Pytanie 16 -->
+        <!-- Pytanie 17 -->
+        <button class="question">Pytanie 17: Wyjaśnić najważniejsze pojęcia z zakresu stanów nieustalonych: komutacja,
+            stan ustalony, nieustalony, warunki początkowe, stała czasowa. Jaką postać przyjmują równania opisujące
+            układ w stanie nieustalonym, jakie składowe zawiera rozwiązanie i w jaki sposób możemy je
+            wyznaczyć?</button>
+        <div class="answer">
+            <p><strong>Warunki początkowe:</strong> Określają całkowitą wartość energii zgromadzonej w układzie w chwili
+                \( t_0 \). Są to wartości \( i_L(t_0) \) oraz \( u_C(t_0) \) odpowiednio w cewkach i kondensatorach.</p>
+            <p><strong>Stała czasowa:</strong> Czas, po którym składowa przejściowa maleje e-krotnie względem swojej
+                wartości początkowej. Stan nieustalony trwa do 5 stałych czasowych.</p>
+            <p><strong>Komutacja:</strong> Natychmiastowe włączenie, wyłączenie lub przełączenie elementu lub części
+                obwodu.</p>
+            <p><strong>Stan nieustalony:</strong> Powstaje bezpośrednio po komutacji i trwa, dopóki efekty wywołane
+                włączeniem nie są pomijalne.</p>
+            <p><strong>Stan ustalony:</strong> Układ jest w stanie ustalonym, gdy odpowiedzi w układzie mają taki sam
+                charakter jak pobudzenia.</p>
+            <p><strong>Równania w stanie nieustalonym:</strong> Opisują układ za pomocą równań różniczkowych.
+                Rozwiązanie zawiera składowe swobodne i wymuszone.</p>
+            <p><strong>Metody wyznaczania:</strong> Metoda klasyczna (rozwiązywanie równań różniczkowych) i metoda
+                operatorowa (przekształcenie Laplace’a).</p>
+            <img src="./img/17.png" alt="Obrazek do pytania 17" style="width:100%;max-width:600px;">
+        </div>
+
+        <!-- Pytanie 18 -->
+        <!-- Pytanie 19 -->
+
+
+
+
+
+
+        <!-- Pytanie 20 -->
+        <!-- Pytanie 21 -->
+        <!-- Pytanie 22 -->
+        <!-- Pytanie 23 -->
+        <!-- Pytanie 24 -->
+        <button class="question">Pytanie 24: Wyjaśnij pojęcia: modulacja, sygnał modulujący i modulowany. Wymień
+            najważniejsze rodzaje modulacji. Podaj kilka zastosowań modulacji. Co to jest współczynnik DT w modulacji
+            PWM?</button>
+        <div class="answer">
+            <p><strong>Modulacja:</strong> Zakodowanie informacji, będącej pewnym przebiegiem elektrycznym, w postaci
+                zmiany parametru innego, nośnego przebiegu elektrycznego.</p>
+            <p><strong>Sygnał modulujący:</strong> Sygnał zawierający użyteczną informację.</p>
+            <p><strong>Sygnał modulowany:</strong> Sygnał, którego parametr podlega zmianie.</p>
+            <p><strong>Najważniejsze rodzaje modulacji:</strong> Modulacja analogowa, modulacja impulsowa, modulacja
+                cyfrowa, modulacja QAM, modulacja szerokości impulsów (PWM).</p>
+            <p><strong>Zastosowania modulacji:</strong> Radiotechnika, przesyłanie transmisji radiowej i telewizyjnej,
+                przesyłanie danych cyfrowych przez kanał radiowy (np. DVB).</p>
+            <p><strong>Współczynnik DT:</strong> Współczynnik wypełnienia impulsów (duty cycle), stosunek czasu
+                włączenia do okresu, zwykle podawany w %.</p>
+        </div>
     </div>
 
     <script>
