@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pl">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,17 +10,18 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #121212; /* Dark mode background */
-            color: #e0e0e0; /* Light text for dark mode */
+            background-color: #f4f4f4;
         }
+
         .container {
             max-width: 600px;
             margin: 20px auto;
             padding: 10px;
-            background-color: #1e1e1e; /* Dark mode container background */
+            background-color: #fff;
             border-radius: 5px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Darker shadow for dark mode */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
+
         .question {
             padding: 10px;
             background-color: #007BFF;
@@ -32,30 +34,80 @@
             font-size: 18px;
             transition: background-color 0.3s;
         }
+
         .question:hover {
             background-color: #0056b3;
         }
+
         .answer {
             padding: 10px;
             display: none;
-            background-color: #2e2e2e; /* Dark mode answer background */
-            border-top: 1px solid #444; /* Darker border for dark mode */
+            background-color: #f9f9f9;
+            border-top: 1px solid #ddd;
         }
     </style>
 </head>
+
 <body>
     <div class="container">
-        <button class="question">Pytanie 1: Co to jest HTML?</button>
+        <!-- Pytanie 1 -->
+        <button class="question">Pytanie 1: Wyjaśnić pojęcia: pole elektrostatyczne, ładunek oraz wytrzymałość
+            elektryczna. Podać przykładowe dielektryki i ich zastosowania.</button>
         <div class="answer">
-            <p>HTML (HyperText Markup Language) to standardowy język znaczników używany do tworzenia stron internetowych.</p>
+            <p><strong>Pole elektrostatyczne:</strong> Pole elektryczne wytwarzane przez nieruchome ładunki.</p>
+            <p><strong>Ładunek elektryczny:</strong> Cecha cząstek elementarnych, która powoduje, że podlegają one
+                oddziaływaniom elektromagnetycznym. Dwa rodzaje ładunków: dodatnie i ujemne. Jednostką ładunku
+                elektrycznego jest kulomb (C).</p>
+            <p><strong>Napięcie elektryczne:</strong> Różnica potencjałów między dwoma punktami, jednostką jest wolt
+                (V).</p>
+            <p><strong>Wytrzymałość elektryczna:</strong> Największa wartość natężenia pola elektrycznego, która nie
+                wywołuje przebicia lub przeskoku iskry.</p>
+            <p><strong>Przykładowe dielektryki:</strong> Papier, szkło, suche drewno, bursztyn, mika, ebonit.</p>
+            <p><strong>Zastosowania dielektryków:</strong> Izolowanie elementów urządzeń elektrycznych, materiały
+                izolacyjne w przemyśle elektrycznym i elektronicznym, kondensatory, transmisja sygnałów (np.
+                światłowody).</p>
         </div>
-        <button class="question">Pytanie 2: Co to jest CSS?</button>
+        <!-- Pytanie 2 -->
+        <button class="question">Pytanie 2: Jak, pod względem właściwości elektrycznych, możemy podzielić ciała
+            fizyczne? Podaj przykłady ciał należących do poszczególnych grup oraz wybrane zastosowania.</button>
         <div class="answer">
-            <p>CSS (Cascading Style Sheets) to język używany do opisywania wyglądu i formatowania dokumentu napisanego w HTML.</p>
+            <p><strong>Podział ciał pod względem właściwości elektrycznych:</strong></p>
+            <p><strong>Przewodniki:</strong> Ładunki elektryczne mogą swobodnie przemieszczać się w całej ich objętości.
+            </p>
+            <p><strong>Przykłady:</strong> Miedź, złoto, srebro, aluminium.</p>
+            <p><strong>Zastosowania:</strong> Przesyłanie energii elektrycznej, przewody energetyczne, grzałki
+                elektryczne, silniki, generatory.</p>
+            <p><strong>Dielektryki (izolatory):</strong> Ładunki elektryczne pozostają w miejscach, w których zostały
+                początkowo umieszczone.</p>
+            <p><strong>Przykłady:</strong> Bursztyn, szkło, papier, mika, ebonit.</p>
+            <p><strong>Zastosowania:</strong> Materiały izolacyjne, kondensatory, transmisja sygnałów (światłowody).</p>
+            <p><strong>Półprzewodniki:</strong> Właściwości elektryczne pośrednie między przewodnikami a dielektrykami.
+            </p>
+            <p><strong>Przykłady:</strong> Krzem, german, arsenek galu.</p>
+            <p><strong>Zastosowania:</strong> Panele słoneczne, diody, tranzystory, czujniki temperatury, układy
+                scalone.</p>
         </div>
-        <button class="question">Pytanie 3: Co to jest JavaScript?</button>
+        <!-- Pytanie 3 -->
+        <button class="question">Pytanie 3: Wyjaśnić pojęcia: element obwodu, schemat obwodu, sygnał i jego rodzaje, w
+            tym sygnał cyfrowy, kierunek odniesienia, stowarzyszone kierunki odniesienia. W jaki sposób zwykle
+            traktowane są połączenia między poszczególnymi elementami.</button>
         <div class="answer">
-            <p>JavaScript to język programowania, który pozwala na tworzenie dynamicznych i interaktywnych elementów na stronach internetowych.</p>
+            <p><strong>Element obwodu:</strong> Model pewnego zjawiska lub cechy fizycznej związanej z obwodem
+                elektrycznym.</p>
+            <p><strong>Schemat obwodu:</strong> Graficzny obraz obwodu pokazujący połączenie elementów reprezentowanych
+                za pomocą odpowiednich symboli.</p>
+            <p><strong>Sygnał:</strong> Funkcja jednej lub więcej zmiennych niezależnych.</p>
+            <p><strong>Rodzaje sygnałów:</strong></p>
+            <p><strong>Sygnał ciągły:</strong> Określony w każdej chwili czasu.</p>
+            <p><strong>Sygnał dyskretny:</strong> Określony w dyskretnych chwilach czasu.</p>
+            <p><strong>Sygnał cyfrowy:</strong> Dyskretny sygnał, który przyjmuje tylko określone wartości (0 i 1),
+                odporny na zakłócenia.</p>
+            <p><strong>Kierunek odniesienia:</strong> Dla każdego prądu przyjmuje się kierunek odniesienia zaznaczony za
+                pomocą strzałki, co umożliwia określenie rzeczywistego prądu.</p>
+            <p><strong>Stowarzyszone kierunki odniesienia:</strong> Jeżeli strzałki prądu i napięcia mają przeciwne
+                zwroty, prąd i napięcie mają stowarzyszone kierunki odniesienia.</p>
+            <p><strong>Połączenia między elementami:</strong> Zwykle traktowane są jako idealne przewody, które nie
+                wprowadzają dodatkowych oporów ani zakłóceń do obwodu.</p>
         </div>
     </div>
 
@@ -68,4 +120,5 @@
         });
     </script>
 </body>
+
 </html>
