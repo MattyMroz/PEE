@@ -46,6 +46,8 @@
             border-top: 1px solid #ddd;
         }
     </style>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 </head>
 
 <body>
@@ -109,6 +111,129 @@
             <p><strong>Połączenia między elementami:</strong> Zwykle traktowane są jako idealne przewody, które nie
                 wprowadzają dodatkowych oporów ani zakłóceń do obwodu.</p>
         </div>
+        <!-- Pytanie 4 -->
+        <button class="question">Pytanie 4: Wyjaśnić pojęcia: moc i energia, podać definicję mocy chwilowej, jednostki
+            oraz związki między tymi wielkościami. W jaki sposób, dysponując kilkoma bateriami, możemy uzyskać wyższe
+            napięcie, pożądane przez zasilane urządzenie, a w jaki sposób większy prąd?</button>
+        <div class="answer">
+            <p><strong>Moc:</strong> Określa pracę wykonaną w ciągu jednostki czasu i jest wyrażana w watach (W).</p>
+            <p><strong>Energia:</strong> Zdolność ciała do wykonania pracy, wyrażana w dżulach (J).</p>
+            <p><strong>Moc chwilowa:</strong> Iloczyn napięcia \(u(t)\) oraz prądu \(i(t)\): \(p(t) = u(t) \cdot i(t)\).
+            </p>
+            <p><strong>Wyższe napięcie:</strong> Aby uzyskać wyższe napięcie, baterie należy połączyć szeregowo (dodatni
+                zacisk pierwszego ogniwa z ujemnym zaciskiem drugiego itd.).</p>
+            <p><strong>Większy prąd:</strong> Aby uzyskać większy prąd, baterie należy połączyć równolegle (dodatni
+                zacisk z dodatnim itd.).</p>
+        </div>
+        <!-- Pytanie 5 -->
+        <button class="question">Pytanie 5: Wyjaśnij pojęcie opornika liniowego. Określ najważniejsze parametry
+            rzeczywistego rezystora, podaj podstawowe zależności, w tym prawo Ohma, zależność od wymiarów i temperatury
+            oraz moc. Co się dzieje z energią dostarczaną do opornika?</button>
+        <div class="answer">
+            <p><strong>Opornik liniowy:</strong> Element bierny obwodu elektrycznego, który ogranicza prąd.</p>
+            <p><strong>Najważniejsze parametry opornika liniowego:</strong></p>
+            <ul>
+                <li><strong>Rezystancja znamionowa:</strong> Oczekiwana rezystancja rezystora.</li>
+                <li><strong>Tolerancja rezystancji:</strong> Maksymalne dopuszczalne odchylenie od rezystancji
+                    znamionowej.</li>
+                <li><strong>Moc znamionowa:</strong> Maksymalna moc, jaką rezystor może wydzielać przy pracy ciągłej.
+                </li>
+                <li><strong>Temperaturowy współczynnik rezystancji:</strong> Zmiany rezystancji pod wpływem temperatury.
+                </li>
+                <li><strong>Napięcie graniczne:</strong> Maksymalne napięcie, jakie może być przyłożone do rezystora.
+                </li>
+                <li><strong>Rezystancja krytyczna:</strong> Rezystancja, przy której rezystor działa optymalnie.</li>
+                <li><strong>Napięcie szumów:</strong> Poziom szumów generowanych przez rezystor.</li>
+            </ul>
+            <p><strong>Prawo Ohma:</strong> \( u = Ri \), gdzie \( u \) to napięcie, \( R \) to rezystancja, a \( i \)
+                to prąd.</p>
+            <p><strong>Moc w oporniku:</strong> \( p(t) = \frac{1}{R} (u(t))^2 \).</p>
+            <p><strong>Zależność rezystancji od wymiarów:</strong> \( R = \rho \frac{l}{S} \), gdzie \( \rho \) to opór
+                właściwy, \( l \) to długość, a \( S \) to przekrój.</p>
+            <p><strong>Zależność rezystancji od temperatury:</strong> \( R_t = R_0 (1 + \alpha (T_t - T_0)) \), gdzie \(
+                \alpha \) to temperaturowy współczynnik oporu.</p>
+            <p><strong>Energia dostarczana do opornika:</strong> Zamieniana jest na energię cieplną.</p>
+        </div>
+        <!-- Pytanie 6 -->
+        <button class="question">Pytanie 6: Wyjaśnić proces formułowania praw Kirchhoffa, w tym podać oba prawa,
+            wyjaśnić kwestię znaków oraz pojęć związanych, np. pętli i oczka. Jaka jest maksymalna liczba niezależnych
+            praw każdego rodzaju w danym obwodzie?</button>
+        <div class="answer">
+            <p><strong>Prawa Kirchhoffa:</strong></p>
+            <p><strong>Napięciowe prawo Kirchhoffa (NPK):</strong> W każdej chwili czasu algebraiczna suma napięć
+                gałęziowych w rozpatrywanej pętli równa się zeru. Składniki sumy algebraicznej piszemy ze znakiem plus,
+                jeżeli kierunki napięć gałęziowych są zgodne z kierunkiem obiegu, i ze znakiem minus w przeciwnym
+                przypadku.</p>
+            <p><strong>Prądowe prawo Kirchhoffa (PPK):</strong> Dla każdego obwodu i dowolnego jego węzła, w każdej
+                chwili algebraiczna suma prądów w gałęziach zbiegających się w tym węźle jest równa zeru. Prądowi
+                przypisujemy znak plus, jeżeli jego kierunek jest od węzła, i znak minus, gdy strzałka prądu jest
+                skierowana do węzła.</p>
+            <p><strong>Pojęcia:</strong></p>
+            <ul>
+                <li><strong>Pętla:</strong> Zbiór elementów zaczynających się w jednym węźle, obejmujący kolejne
+                    połączone ze sobą gałęzie i kończący się w tym samym węźle.</li>
+                <li><strong>Oczko:</strong> Szczególny przypadek pętli, która nie ma w sobie żadnego elementu.</li>
+            </ul>
+            <p><strong>Maksymalna liczba niezależnych praw:</strong></p>
+            <ul>
+                <li><strong>PPK:</strong> Dla obwodu z \(A\) węzłami można ułożyć \(A - 1\) niezależnych PPK.</li>
+                <li><strong>NPK:</strong> Dla obwodu z \(A\) węzłami i \(B\) gałęziami można ułożyć \(B - A + 1\)
+                    niezależnych NPK.</li>
+                <li><strong>Łącznie:</strong> Dla obwodu z \(A\) węzłami i \(B\) gałęziami można ułożyć \(B\)
+                    niezależnych praw Kirchhoffa.</li>
+            </ul>
+        </div>
+        <!-- Pytanie 7 -->
+        <button class="question">Pytanie 7: Omówić połączenie szeregowe i równoległe oporników, wyprowadzić wzory na
+            rezystancję zastępczą oraz omówić dzielnik napięcia i prądu.</button>
+        <div class="answer">
+            <p><strong>Połączenie szeregowe:</strong></p>
+            <p><strong>Prąd:</strong> Prąd płynie przez każdy element o tej samej wartości.</p>
+            <p><strong>Rezystancja zastępcza:</strong> \( R_z = R_1 + R_2 \).</p>
+            <p><strong>Dzielnik napięcia:</strong> Napięcie dzieli się proporcjonalnie do rezystancji (\( u = u_1 + u_2
+                \)).</p>
+
+            <p><strong>Połączenie równoległe:</strong></p>
+            <p><strong>Napięcie:</strong> Napięcie na każdym elemencie jest takie samo.</p>
+            <p><strong>Rezystancja zastępcza:</strong> \( \frac{1}{R_z} = \frac{1}{R_1} + \frac{1}{R_2} \).</p>
+            <p><strong>Dzielnik prądu:</strong> Prąd dzieli się odwrotnie proporcjonalnie do rezystancji (\( i = i_1 +
+                i_2 \)).</p>
+
+            <p><strong>Szczególne przypadki:</strong></p>
+            <p><strong>Przerwa w połączeniu szeregowym:</strong> Prąd wynosi zero.</p>
+            <p><strong>Zwarcie w połączeniu równoległym:</strong> Cały prąd płynie przez zwarcie.</p>
+        </div>
+        <!-- Pytanie 8 -->
+        <button class="question">Pytanie 8: Wyjaśnić pojęcia: graf, graf zorientowany. Podać twierdzenie Tellegena i
+            wnioski z niego wypływające.</button>
+        <div class="answer">
+            <p><strong>Graf:</strong> Zbiór węzłów i gałęzi, gdzie każda gałąź łączy się z odpowiednim węzłem.</p>
+            <p><strong>Graf zorientowany:</strong> Graf, w którym każda gałąź ma przyporządkowany zwrot.</p>
+            <p><strong>Twierdzenie Tellegena:</strong> Jeżeli prądy gałęziowe \(i_k\) spełniają PPK w każdym węźle grafu
+                oraz napięcia gałęziowe \(u_k\) spełniają NPK w każdej pętli grafu, to:</p>
+            <p style="text-align: center;">
+                \[
+                \sum_{k=1}^{b} u_k i_k = 0
+                \]
+            </p>
+            <p>gdzie \(b\) to liczba gałęzi grafu.</p>
+            <p><strong>Wnioski:</strong> Suma mocy chwilowych dla wszystkich gałęzi obwodu jest równa zeru.</p>
+        </div>
+        <!-- Pytanie 9 -->
+        <button class="question">Pytanie 9: Wyjaśnić pojęcia: zasada superpozycji oraz układy równoważne.</button>
+        <div class="answer">
+            <p><strong>Zasada superpozycji:</strong> W obwodach liniowych odpowiedź na kilka wymuszeń jednocześnie jest
+                sumą odpowiedzi na każde wymuszenie działające oddzielnie.</p>
+            <p>Przyrównanie do zera prądów źródłowych oznacza rozwarcie źródeł prądowych, a przyrównanie do zera napięć
+                źródłowych oznacza zwarcie źródeł napięciowych.</p>
+            <p><strong>Układy równoważne:</strong> Układy są równoważne, jeśli ich opis matematyczny jest taki sam.
+                Rzeczywiste źródło napięcia jest równoważne rzeczywistemu źródłu prądu, jeśli ich opisy są identyczne.
+            </p>
+            <p><strong>Ilustracja:</strong></p>
+            <img src="./img/9.png" alt="Ilustracja zasady superpozycji i układów równoważnych"
+                style="width:100%;max-width:600px;">
+        </div>
+
     </div>
 
     <script>
