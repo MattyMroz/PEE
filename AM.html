@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 10px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .question {
+            padding: 15px;
+            background-color: #007BFF;
+            color: #fff;
+            cursor: pointer;
+            border: none;
+            text-align: left;
+            width: 100%;
+            outline: none;
+            font-size: 10px;
+            font-weight: bold;
+            transition: background-color 0.3s, font-size 0.3s;
+            margin-bottom: 10px;
+            border-radius: 5px;
+        }
+
+        .question:hover {
+            background-color: #0056b3;
+        }
+
+        .answer {
+            padding: 15px;
+            display: none;
+            background-color: #f9f9f9;
+            border-top: 1px solid #ddd;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+    </style>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <!-- Pytanie 1 -->
+        <button class="question">1: Rozwiąż zagadnienie: \( y' = \frac{e^x (y + 1)}{e^x + 1} \), \( y(0) = -4
+            \)</button>
+        <div class="answer">
+            <p><strong>Rozwiązanie:</strong></p>
+            <p>Podzielmy równanie na składniki:</p>
+            <p>\( y' = \frac{e^x (y + 1)}{e^x + 1} \)</p>
+            <p>Przekształćmy równanie:</p>
+            <p>\( \frac{1}{y + 1} \frac{dy}{dx} = \frac{e^x}{e^x + 1} \)</p>
+            <p>Rozdzielmy zmienne:</p>
+            <p>\( \frac{1}{y + 1} dy = \frac{e^x}{e^x + 1} dx \)</p>
+            <p>Zintegrujmy obie strony:</p>
+            <p>\( \int \frac{1}{y + 1} dy = \int \frac{e^x}{e^x + 1} dx \)</p>
+            <p>Lewa strona:</p>
+            <p>\( \int \frac{1}{y + 1} dy = \ln|y + 1| \)</p>
+            <p>Prawa strona:</p>
+            <p>Użyjmy podstawienia \( u = e^x + 1 \), wtedy \( du = e^x dx \):</p>
+            <p>\( \int \frac{e^x}{e^x + 1} dx = \int \frac{1}{u} du = \ln|u| = \ln|e^x + 1| \)</p>
+            <p>Zatem:</p>
+            <p>\( \ln|y + 1| = \ln|e^x + 1| + C \)</p>
+            <p>Zastosujmy warunek początkowy \( y(0) = -4 \):</p>
+            <p>\( \ln|-4 + 1| = \ln|e^0 + 1| + C \)</p>
+            <p>\( \ln 3 = \ln 2 + C \)</p>
+            <p>\( C = \ln 3 - \ln 2 = \ln \frac{3}{2} \)</p>
+            <p>Ostateczne rozwiązanie:</p>
+            <p>\( \ln|y + 1| = \ln \left( \frac{3}{2} (e^x + 1) \right) \)</p>
+            <p>\( y + 1 = \frac{3}{2} (e^x + 1) \)</p>
+            <p>\( y = \frac{3}{2} e^x + \frac{3}{2} - 1 \)</p>
+            <p>\( y = \frac{3}{2} e^x + \frac{1}{2} \)</p>
+        </div>
+        <!-- Pytanie 2 -->
+        <button class="question">2: Rozwiąż równanie różniczkowe \( y' - y \cot x = \cos x \sin^2 x \)</button>
+        <div class="answer">
+            <p>Równanie różniczkowe:</p>
+            <p>\( y' - y \cot x = \cos x \sin^2 x \)</p>
+            <p>Rozwiązanie:</p>
+            <p>Przekształcenie równania:</p>
+            <p>\( y' + P(x)y = Q(x) \)</p>
+            <p>Gdzie \( P(x) = -\cot x \) i \( Q(x) = \cos x \sin^2 x \).</p>
+            <p>Czynnik całkujący:</p>
+            <p>\( \mu(x) = e^{\int P(x) dx} = e^{\int -\cot x dx} = e^{-\ln|\sin x|} = \frac{1}{\sin x} \)</p>
+            <p>Mnożymy obie strony równania przez czynnik całkujący:</p>
+            <p>\( \frac{1}{\sin x} y' - \frac{1}{\sin x} y \cot x = \frac{\cos x \sin^2 x}{\sin x} \)</p>
+            <p>\( \frac{d}{dx} \left( \frac{y}{\sin x} \right) = \cos x \sin x \)</p>
+            <p>Integrujemy obie strony:</p>
+            <p>\( \frac{y}{\sin x} = \int \cos x \sin x dx \)</p>
+            <p>Używamy podstawienia \( u = \sin x \), wtedy \( du = \cos x dx \):</p>
+            <p>\( \int \cos x \sin x dx = \int u du = \frac{u^2}{2} = \frac{\sin^2 x}{2} \)</p>
+            <p>Zatem:</p>
+            <p>\( \frac{y}{\sin x} = \frac{\sin^2 x}{2} + C \)</p>
+            <p>\( y = \frac{\sin^3 x}{2} + C \sin x \)</p>
+        </div>
+    </div>
+
+    <script>
+        document.querySelectorAll('.question').forEach(button => {
+            button.addEventListener('click', () => {
+                const answer = button.nextElementSibling;
+                answer.style.display = answer.style.display === 'block' ? 'none' : 'block';
+            });
+        });
+    </script>
+</body>
+
+</html>
