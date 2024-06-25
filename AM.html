@@ -109,6 +109,103 @@
             <p>\( \frac{y}{\sin x} = \frac{\sin^2 x}{2} + C \)</p>
             <p>\( y = \frac{\sin^3 x}{2} + C \sin x \)</p>
         </div>
+
+        <!-- Pytanie 3 -->
+        <button class="question">3: Rozwiąż równanie różniczkowe \( y'' - 4y' + 4y = 3xe^{2x} \)</button>
+        <div class="answer">
+            <p>Równanie różniczkowe:</p>
+            <p>\( y'' - 4y' + 4y = 3xe^{2x} \)</p>
+            <p>Rozwiązanie:</p>
+            <p>Równanie jednorodne:</p>
+            <p>\( y'' - 4y' + 4y = 0 \)</p>
+            <p>Równanie charakterystyczne:</p>
+            <p>\( r^2 - 4r + 4 = 0 \)</p>
+            <p>\( (r - 2)^2 = 0 \)</p>
+            <p>Podwójny pierwiastek \( r = 2 \)</p>
+            <p>Rozwiązanie ogólne równania jednorodnego:</p>
+            <p>\( y_h = (C_1 + C_2 x)e^{2x} \)</p>
+            <p>Rozwiązanie szczególne:</p>
+            <p>Przyjmujemy rozwiązanie szczególne w postaci:</p>
+            <p>\( y_p = Ax^2 e^{2x} \)</p>
+            <p>Podstawiamy \( y_p \) do równania:</p>
+            <p>\( y_p'' = (4Ax^2 + 8Ax + 2A)e^{2x} \)</p>
+            <p>\( y_p' = (2Ax^2 + 4Ax)e^{2x} \)</p>
+            <p>\( y_p = Ax^2 e^{2x} \)</p>
+            <p>Podstawiamy do równania:</p>
+            <p>\( (4Ax^2 + 8Ax + 2A)e^{2x} - 4(2Ax^2 + 4Ax)e^{2x} + 4Ax^2 e^{2x} = 3xe^{2x} \)</p>
+            <p>Uproszczenie:</p>
+            <p>\( 4Ax^2 + 8Ax + 2A - 8Ax^2 - 16Ax + 4Ax^2 = 3x \)</p>
+            <p>\( 2A = 3 \)</p>
+            <p>\( A = \frac{3}{2} \)</p>
+            <p>Zatem rozwiązanie szczególne to:</p>
+            <p>\( y_p = \frac{3}{2}x^2 e^{2x} \)</p>
+            <p>Rozwiązanie ogólne:</p>
+            <p>\( y = y_h + y_p \)</p>
+            <p>\( y = (C_1 + C_2 x)e^{2x} + \frac{3}{2}x^2 e^{2x} \)</p>
+        </div>
+        <!-- Pytanie 4 -->
+        <button class="question">4: Wyznacz rozwiązanie zagadnienia brzegowego \( y_{n+2} + 6y_{n+1} - 7y_n = 32n - 4,
+            \quad y_0 = 2, \quad y_1 = -3 \)</button>
+        <div class="answer">
+            <p>Równanie różniczkowe:</p>
+            <p>\( y_{n+2} + 6y_{n+1} - 7y_n = 32n - 4 \)</p>
+            <p>Warunki początkowe:</p>
+            <p>\( y_0 = 2, \quad y_1 = -3 \)</p>
+            <p>Rozwiązanie:</p>
+            <p>Równanie jednorodne:</p>
+            <p>\( y_{n+2} + 6y_{n+1} - 7y_n = 0 \)</p>
+            <p>Równanie charakterystyczne:</p>
+            <p>\( r^2 + 6r - 7 = 0 \)</p>
+            <p>Rozwiązanie równania kwadratowego:</p>
+            <p>\( r = \frac{-6 \pm \sqrt{64}}{2} = \frac{-6 \pm 8}{2} \)</p>
+            <p>\( r_1 = 1, \quad r_2 = -7 \)</p>
+            <p>Rozwiązanie ogólne równania jednorodnego:</p>
+            <p>\( y_h = A \cdot 1^n + B \cdot (-7)^n \)</p>
+            <p>Rozwiązanie szczególne:</p>
+            <p>Przyjmujemy rozwiązanie szczególne w postaci:</p>
+            <p>\( y_p = Cn + D \)</p>
+            <p>Podstawiamy \( y_p \) do równania:</p>
+            <p>\( (Cn + 2C + D) + 6(Cn + D) - 7(Cn + D) = 32n - 4 \)</p>
+            <p>Uproszczenie:</p>
+            <p>\( Cn + 2C + D + 6Cn + 6D - 7Cn - 7D = 32n - 4 \)</p>
+            <p>Porównanie współczynników:</p>
+            <p>\( C = 32 \)</p>
+            <p>\( 2C - D = -4 \)</p>
+            <p>Podstawiamy \( C = 32 \):</p>
+            <p>\( 2(32) - D = -4 \)</p>
+            <p>\( 64 - D = -4 \)</p>
+            <p>\( D = 68 \)</p>
+            <p>Rozwiązanie szczególne:</p>
+            <p>\( y_p = 32n + 68 \)</p>
+            <p>Rozwiązanie ogólne:</p>
+            <p>\( y = y_h + y_p \)</p>
+            <p>\( y = A \cdot 1^n + B \cdot (-7)^n + 32n + 68 \)</p>
+            <p>Warunki początkowe:</p>
+            <p>\( y_0 = 2 \)</p>
+            <p>\( y_1 = -3 \)</p>
+            <p>Podstawiamy \( n = 0 \):</p>
+            <p>\( y_0 = A + B + 68 = 2 \)</p>
+            <p>\( A + B + 68 = 2 \)</p>
+            <p>\( A + B = -66 \)</p>
+            <p>Podstawiamy \( n = 1 \):</p>
+            <p>\( y_1 = A - 7B + 32 + 68 = -3 \)</p>
+            <p>\( A - 7B + 100 = -3 \)</p>
+            <p>\( A - 7B = -103 \)</p>
+            <p>Rozwiązujemy układ równań:</p>
+            <p>\( A + B = -66 \)</p>
+            <p>\( A - 7B = -103 \)</p>
+            <p>Odejmujemy pierwsze równanie od drugiego:</p>
+            <p>\( (A - 7B) - (A + B) = -103 + 66 \)</p>
+            <p>\( -8B = -37 \)</p>
+            <p>\( B = \frac{37}{8} \)</p>
+            <p>Podstawiamy \( B \) do pierwszego równania:</p>
+            <p>\( A + \frac{37}{8} = -66 \)</p>
+            <p>\( A = -66 - \frac{37}{8} \)</p>
+            <p>\( A = -66 - 4.625 \)</p>
+            <p>\( A = -70.625 \)</p>
+            <p>Ostateczne rozwiązanie:</p>
+            <p>\( y = -70.625 \cdot 1^n + \frac{37}{8} \cdot (-7)^n + 32n + 68 \)</p>
+        </div>
     </div>
 
     <script>
