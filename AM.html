@@ -57,6 +57,106 @@
 
 <body>
     <div class="container">
+
+        <h1>Przewidywanie Rozwiązania Szczególnego</h1>
+        <h2>Kroki przewidywania rozwiązania szczególnego</h2>
+        <ol>
+            <li><strong>Zidentyfikuj formę prawej strony równania różniczkowego</strong>:
+                <p>Sprawdź, czy prawa strona jest wielomianem, wykładniczą funkcją, funkcją trygonometryczną, czy ich
+                    kombinacją.</p>
+            </li>
+            <li><strong>Określ pierwiastki równania charakterystycznego</strong>:
+                <p>Rozwiąż równanie charakterystyczne dla równania jednorodnego związanego z równaniem różniczkowym.</p>
+            </li>
+            <li><strong>Przewiduj formę rozwiązania szczególnego</strong>:
+                <ul>
+                    <li><strong>Wielomian \( P(x) \)</strong>:
+                        <p>Przewiduj rozwiązanie szczególne jako wielomian o tej samej stopniu co \( P(x) \).</p>
+                    </li>
+                    <li><strong>Wykładnicza funkcja \( e^{\alpha x} \)</strong>:
+                        <p>Przewiduj rozwiązanie szczególne jako \( A e^{\alpha x} \).</p>
+                    </li>
+                    <li><strong>Funkcja trygonometryczna \( \sin(\beta x) \) lub \( \cos(\beta x) \)</strong>:
+                        <p>Przewiduj rozwiązanie szczególne jako \( A \cos(\beta x) + B \sin(\beta x) \).</p>
+                    </li>
+                    <li><strong>Kombinacja \( x^n e^{\alpha x} \)</strong>:
+                        <p>Przewiduj rozwiązanie szczególne jako wielomian stopnia \( n \) pomnożony przez \( e^{\alpha
+                            x} \).</p>
+                    </li>
+                </ul>
+            </li>
+            <li><strong>Uwzględnij pierwiastki równania charakterystycznego</strong>:
+                <ul>
+                    <li><strong>Jeśli \( \alpha \) nie jest pierwiastkiem równania charakterystycznego</strong>:
+                        <p>Przewiduj rozwiązanie szczególne jako \( A e^{\alpha x} \).</p>
+                    </li>
+                    <li><strong>Jeśli \( \alpha \) jest pierwiastkiem równania charakterystycznego</strong>:
+                        <p>Przewiduj rozwiązanie szczególne jako \( x A e^{\alpha x} \).</p>
+                    </li>
+                    <li><strong>Jeśli \( \alpha \) jest podwójnym pierwiastkiem równania charakterystycznego</strong>:
+                        <p>Przewiduj rozwiązanie szczególne jako \( x^2 A e^{\alpha x} \).</p>
+                    </li>
+                </ul>
+            </li>
+        </ol>
+        <h2>Przykłady przewidywania</h2>
+        <ul>
+            <li><strong>Prawa strona: \( 3x^2 \)</strong>:
+                <p>Przewiduj rozwiązanie szczególne jako \( Ax^2 + Bx + C \).</p>
+            </li>
+            <li><strong>Prawa strona: \( 5e^{3x} \)</strong>:
+                <ul>
+                    <li>Jeśli \( 3 \) nie jest pierwiastkiem równania charakterystycznego:
+                        <p>Przewiduj rozwiązanie szczególne jako \( A e^{3x} \).</p>
+                    </li>
+                    <li>Jeśli \( 3 \) jest pierwiastkiem równania charakterystycznego:
+                        <p>Przewiduj rozwiązanie szczególne jako \( x A e^{3x} \).</p>
+                    </li>
+                    <li>Jeśli \( 3 \) jest podwójnym pierwiastkiem równania charakterystycznego:
+                        <p>Przewiduj rozwiązanie szczególne jako \( x^2 A e^{3x} \).</p>
+                    </li>
+                </ul>
+            </li>
+            <li><strong>Prawa strona: \( \cos(2x) \)</strong>:
+                <p>Przewiduj rozwiązanie szczególne jako \( A \cos(2x) + B \sin(2x) \).</p>
+            </li>
+            <li><strong>Prawa strona: \( x e^{4x} \)</strong>:
+                <ul>
+                    <li>Jeśli \( 4 \) nie jest pierwiastkiem równania charakterystycznego:
+                        <p>Przewiduj rozwiązanie szczególne jako \( (Ax + B) e^{4x} \).</p>
+                    </li>
+                    <li>Jeśli \( 4 \) jest pierwiastkiem równania charakterystycznego:
+                        <p>Przewiduj rozwiązanie szczególne jako \( x (Ax + B) e^{4x} \).</p>
+                    </li>
+                    <li>Jeśli \( 4 \) jest podwójnym pierwiastkiem równania charakterystycznego:
+                        <p>Przewiduj rozwiązanie szczególne jako \( x^2 (Ax + B) e^{4x} \).</p>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <h2>Podsumowanie</h2>
+        <ol>
+            <li>Zidentyfikuj formę prawej strony równania.</li>
+            <li>Określ pierwiastki równania charakterystycznego.</li>
+            <li>Przewiduj formę rozwiązania szczególnego na podstawie formy prawej strony.</li>
+            <li>Uwzględnij pierwiastki równania charakterystycznego, dostosowując przewidywanie.</li>
+        </ol>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         <!-- Pytanie 1 -->
         <button class="question">1: Rozwiąż zagadnienie: \( y' = \frac{e^x (y + 1)}{e^x + 1} \), \( y(0) = -4
             \)</button>
