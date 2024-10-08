@@ -1,0 +1,106 @@
+OGÓLNE POJĘCIA, ZJAWISKA I WZORY, odpowiedź wyczerpująca i krótka rzeczy w () są dodatkowe i nie trzeba ich przepisywać jak małpa
+
+M1:
+1. Narysuj układ do prawdziwego mierzenia prądu (metodą techniczną?) ✅
+2. Wyjaśnij co oznacza wartość skuteczna prądu okresowo zmiennego ✅
+3. Zasada poprawności pomiaru napięcia i natężenia ✅
+4. Wartość średnia napięcia oraz wartość skuteczna napięcia ???
+
+
+M3:
+1. Opisz niepewność pomiarową typu A i B ✅
+2. Niepewność typu B ✅
+3. Niepewność rozszerzona ✅
+
+M5:
+1. Schemat blokowy struktury systemu pomiarowego ✅
+2. Standardy USB i ich szybkości ✅
+3. Opisz interfejs USB ✅
+4. Konfiguracje komputerowych systemów pomiarowych ???
+
+
+M6:
+1. Co to jest przetwornik analogowo-cyfrowy (ADC) i cyfrowo-analogowy (DAC)? ❌
+    - Przetwornik analogowo-cyfrowy (ADC) to urządzenie zmieniające sygnał analogowy na cyfrowy, a przetwornik cyfrowo-analogowy (DAC) odtwarza sygnał analogowy z informacji cyfrowej. Oba są szeroko stosowane w elektronice do przetwarzania sygnałów (praktycznie w każdym współczesnym sprzęcie elektronicznym, w którym zachodzi proces przetwarzania i obróbki sygnału).
+
+
+2. Wymień i opisz jednym zdaniem etapy przetwarzania analogowo-cyfrowego ✅
+    - Przetwarzanie A/C to proces polegający na uproszczeniu sygnału z postaci ciągłej do dyskretnej przy skończonej dokładności odwzorowania
+
+Przetwarzanie A/C składa się z trzech głównych etapów:
+    - Próbkowanie: Pomiar wartości sygnału analogowego w regularnych odstępach czasu, tworząc ciąg próbek (powstanie wykresu słupkowego-sinusoidalnego)
+    - Kwantyzacja: Ograniczenie dokładności danych do najbliższego poziomu reprezentacji, poprzez przypisanie każdej próbki do najbliższego zakresu wartości (powstanie wykresu schodkowego)
+    - Kodowanie: Zamiana skwantowanych wartości (dyskretnych ciągów próbek) na słowa bitowe / cyfrowe (ciągi bitów).
+
+3. Co to jest próbkowanie lub kwantyzacja lub kodowanie ✅ (TO SAMO CO W 2)
+
+4. Opisać zjawisko aliasingu ✅
+    - Aliasing to błędne odwzorowanie sygnału przy zbyt niskiej częstotliwości próbkowania w stosunku do częstotliwości sygnału wejściowego. Aby go uniknąć, częstotliwość próbkowania musi być co najmniej dwa razy wyższa od najwyższej częstotliwości w sygnale.
+
+5. Co to jest szum kwantyzacji i jak wpływa na jakość sygnału? ❌
+    - Szum kwantyzacji to błąd wynikający z przybliżania wartości sygnału do skończonej liczby poziomów. Powoduje zniekształcenia i szumy. Im większa liczba poziomów kwantyzacji (wyższa rozdzielczość przetwornika), tym mniejszy szum kwantyzacji i lepsza jakość sygnału.
+
+6. Jakie są rodzaje kodów stosowanych w przetwarzaniu A/C? ❌
+Do najpopularniejszych kodów należą:
+    - Naturalny kod binarny (NB): Prosty kod, w którym kolejne bity reprezentują kolejne potęgi liczby 2.
+    - Kod dwójkowy przesunięty: Podobny do NB, ale przesunięty o połowę zakresu, aby móc reprezentować liczby ujemne.
+    - Kod uzupełnień do dwóch (ZU2): Najczęściej stosowany kod do reprezentacji liczb ze znakiem. Umożliwia proste dodawanie i odejmowanie liczb.
+    - Kod BCD (Binary-Coded Decimal): Każda cyfra dziesiętna jest kodowana na 4 bitach.
+
+6. Jakie są główne metody przetwarzania A/C? ❌
+Wyróżniamy dwie główne grupy metod:
+    - Metody bezpośrednie (porównawcze): Napięcie wejściowe jest porównywane z wieloma napięciami odniesienia, np. metoda bezpośredniego porównania, kompensacyjna wagowa (SAR).
+    - Metody pośrednie (przetworzeniowo-porównawcze): Napięcie wejściowe jest przekształcane na inną wielkość fizyczną (np. czas, częstotliwość), która następnie jest konwertowana na postać cyfrową, np. metoda czasowa z dwukrotnym całkowaniem, metoda częstotliwościowa, metoda delta-sigma.
+
+7. Jaki rodzaj przetwornika jest najszybszy, jaki ma największą rozdzielczość ✅
+    - Najszybsze są przetworniki szybkie -> kompensacyjne SAR lub złożone -> Pipeline, które charakteryzują się bardzo dużą częstotliwością przetwarzania.
+    - Największą rozdzielczość oferują przetworniki Delta-Sigma (ΔΣ), osiągając dużą liczbę bitów przy jednoczesnej znacznej szybkości próbkowania.
+
+8. Jakie są podstawowe parametry przetworników A/C? ❌
+Do najważniejszych parametrów należą:
+    - Zakres przetwarzania (FS) – pełny zakres napięcia sygnału wejściowego.
+    - Rozdzielczość – stosunek przedziału kwantyzacji do pełnego zakresu przetwarzania, wyrażony w bitach.
+    - Przedział kwantowania (q) – najmniejszy krok pomiarowy sygnału.
+    - Dokładność – różnica między rzeczywistą a przewidywaną wartością sygnału.
+    - Czas przetwarzania – czas potrzebny do jednego pełnego przetworzenia sygnału.
+    - Szybkość bitowa (bit rate) – liczba bitów uzyskiwanych w jednostce czasu.
+    - Błąd kwantyzacji – szum generowany podczas procesu kwantyzacji.
+    - Błąd wzmocnienia i przesunięcia zera – odchylenia od idealnej wartości przetwarzanego sygnału​.
+    - Błąd przesunięcia zera offset error - różnica między rzeczywistą a idealną wartością sygnału dla min/zero wartości cyfrowej.
+    - Nieliniowość całkowa (INL) – max odchylenie rzeczywistej charakterystyki od linii prostej.
+    - Nieliniowość różniczkowa (DNL) – lokalne odchylenia charakterystyki. Jeśli |DNL| < 1LSB, brak pomijania kodów.
+
+
+
+
+E1:
+1. Dioda Zenera ✅
+
+E2:
+1. Narysuj schemat prostownika sterowanego w układzie z mostkiem graetza ✅
+2. Różnice między diodami i tyrystorami. Wady i zalety ✅
+3. Filtr pojemnościowy ???
+
+
+L1:
+1. Co to temperatura współczynnika rezystancji ✅
+2. Wymień dobre przewodniki prądu i podaj ich konduktywność ✅
+3. Różnice między rezystancją czystych metali i z domieszkami ???
+
+L2:
+1. Prąd upływu ✅
+2. Pojemność kondensatora ???
+3. Wymień składowe prądu w dielektryku ???
+
+L4:
+1. Pętla histerezy magnetycznej i charakterystyczne punkty ✅
+2. Opisz jak dokonuje się zapisu / odczytu informacji przy pomocy nośnika magnetycznego ???
+
+L5:
+1. Opisz działanie monitora LCD ✅
+2. Co trzeba zrobić aby z diody LED zrobić diodę laserową ✅
+
+LIM5:
+1. Zjawisko foto-elektryczne ✅
+2. Zjawisko luminescencji ???
+

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 10px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .question {
+            padding: 15px;
+            background-color: #007BFF;
+            color: #fff;
+            cursor: pointer;
+            border: none;
+            text-align: left;
+            width: 100%;
+            outline: none;
+            font-size: 14px;
+            font-weight: bold;
+            transition: background-color 0.3s, font-size 0.3s;
+            margin-bottom: 10px;
+            border-radius: 5px;
+        }
+
+        .question:hover {
+            background-color: #0056b3;
+        }
+
+        .answer {
+            padding: 15px;
+            display: none;
+            background-color: #f9f9f9;
+            border-top: 1px solid #ddd;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+    </style>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <h2>Zadanie M6</h2>
+
+        <button class="question">1. Co to jest przetwornik analogowo-cyfrowy (ADC) i cyfrowo-analogowy (DAC)? ❌</button>
+        <div class="answer">
+            <p><strong>Przetwornik analogowo-cyfrowy (ADC):</strong> Urządzenie zmieniające sygnał analogowy na cyfrowy.</p>
+            <p><strong>Przetwornik cyfrowo-analogowy (DAC):</strong> Odtwarza sygnał analogowy z informacji cyfrowej.</p>
+            <p>Oba są szeroko stosowane w elektronice do przetwarzania sygnałów (praktycznie w każdym współczesnym sprzęcie elektronicznym, w którym zachodzi proces przetwarzania i obróbki sygnału).</p>
+        </div>
+
+        <button class="question">2. Wymień i opisz jednym zdaniem etapy przetwarzania analogowo-cyfrowego ✅</button>
+        <div class="answer">
+            <p><strong>Przetwarzanie A/C:</strong> Proces polegający na uproszczeniu sygnału z postaci ciągłej do dyskretnej przy skończonej dokładności odwzorowania.</p>
+            <p>Etapy:</p>
+            <p><strong>Próbkowanie:</strong> Pomiar wartości sygnału analogowego w regularnych odstępach czasu, tworząc ciąg próbek (powstanie wykresu słupkowego-sinusoidalnego).</p>
+            <p><strong>Kwantyzacja:</strong> Ograniczenie dokładności danych do najbliższego poziomu reprezentacji, poprzez przypisanie każdej próbki do najbliższego zakresu wartości (powstanie wykresu schodkowego).</p>
+            <p><strong>Kodowanie:</strong> Zamiana skwantowanych wartości (dyskretnych ciągów próbek) na słowa bitowe / cyfrowe (ciągi bitów).</p>
+        </div>
+
+        <button class="question">3. Co to jest próbkowanie lub kwantyzacja lub kodowanie ✅</button>
+        <div class="answer">
+            <p>Patrz odpowiedź na pytanie 2.</p>
+        </div>
+
+        <button class="question">4. Opisać zjawisko aliasingu ✅</button>
+        <div class="answer">
+            <p><strong>Aliasing:</strong> Błędne odwzorowanie sygnału przy zbyt niskiej częstotliwości próbkowania w stosunku do częstotliwości sygnału wejściowego. Aby go uniknąć, częstotliwość próbkowania musi być co najmniej dwa razy wyższa od najwyższej częstotliwości w sygnale.</p>
+        </div>
+
+        <button class="question">5. Co to jest szum kwantyzacji i jak wpływa na jakość sygnału? ❌</button>
+        <div class="answer">
+            <p><strong>Szum kwantyzacji:</strong> Błąd wynikający z przybliżania wartości sygnału do skończonej liczby poziomów. Powoduje zniekształcenia i szumy. Im większa liczba poziomów kwantyzacji (wyższa rozdzielczość przetwornika), tym mniejszy szum kwantyzacji i lepsza jakość sygnału.</p>
+        </div>
+
+        <button class="question">6. Jakie są rodzaje kodów stosowanych w przetwarzaniu A/C? ❌</button>
+        <div class="answer">
+            <p>Do najpopularniejszych kodów należą:</p>
+            <p><strong>Naturalny kod binarny (NB):</strong> Prosty kod, w którym kolejne bity reprezentują kolejne potęgi liczby 2.</p>
+            <p><strong>Kod dwójkowy przesunięty:</strong> Podobny do NB, ale przesunięty o połowę zakresu, aby móc reprezentować liczby ujemne.</p>
+            <p><strong>Kod uzupełnień do dwóch (ZU2):</strong> Najczęściej stosowany kod do reprezentacji liczb ze znakiem. Umożliwia proste dodawanie i odejmowanie liczb.</p>
+            <p><strong>Kod BCD (Binary-Coded Decimal):</strong> Każda cyfra dziesiętna jest kodowana na 4 bitach.</p>
+        </div>
+
+        <button class="question">7. Jakie są główne metody przetwarzania A/C? ❌</button>
+        <div class="answer">
+            <p>Wyróżniamy dwie główne grupy metod:</p>
+            <p><strong>Metody bezpośrednie (porównawcze):</strong> Napięcie wejściowe jest porównywane z wieloma napięciami odniesienia, np. metoda bezpośredniego porównania, kompensacyjna wagowa (SAR).</p>
+            <p><strong>Metody pośrednie (przetworzeniowo-porównawcze):</strong> Napięcie wejściowe jest przekształcane na inną wielkość fizyczną (np. czas, częstotliwość), która następnie jest konwertowana na postać cyfrową, np. metoda czasowa z dwukrotnym całkowaniem, metoda częstotliwościowa, metoda delta-sigma.</p>
+        </div>
+
+        <button class="question">8. Jaki rodzaj przetwornika jest najszybszy, jaki ma największą rozdzielczość ✅</button>
+        <div class="answer">
+            <p><strong>Najszybsze:</strong> Przetworniki szybkie -> kompensacyjne SAR lub złożone -> Pipeline, które charakteryzują się bardzo dużą częstotliwością przetwarzania.</p>
+            <p><strong>Największa rozdzielczość:</strong> Przetworniki Delta-Sigma (ΔΣ), osiągając dużą liczbę bitów przy jednoczesnej znacznej szybkości próbkowania.</p>
+        </div>
+
+        <button class="question">9. Jakie są podstawowe parametry przetworników A/C? ❌</button>
+        <div class="answer">
+            <p>Do najważniejszych parametrów należą:</p>
+            <p><strong>Zakres przetwarzania (FS):</strong> Pełny zakres napięcia sygnału wejściowego.</p>
+            <p><strong>Rozdzielczość:</strong> Stosunek przedziału kwantyzacji do pełnego zakresu przetwarzania, wyrażony w bitach.</p>
+            <p><strong>Przedział kwantowania (q):</strong> Najmniejszy krok pomiarowy sygnału.</p>
+            <p><strong>Dokładność:</strong> Różnica między rzeczywistą a przewidywaną wartością sygnału.</p>
+            <p><strong>Czas przetwarzania:</strong> Czas potrzebny do jednego pełnego przetworzenia sygnału.</p>
+            <p><strong>Szybkość bitowa (bit rate):</strong> Liczba bitów uzyskiwanych w jednostce czasu.</p>
+            <p><strong>Błąd kwantyzacji:</strong> Szum generowany podczas procesu kwantyzacji.</p>
+            <p><strong>Błąd wzmocnienia i przesunięcia zera:</strong> Odchylenia od idealnej wartości przetwarzanego sygnału.</p>
+            <p><strong>Błąd przesunięcia zera (offset error):</strong> Różnica między rzeczywistą a idealną wartością sygnału dla min/zero wartości cyfrowej.</p>
+            <p><strong>Nieliniowość całkowa (INL):</strong> Max odchylenie rzeczywistej charakterystyki od linii prostej.</p>
+            <p><strong>Nieliniowość różniczkowa (DNL):</strong> Lokalne odchylenia charakterystyki. Jeśli |DNL| < 1LSB, brak pomijania kodów.</p>
+        </div>
+    </div>
+
+
+    <script>
+        document.querySelectorAll('.question').forEach(button => {
+            button.addEventListener('click', () => {
+                const answer = button.nextElementSibling;
+                answer.style.display = answer.style.display === 'block' ? 'none' : 'block';
+            });
+        });
+    </script>
+</body>
+
+</html>
