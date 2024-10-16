@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 10px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .question {
+            padding: 15px;
+            background-color: #007BFF;
+            color: #fff;
+            cursor: pointer;
+            border: none;
+            text-align: left;
+            width: 100%;
+            outline: none;
+            font-size: 14px;
+            font-weight: bold;
+            transition: background-color 0.3s, font-size 0.3s;
+            margin-bottom: 10px;
+            border-radius: 5px;
+        }
+
+        .question:hover {
+            background-color: #0056b3;
+        }
+
+        .answer {
+            padding: 15px;
+            display: none;
+            background-color: #f9f9f9;
+            border-top: 1px solid #ddd;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+    </style>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <h2>Zadanie E1</h2>
+
+        <button class="question">1. Wyjaśnić pojęcia: półprzewodnik samoistny i domieszkowany. ✅</button>
+        <div class="answer">
+            <p><strong>Półprzewodnik samoistny:</strong> Materiał o wysokiej czystości, w którym przewodnictwo elektryczne jest wynikiem generacji par elektron-dziura pod wpływem czynników zewnętrznych, takich jak temperatura czy światło. W temperaturze zera bezwzględnego półprzewodnik samoistny nie przewodzi prądu.</p>
+            <p><strong>Półprzewodnik domieszkowany:</strong> Materiał, do którego celowo wprowadzono atomy innych pierwiastków (domieszki) w celu zwiększenia przewodnictwa. Domieszki mogą być donorowe (typu n - negative - np. arsen, fosfor) lub akceptorowe (typu p - positive - np. bor, gal). Domieszka donorowa dostarcza dodatkowych elektronów, a domieszka akceptorowa tworzy dziury, które zachowują się jak nośniki ładunku dodatniego.</p>
+        </div>
+
+        <button class="question">2. Wyjaśnić mechanizm przepływu prądu przez półprzewodnik samoistny i domieszkowany. ✅</button>
+        <div class="answer">
+            <p><strong>a) Półprzewodnik samoistny:</strong></p>
+            <ul>
+                <li>W temperaturze zera bezwzględnego: Półprzewodnik samoistny nie przewodzi prądu, ponieważ elektrony walencyjne są związane w wiązaniach i nie mogą się swobodnie poruszać.</li>
+                <li>Dostarczenie energii (np. cieplnej): Powoduje generację par elektron-dziura. Elektrony z pasma walencyjnego uzyskują energię i przechodzą do pasma przewodnictwa, pozostawiając po sobie dziury.</li>
+                <li>W obecności pola elektrycznego: Zarówno elektrony w paśmie przewodnictwa, jak i dziury w paśmie walencyjnym mogą się poruszać, tworząc prąd elektryczny. Elektrony poruszają się w kierunku przeciwnym do pola elektrycznego, a dziury w kierunku zgodnym z polem.</li>
+                <li>Rekombinacja: Elektrony z pasma przewodnictwa mogą powrócić do pasma walencyjnego, rekombinując z dziurami.</li>
+            </ul>
+            <p><strong>b) Półprzewodnik domieszkowany:</strong></p>
+            <ul>
+                <li>Typ n: Domieszka donorowa dostarcza dodatkowy elektron. Ten elektron jest słabo związany z atomem domieszki i łatwo przechodzi do pasma przewodnictwa. Elektrony stają się nośnikami większościowymi, a dziury nośnikami mniejszościowymi. Prąd elektryczny płynie głównie dzięki ruchowi elektronów.</li>
+                <li>Typ p: Domieszka akceptorowa tworzy "dziurę", czyli brak elektronu w wiązaniu. Dziury stają się nośnikami większościowymi, a elektrony nośnikami mniejszościowymi. Prąd płynie głównie dzięki ruchowi dziur, które zachowują się jak dodatnie nośniki ładunku.</li>
+            </ul>
+        </div>
+
+        <button class="question">3. Wyjaśnić zjawiska zachodzące w złączu p-n. ✅</button>
+        <div class="answer">
+            <ol>
+                <li><strong>Dyfuzja:</strong> Elektrony z obszaru n (o większej koncentracji elektronów) przemieszczają się do obszaru p, a dziury z obszaru p (o większej koncentracji dziur) do obszaru n.</li>
+                <li><strong>Rekombinacja:</strong> Elektrony i dziury, które przekroczyły złącze, ulegają rekombinacji, czyli elektrony wypełniają dziury.</li>
+                <li><strong>Warstwa Zaporowa:</strong> W wyniku rekombinacji, w obszarze przy złączu tworzy się warstwa zaporowa, zubożona o swobodne nośniki ładunku (elektrony i dziury). W warstwie tej pozostają nieruchome, zjonizowane atomy domieszek: dodatnie w obszarze n i ujemne w obszarze p.</li>
+                <li><strong>Bariera Potencjału:</strong> Pole elektryczne, wytworzone przez zjonizowane atomy domieszek w warstwie zaporowej, tworzy barierę potencjału (Ub). Bariera ta utrudnia dalszy przepływ nośników przez złącze.</li>
+                <li><strong>Wpływ Napięcia Zewnętrznego:</strong>
+                    <ul>
+                        <li>Polaryzacja Zaporowa: Podłączenie dodatniego bieguna napięcia do obszaru n, a ujemnego do obszaru p zwiększa barierę potencjału. Przez złącze płynie wtedy bardzo mały prąd nośników mniejszościowych.</li>
+                        <li>Polaryzacja Przewodzenia: Podłączenie dodatniego bieguna napięcia do obszaru p, a ujemnego do obszaru n zmniejsza barierę potencjału. Umożliwia to przepływ prądu dyfuzyjnego nośników większościowych.</li>
+                    </ul>
+                </li>
+            </ol>
+        </div>
+
+        <button class="question">4. Charakterystyki prądowo-napięciowe elementów półprzewodnikowych. ✅</button>
+        <div class="answer">
+            <p>Charakterystyki prądowo-napięciowe elementów półprzewodnikowych opisują zależność między prądem płynącym przez element a napięciem przyłożonym do jego zacisków. Dla różnych elementów półprzewodnikowych charakterystyki te mogą się znacząco różnić. Oto kilka przykładów:</p>
+            <ul>
+                <li><strong>Dioda prostownicza:</strong> Charakteryzuje się nieliniową zależnością prądu od napięcia. W kierunku przewodzenia prąd gwałtownie rośnie po przekroczeniu napięcia progowego, a w kierunku zaporowym płynie bardzo mały prąd wsteczny.</li>
+                <li><strong>Dioda Zenera:</strong> W kierunku przewodzenia zachowuje się jak zwykła dioda, ale w kierunku zaporowym, po osiągnięciu napięcia przebicia, prąd gwałtownie rośnie przy prawie stałym napięciu.</li>
+                <li><strong>Tranzystor bipolarny:</strong> Charakterystyki wyjściowe pokazują zależność prądu kolektora od napięcia kolektor-emiter dla różnych wartości prądu bazy.</li>
+                <li><strong>Tranzystor polowy:</strong> Charakterystyki wyjściowe przedstawiają zależność prądu drenu od napięcia dren-źródło dla różnych wartości napięcia bramka-źródło.</li>
+            </ul>
+        </div>
+
+        <button class="question">5. Rodzaje diod półprzewodnikowych. ✅</button>
+        <div class="answer">
+            <ul>
+                <li><strong>Diody prostownicze:</strong> Używane do prostowania prądu przemiennego.</li>
+                <li><strong>Diody Zenera:</strong> Stosowane w układach stabilizacji napięcia.</li>
+                <li><strong>Diody impulsowe:</strong> Przeznaczone do szybkiego przełączania obwodów elektronicznych.</li>
+                <li><strong>Diody pojemnościowe:</strong> Ich pojemność zmienia się wraz z przyłożonym napięciem.</li>
+                <li><strong>Diody detekcyjne:</strong> Służą do detekcji sygnałów o niewielkiej amplitudzie.</li>
+                <li><strong>Diody elektroluminescencyjne (LED):</strong> Emitują światło, gdy są spolaryzowane w kierunku przewodzenia.</li>
+                <li><strong>Fotodiody:</strong> Ich prąd wsteczny zależy od natężenia światła padającego na złącze p-n.</li>
+                <li><strong>Diody laserowe:</strong> Emitują spójne światło laserowe.</li>
+                <li><strong>Diody mikrofalowe:</strong> Pracują w zakresie częstotliwości mikrofalowych.</li>
+            </ul>
+        </div>
+
+        <button class="question">6. Dioda Zenera. ✅</button>
+        <div class="answer">
+            <p><strong>Dioda Zenera:</strong></p>
+            <ul>
+                <li>Stosowana w układach stabilizacji napięcia, ogranicznikach napięcia i innych aplikacjach, gdzie wymagana jest stała wartość napięcia.</li>
+                <li><strong>Działanie:</strong> Pracuje w stanie przebicia, który w jej przypadku jest odwracalny i nie powoduje uszkodzenia elementu. W obszarze przebicia, napięcie na diodzie Zenera pozostaje praktycznie stałe, niezależnie od płynącego prądu.</li>
+                <li><strong>Parametry:</strong> Najważniejszym parametrem jest napięcie przebicia (UZ). Produkowane są diody na napięcia od 1V do kilkuset V. Istotna jest również rezystancja dynamiczna diody w stanie przebicia (RdZ) - im mniejsza RdZ, tym dioda jest "lepsza", ponieważ zapewnia stabilniejsze napięcie.</li>
+                <li><strong>Rodzaje przebicia:</strong> W zależności od domieszkowania złącza p-n, mogą występować różne rodzaje przebicia: przebicie Zenera (w złączach silnie domieszkowanych), przebicie lawinowe (w złączach słabo domieszkowanych) lub oba te zjawiska (w złączach o średniej koncentracji domieszek).</li>
+            </ul>
+        </div>
+
+        <button class="question">7. Dioda LED. ✅</button>
+        <div class="answer">
+            <p><strong>Dioda LED (Light Emitting Diode):</strong></p>
+            <ul>
+                <li>Powszechnie stosowane w różnego rodzaju wskaźnikach, wyświetlaczach, oświetleniu i innych aplikacjach.</li>
+                <li><strong>Działanie:</strong> Przepływ prądu przez złącze p-n powoduje rekombinację nośników ładunku, czemu towarzyszy emisja fotonów, czyli światła. Długość fali emitowanego światła (a tym samym jego kolor) zależy od rodzaju użytego półprzewodnika.</li>
+                <li><strong>Materiały:</strong> Wytwarzane ze związków galu, takich jak GaAs, GaP, GaAsP i GaN.</li>
+                <li><strong>Kolory:</strong> Dostępne są diody LED emitujące światło o różnych kolorach, w tym czerwone, pomarańczowe, żółte, zielone, niebieskie, białe, a także promieniowanie podczerwone i ultrafioletowe.</li>
+                <li><strong>Zalety:</strong> Charakteryzują się wysoką skutecznością świetlną i trwałością, co sprawia, że są energooszczędne i długowieczne. Dzięki tym zaletom, diody LED w dużej mierze zastąpiły tradycyjne źródła światła, takie jak żarówki i świetlówki.</li>
+                <li><strong>Napięcie progowe:</strong> Dioda LED zaczyna emitować światło po przekroczeniu napięcia progowego (Up), które wynosi od 1,5V do 3,5V.</li>
+            </ul>
+        </div>
+
+        <button class="question">8. Wyjaśnić działanie tyrystora. ✅</button>
+        <div class="answer">
+            <p><strong>Tyrystor:</strong></p>
+            <ul>
+                <li>Działa jak przełącznik sterowany, który przewodzi prąd tylko w jednym kierunku po aktywacji.</li>
+                <li>Posiada trzy wyprowadzenia: anodę (A), katodę (K) i bramkę (G).</li>
+                <li>Składa się z czterech warstw półprzewodnikowych (p-n-p-n).</li>
+                <li>Wewnętrzna struktura tyrystora tworzy środkowe złącze p-n, które blokuje przepływ prądu, dopóki nie zostanie "rozładowane" przez impuls prądowy na bramce lub inne metody aktywacji.</li>
+            </ul>
+        </div>
+
+        <button class="question">9. Jak włączyć tyrystor. ✅</button>
+        <div class="answer">
+            <p>Aby włączyć tyrystor należy zlikwidować wewnętrzną barierę potencjału. Można to zrobić na kilka sposobów:</p>
+            <ul>
+                <li><strong>Impuls bramkowy:</strong> To najpopularniejsza metoda, polegająca na podaniu krótkiego impulsu prądu do bramki.</li>
+                <li><strong>Dostarczenie energii (np. cieplnej lub promienistej) do warstwy zaporowej:</strong> Zwiększenie temperatury lub naświetlenie struktury tyrystora ułatwia przepływ prądu.</li>
+                <li><strong>Przekroczenie napięcia blokowania:</strong> Jeśli napięcie na tyrystorze przekroczy pewną wartość graniczną, może dojść do lawinowego wzrostu prądu i włączenia tyrystora.</li>
+                <li><strong>Przekroczenie szybkości narastania napięcia:</strong> Nagły skok napięcia może również aktywować tyrystor.</li>
+            </ul>
+            <p>Jedynym sposobem na wyłączenie tyrystora jest obniżenie prądu poniżej wartości prądu utrzymania (IH).</p>
+        </div>
+    </div>
+
+    <script>
+        document.querySelectorAll('.question').forEach(button => {
+            button.addEventListener('click', () => {
+                const answer = button.nextElementSibling;
+                answer.style.display = answer.style.display === 'block' ? 'none' : 'block';
+            });
+        });
+    </script>
+</body>
+
+</html>
