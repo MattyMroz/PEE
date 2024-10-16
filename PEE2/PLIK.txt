@@ -1,22 +1,28 @@
 OGÓLNE POJĘCIA, ZJAWISKA I WZORY, odpowiedź wyczerpująca i krótka rzeczy w () są dodatkowe i nie trzeba ich przepisywać jak małpa
+https://docs.google.com/spreadsheets/d/1C-5IATMDBbHs1orUkKg92lsSX73KOIlXjoMFXf41mjI/htmlview
+
 
 M1:
 1. Narysuj układ do prawdziwego mierzenia prądu (metodą techniczną?) ✅
 2. Wyjaśnij co oznacza wartość skuteczna prądu okresowo zmiennego ✅
 3. Zasada poprawności pomiaru napięcia i natężenia ✅
 4. Wartość średnia napięcia oraz wartość skuteczna napięcia ???
+5. Blad wzgledny, bezwgledny, graniczny ✅
+
 
 
 M3:
 1. Opisz niepewność pomiarową typu A i B ✅
-2. Niepewność typu B ✅
-3. Niepewność rozszerzona ✅
+2. Niepewność standardowa typu A ✅
+3. Niepewność typu B ✅
+4. Niepewność rozszerzona ✅
 
 M5:
 1. Schemat blokowy struktury systemu pomiarowego ✅
-2. Standardy USB i ich szybkości ✅
-3. Opisz interfejs USB ✅
-4. Konfiguracje komputerowych systemów pomiarowych ???
+2. Struktury pomiarowego systemu komputerowego ✅
+3. Standardy USB i ich szybkości ✅
+4. Opisz interfejs USB ✅
+5. Konfiguracje komputerowych systemów pomiarowych ???
 
 
 M6:
@@ -28,7 +34,7 @@ M6:
     - Przetwarzanie A/C to proces polegający na uproszczeniu sygnału z postaci ciągłej do dyskretnej przy skończonej dokładności odwzorowania
 
 Przetwarzanie A/C składa się z trzech głównych etapów:
-    - Próbkowanie: Pomiar wartości sygnału analogowego w regularnych odstępach czasu, tworząc ciąg próbek (powstanie wykresu słupkowego-sinusoidalnego)
+    - Próbkowanie: Pomiar wartości sygnału analogowego w regularnych odstępach czasu, tworząc ciąg próbek (powstanie wykresu słupkowego)
     - Kwantyzacja: Ograniczenie dokładności danych do najbliższego poziomu reprezentacji, poprzez przypisanie każdej próbki do najbliższego zakresu wartości (powstanie wykresu schodkowego)
     - Kodowanie: Zamiana skwantowanych wartości (dyskretnych ciągów próbek) na słowa bitowe / cyfrowe (ciągi bitów).
 
@@ -74,7 +80,167 @@ Do najważniejszych parametrów należą:
 
 
 E1:
-1. Dioda Zenera ✅
+1. Wyjaśnić pojęcia: półprzewodnik samoistny i domieszkowany. ✅
+
+Półprzewodnik samoistny to materiał o wysokiej czystości, w którym przewodnictwo elektryczne jest wynikiem generacji par elektron-dziura pod wpływem czynników zewnętrznych, takich jak temperatura czy światło. W temperaturze zera bezwzględnego półprzewodnik samoistny nie przewodzi prądu.
+
+Półprzewodnik domieszkowany to materiał, do którego celowo wprowadzono atomy innych pierwiastków (domieszki) w celu zwiększenia przewodnictwa. Domieszki mogą być donorowe (typu n - negative - np. arsen, fosfor) lub akceptorowe (typu p - positive - np. bor, gal). Domieszka donorowa dostarcza dodatkowych elektronów, a domieszka akceptorowa tworzy dziury, które zachowują się jak nośniki ładunku dodatniego.
+
+
+
+
+2. Wyjaśnić mechanizm przepływu prądu przez półprzewodnik samoistny i domieszkowany. ✅
+
+a) Półprzewodnik samoistny:
+
+    W temperaturze zera bezwzględnego: Półprzewodnik samoistny nie przewodzi prądu, ponieważ elektrony walencyjne są związane w wiązaniach i nie mogą się swobodnie poruszać.
+
+    Dostarczenie energii (np. cieplnej): Powoduje generację par elektron-dziura. Elektrony z pasma walencyjnego uzyskują energię i przechodzą do pasma przewodnictwa, pozostawiając po sobie dziury.
+
+    W obecności pola elektrycznego: Zarówno elektrony w paśmie przewodnictwa, jak i dziury w paśmie walencyjnym mogą się poruszać, tworząc prąd elektryczny. Elektrony poruszają się w kierunku przeciwnym do pola elektrycznego, a dziury w kierunku zgodnym z polem.
+
+    Rekombinacja: Elektrony z pasma przewodnictwa mogą powrócić do pasma walencyjnego, rekombinując z dziurami.
+
+b) Półprzewodnik domieszkowany:
+
+3. Półprzewodnik typu n. ✅
+Typ n:
+
+    Domieszka donorowa (np. fosfor w krzemie) dostarcza dodatkowy elektron. Ten elektron jest słabo związany z atomem domieszki i łatwo przechodzi do pasma przewodnictwa.
+
+    Elektrony stają się nośnikami większościowymi, a dziury nośnikami mniejszościowymi.
+
+    Prąd elektryczny płynie głównie dzięki ruchowi elektronów.
+
+Typ p:
+
+    Domieszka akceptorowa (np. bor w krzemie) tworzy "dziurę", czyli brak elektronu w wiązaniu.
+
+    Dziury stają się nośnikami większościowymi, a elektrony nośnikami mniejszościowymi.
+
+    Prąd płynie głównie dzięki ruchowi dziur, które zachowują się jak dodatnie nośniki ładunku.
+
+
+
+
+3. Wyjaśnić zjawiska zachodzące w złączu p-n. ✅
+
+
+    1.Dyfuzja: Elektrony z obszaru n (o większej koncentracji elektronów) przemieszczają się do obszaru p, a dziury z obszaru p (o większej koncentracji dziur) do obszaru n.
+
+    2. Rekombinacja: Elektrony i dziury, które przekroczyły złącze, ulegają rekombinacji, czyli elektrony wypełniają dziury.
+
+    3. Warstwa Zaporowa: W wyniku rekombinacji, w obszarze przy złączu tworzy się warstwa zaporowa, zubożona o swobodne nośniki ładunku (elektrony i dziury). W warstwie tej pozostają nieruchome, zjonizowane atomy domieszek: dodatnie w obszarze n i ujemne w obszarze p.
+
+    4. Bariera Potencjału: Pole elektryczne, wytworzone przez zjonizowane atomy domieszek w warstwie zaporowej, tworzy barierę potencjału (Ub). Bariera ta utrudnia dalszy przepływ nośników przez złącze.
+
+    5. Wpływ Napięcia Zewnętrznego:
+
+        - Polaryzacja Zaporowa: Podłączenie dodatniego bieguna napięcia do obszaru n, a ujemnego do obszaru p zwiększa barierę potencjału. Przez złącze płynie wtedy bardzo mały prąd nośników mniejszościowych.
+
+        - Polaryzacja Przewodzenia: Podłączenie dodatniego bieguna napięcia do obszaru p, a ujemnego do obszaru n zmniejsza barierę potencjału. Umożliwia to przepływ prądu dyfuzyjnego nośników większościowych.
+
+5. Charakterystyki prądowo-napięciowe elementów półprzewodnikowych. ✅
+
+Charakterystyka prądowo-napięciowa elementu półprzewodnikowego to graficzne przedstawienie zależności prądu płynącego przez element od przyłożonego napięcia. Pozwala ona zrozumieć, jak element zachowuje się w różnych warunkach pracy.
+
+Dioda:
+
+    - W kierunku przewodzenia: Rezystancja diody maleje wraz ze wzrostem napięcia, a po przekroczeniu bariery potencjału (około 0.7V dla krzemu) prąd zaczyna gwałtownie rosnąć.
+
+    - W kierunku zaporowym: Rezystancja jest bardzo duża i prąd jest znikomy, aż do osiągnięcia napięcia przebicia, po którym następuje gwałtowny wzrost prądu, mogący uszkodzić diodę.
+
+Dioda Zenera:
+
+    - Charakterystyka w kierunku przewodzenia jest podobna do zwykłej diody.
+
+    - W kierunku zaporowym, po osiągnięciu napięcia Zenera (UZ), dioda wchodzi w stan przebicia, ale zachowuje niską rezystancję dynamiczną, co pozwala na stabilizację napięcia.
+
+Tyrystor:
+
+    - Posiada trzy stabilne stany pracy, co odzwierciedla się w charakterystyce: stan zaporowy, stan blokowania i stan przewodzenia.
+
+    - W stanie blokowania, mimo przyłożenia napięcia w kierunku     przewodzenia, prąd nie płynie.
+
+    - Aby włączyć tyrystor i przejść do stanu przewodzenia, konieczne jest podanie impulsu bramkowego, dostarczenie energii do struktury lub przekroczenie napięcia/szybkości narastania napięcia.
+
+    - Po włączeniu tyrystor przewodzi prąd aż do momentu, gdy prąd spadnie poniżej prądu podtrzymania (IH), co powoduje jego wyłączenie.
+
+
+
+
+
+6. Omówić rodzaje diod. ✅
+7. Dioda Zenera, dioda LED. ✅
+Diody to dwukońcówkowe elementy półprzewodnikowe, wykorzystujące właściwości złącza p-n. W źródłach wymieniono kilka rodzajów diod, w tym:
+
+    - Diody prostownicze: Służą do przekształcania prądu zmiennego na prąd jednokierunkowy, wykorzystując fakt, że złącze p-n przewodzi prąd tylko w jednym kierunku (przy polaryzacji w kierunku przewodzenia).
+
+    - Diody Zenera: Charakteryzują się specjalnie zmodyfikowaną charakterystyką wsteczną, co pozwala im na pracę w stanie przebicia przy określonej wartości napięcia, zwanego napięciem Zenera (UZ).
+
+    - Diody impulsowe: Przeznaczone do szybkiego przełączania obwodów elektronicznych, działając jak klucz sterowany napięciem.
+
+    - Diody pojemnościowe: Ich pojemność zmienia się wraz z przyłożonym napięciem.
+
+    - Diody detekcyjne: Służą do detekcji sygnałów o niewielkiej amplitudzie.
+
+    - Diody elektroluminescencyjne (LED): Emitują światło, gdy są spolaryzowane w kierunku przewodzenia.
+
+    - Fotodiody: Ich prąd wsteczny zależy od natężenia światła padającego na złącze p-n.
+
+    - Diody laserowe: Emitują spójne światło laserowe.
+
+    - Diody mikrofalowe: Pracują w zakresie częstotliwości mikrofalowych.
+
+Dioda Zenera:
+
+    Diody Zenera są stosowane w układach stabilizacji napięcia, ogranicznikach napięcia i innych aplikacjach, gdzie wymagana jest stała wartość napięcia.
+
+    Działanie: Dioda Zenera pracuje w stanie przebicia, który w jej przypadku jest odwracalny i nie powoduje uszkodzenia elementu. W obszarze przebicia, napięcie na diodzie Zenera pozostaje praktycznie stałe, niezależnie od płynącego prądu.
+
+    Parametry: Najważniejszym parametrem diody Zenera jest napięcie przebicia (UZ). Produkowane są diody na napięcia od 1V do kilkuset V. Istotna jest również rezystancja dynamiczna diody w stanie przebicia (RdZ) - im mniejsza RdZ, tym dioda jest "lepsza", ponieważ zapewnia stabilniejsze napięcie.
+
+    Rodzaje przebicia: W zależności od domieszkowania złącza p-n, w diodach Zenera mogą występować różne rodzaje przebicia: przebicie Zenera (w złączach silnie domieszkowanych), przebicie lawinowe (w złączach słabo domieszkowanych) lub oba te zjawiska (w złączach o średniej koncentracji domieszek).
+
+
+Dioda LED:
+    Diody LED są obecnie powszechnie stosowane w różnego rodzaju wskaźnikach, wyświetlaczach, oświetleniu i innych aplikacjach.
+
+    Działanie: W diodzie LED, przepływ prądu przez złącze p-n powoduje rekombinację nośników ładunku, czemu towarzyszy emisja fotonów, czyli światła. Długość fali emitowanego światła (a tym samym jego kolor) zależy od rodzaju użytego półprzewodnika.
+
+    Materiały: Diody LED są wytwarzane ze związków galu, takich jak GaAs, GaP, GaAsP i GaN.
+
+    Kolory: Dostępne są diody LED emitujące światło o różnych kolorach, w tym czerwone, pomarańczowe, żółte, zielone, niebieskie, białe, a także promieniowanie podczerwone i ultrafioletowe.
+
+    Zalety: Diody LED charakteryzują się wysoką skutecznością świetlną i trwałością, co sprawia, że są energooszczędne i długowieczne. Dzięki tym zaletom, diody LED w dużej mierze zastąpiły tradycyjne źródła światła, takie jak żarówki i świetlówki.
+
+    Napięcie progowe: Dioda LED zaczyna emitować światło po     przekroczeniu napięcia progowego (Up), które wynosi od 1,5V do 3,5V.
+
+
+
+
+
+
+8. Wyjaśnić działanie tyrystora. ✅
+9. Jak włączyć tyrystor. ✅
+
+
+Tyrystor działa jak przełącznik sterowany, który przewodzi prąd tylko w jednym kierunku po aktywacji. Posiada trzy wyprowadzenia: anodę (A), katodę (K) i bramkę (G), oraz składa się z czterech warstw półprzewodnikowych (p-n-p-n).
+Wewnętrzna struktura tyrystora tworzy środkowe złącze p-n, które blokuje przepływ prądu, dopóki nie zostanie "rozładowane" przez impuls prądowy na bramce lub inne metody aktywacji.
+
+Aby włączyć tyrystor należy zlikwidować wewnętrzną barierę potencjału:
+
+    - Impuls bramkowy: To najpopularniejsza metoda, polegająca na podaniu krótkiego impulsu prądu do bramki.
+
+    - Dostarczenie energii (np. cieplnej lub promienistej) do warstwy zaporowej: Zwiększenie temperatury lub naświetlenie struktury tyrystora ułatwia przepływ prądu.
+
+    - Przekroczenie napięcia blokowania: Jeśli napięcie na tyrystorze przekroczy pewną wartość graniczną, może dojść do lawinowego wzrostu prądu i włączenia tyrystora.
+
+    - Przekroczenie szybkości narastania napięcia: Nagły skok napięcia może również aktywować tyrystor.
+
+Jedynym sposobem na wyłączenie tyrystora jest obniżenie prądu poniżej wartości prądu utrzymania (IH).
+
+
 
 E2:
 1. Narysuj schemat prostownika sterowanego w układzie z mostkiem graetza ✅
