@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 10px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .question {
+            padding: 15px;
+            background-color: #007BFF;
+            color: #fff;
+            cursor: pointer;
+            border: none;
+            text-align: left;
+            width: 100%;
+            outline: none;
+            font-size: 14px;
+            font-weight: bold;
+            transition: background-color 0.3s, font-size 0.3s;
+            margin-bottom: 10px;
+            border-radius: 5px;
+        }
+
+        .question:hover {
+            background-color: #0056b3;
+        }
+
+        .answer {
+            padding: 15px;
+            display: none;
+            background-color: #f9f9f9;
+            border-top: 1px solid #ddd;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 10px auto;
+        }
+    </style>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <h2>Zadanie E2</h2>
+
+        <button class="question">1. Narysuj schemat prostownika dwupołówkowego w układzie mostka Graetza ✅</button>
+        <div class="answer">
+            <p>Schemat prostownika dwupołówkowego w układzie mostka Graetza:</p>
+            <img src="./E2_1.png" alt="Schemat mostka Graetza">
+        </div>
+
+        <button class="question">2. Narysuj wykres napięcia wyjściowego dla prostownika jednopołówkowego sterowanego
+            ✅</button>
+        <div class="answer">
+            <p>Wykres napięcia wyjściowego dla prostownika jednopołówkowego sterowanego:</p>
+            <img src="./E2_2.png" alt="Wykres napięcia wyjściowego prostownika jednopołówkowego">
+        </div>
+
+        <button class="question">3. Różnice między diodami i tyrystorami. Wady i zalety ✅</button>
+        <div class="answer">
+            <h3>Diody</h3>
+            <p><strong>Działanie:</strong> Diody przepuszczają prąd tylko w jednym kierunku, gdy są spolaryzowane w
+                kierunku przewodzenia (wyższy potencjał na anodzie).</p>
+            <p><strong>Zalety:</strong></p>
+            <ul>
+                <li>Prostota i niski koszt.</li>
+            </ul>
+            <p><strong>Wady:</strong></p>
+            <ul>
+                <li>Brak możliwości sterowania przepływem prądu.</li>
+            </ul>
+
+            <h3>Tyrystory</h3>
+            <p><strong>Działanie:</strong> Tyrystory również przepuszczają prąd tylko w jednym kierunku, ale wymagają
+                impulsu prądowego na bramkę, aby wejść w stan przewodzenia.</p>
+            <p><strong>Zalety:</strong></p>
+            <ul>
+                <li>Możliwość regulacji wartości średniej napięcia wyjściowego poprzez zmianę kąta wyzwalania.</li>
+            </ul>
+            <p><strong>Wady:</strong></p>
+            <ul>
+                <li>Generują silnie zniekształcony przebieg napięcia wyjściowego, co wymaga stosowania filtrów o dużej
+                    skuteczności.</li>
+                <li>Większa złożoność i koszt w porównaniu do diod.</li>
+            </ul>
+        </div>
+
+        <button class="question">4. Wyjaśnić zasadę działania filtru pojemnościowego ✅</button>
+        <div class="answer">
+            <p>Filtr pojemnościowy wygładza przebieg napięcia jednokierunkowego na wyjściu prostownika.</p>
+            <p><strong>Zasada działania:</strong></p>
+            <ul>
+                <li>Podczas dodatniej półfali napięcia wejściowego, dioda przewodzi, ładując kondensator.</li>
+                <li>Gdy napięcie wejściowe spada, kondensator rozładowuje się przez obciążenie, utrzymując napięcie
+                    wyjściowe na względnie stałym poziomie.</li>
+                <li>Im większa pojemność kondensatora (C) i rezystancja obciążenia (R), tym mniejsza amplituda tętnień
+                    napięcia wyjściowego.</li>
+            </ul>
+            <img src="./E2_3.png" alt="Działanie filtru pojemnościowego">
+        </div>
+
+        <button class="question">5. Wyjaśnić rolę diod i tyrystorów w układach zasilających ✅</button>
+        <div class="answer">
+            <h3>Diody:</h3>
+            <ul>
+                <li>Stosowane w prostownikach niesterowanych do przekształcania napięcia przemiennego na
+                    jednokierunkowe.</li>
+            </ul>
+
+            <h3>Tyrystory:</h3>
+            <ul>
+                <li>Używane w prostownikach sterowanych do regulacji napięcia wyjściowego.</li>
+                <li>Znajdują zastosowanie w układach zasilających dużej mocy, sterowania prędkością obrotową silników i
+                    energoelektronice.</li>
+            </ul>
+        </div>
+
+        <button class="question">6. Omówić działanie prostowników niesterowanych ✅</button>
+        <div class="answer">
+            <p>Prostowniki niesterowane wykorzystują diody do przekształcania napięcia przemiennego na jednokierunkowe.
+            </p>
+
+            <h3>Prostownik jednopołówkowy:</h3>
+            <p>Przeprowadza tylko dodatnie półfale napięcia wejściowego, co skutkuje dużymi tętnieniami i niską
+                wartością średnią napięcia wyjściowego.</p>
+
+            <h3>Prostownik dwupołówkowy (mostek Graetza):</h3>
+            <p>Wykorzystuje cztery diody do prostowania obu półfal napięcia wejściowego, zapewniając wyższą wartość
+                średnią napięcia wyjściowego i mniejsze tętnienia.</p>
+        </div>
+
+        <button class="question">7. Omówić działanie prostowników sterowanych ✅</button>
+        <div class="answer">
+            <p>Prostowniki sterowane wykorzystują tyrystory, umożliwiając regulację wartości średniej napięcia
+                wyjściowego poprzez zmianę kąta wyzwalania.</p>
+
+            <h3>Prostownik jednopołówkowy sterowany:</h3>
+            <p>Tyrystor zastępuje diodę w prostowniku jednopołówkowym, a kąt wyzwalania reguluje moment włączenia
+                tyrystora w każdej dodatniej półfali.</p>
+
+            <h3>Prostownik dwupołówkowy sterowany (2T-2D):</h3>
+            <p>W układzie mostkowym Graetza diody są zastąpione dwoma tyrystorami i dwiema diodami, co pozwala na
+                regulację napięcia wyjściowego dla obu półfal.</p>
+        </div>
+
+        <button class="question">8. Przedstawić analizę graficzną pracy stabilizatora napięcia ✅</button>
+        <div class="answer">
+            <p>Analizę graficzną pracy stabilizatora napięcia przedstawia poniższy rysunek:</p>
+            <img src="./E2_4.png" alt="Analiza graficzna pracy stabilizatora napięcia">
+
+            <p><strong>Zasada działania:</strong></p>
+            <ul>
+                <li>Charakterystyka prądowo-napięciowa rezystora R i diody Zenera przecinają się w punkcie pracy
+                    stabilizatora.</li>
+                <li>Współrzędne punktu pracy określają napięcie wyjściowe i prąd diody Zenera.</li>
+                <li>Zmiana napięcia wejściowego powoduje przesunięcie charakterystyki rezystora, ale napięcie na diodzie
+                    Zenera pozostaje względnie stałe, zapewniając stabilizację napięcia wyjściowego.</li>
+                <li>Współczynnik stabilizacji (kS) określa jakość stabilizacji i jest tym mniejszy, im mniejsze są
+                    zmiany napięcia wyjściowego w stosunku do zmian napięcia wejściowego.</li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        document.querySelectorAll('.question').forEach(button => {
+            button.addEventListener('click', () => {
+                const answer = button.nextElementSibling;
+                answer.style.display = answer.style.display === 'block' ? 'none' : 'block';
+            });
+        });
+    </script>
+</body>
+
+</html>
