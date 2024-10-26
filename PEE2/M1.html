@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 10px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .question {
+            padding: 15px;
+            background-color: #007BFF;
+            color: #fff;
+            cursor: pointer;
+            border: none;
+            text-align: left;
+            width: 100%;
+            outline: none;
+            font-size: 14px;
+            font-weight: bold;
+            transition: background-color 0.3s, font-size 0.3s;
+            margin-bottom: 10px;
+            border-radius: 5px;
+        }
+
+        .question:hover {
+            background-color: #0056b3;
+        }
+
+        .answer {
+            padding: 15px;
+            display: none;
+            background-color: #f9f9f9;
+            border-top: 1px solid #ddd;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 10px auto;
+        }
+    </style>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <h2>Zadanie M1</h2>
+
+        <button class="question">1. Błąd względny, bezwzględny, graniczny ✅</button>
+        <div class="answer">
+            <p><strong>Błąd bezwzględny</strong> (\(\Delta x\)) – różnica między wartością zmierzoną (\(x\)) a rzeczywistą (\(x_0\)), wyrażona jako:</p>
+            <p>\[\Delta x = x - x_0\]</p>
+            <p>Mówi o tym, jak daleko od prawdziwej wartości leży wynik.</p>
+
+            <p><strong>Błąd względny</strong> (\(\delta x\)) – stosunek błędu bezwzględnego do wartości rzeczywistej, najczęściej podawany w procentach:</p>
+            <p>\[\delta x = \frac{\Delta x}{x_0} \times 100\%\]</p>
+            <p>Pozwala ocenić, jak istotna jest różnica względem wielkości rzeczywistej.</p>
+
+            <p><strong>Błąd graniczny</strong> (\(\Delta_{gr}\)) – maksymalna dopuszczalna wartość błędu dla przyrządu w określonych warunkach (np. ciśnienie, temperatura, wilgotność). Można go wyznaczyć jako:</p>
+            <p>\[\Delta_{gr} x = (a\% \times x + b\% \times Z_x)\]</p>
+            <p>Określa największą możliwą odchyłkę dla danego zakresu przy poprawnym użytkowaniu przyrządu.</p>
+
+            <h3>INNE:</h3>
+            <ul>
+                <li><strong>Zakres pomiarowy (Zx)</strong>: Zakres, w którym miernik pracuje z ustaloną dokładnością.</li>
+                <li><strong>Rozdzielczość (LSB)</strong>: Najmniejsza wartość, jaką przyrząd jest w stanie wskazać.</li>
+                <li><strong>Liczba cyfr znaczących</strong>: Określa, ile pełnych cyfr od 0 do 9 może pojawić się na wyświetlaczu przyrządu.</li>
+            </ul>
+        </div>
+
+        <button class="question">2. Metody pomiaru ✅</button>
+        <div class="answer">
+            <h3>Pomiar bezpośredni:</h3>
+            <ul>
+                <li>To metoda, w której wartość mierzona jest bezpośrednio odczytywana z przyrządu.</li>
+                <li>Przykłady: pomiar napięcia za pomocą woltomierza lub rezystancji omomierzem.</li>
+                <li>Jest prosty, ale wymaga bezpośredniego podłączenia przyrządu do mierzonych wielkości.</li>
+            </ul>
+
+            <h3>Pomiar pośredni:</h3>
+            <ul>
+                <li>W tej metodzie wartość mierzona nie jest odczytywana bezpośrednio, ale jest obliczana na podstawie innych, mierzonych wielkości.</li>
+                <li>Przykład: pomiar rezystancji \(R_x\) za pomocą prawa Ohma (gdzie \(R_x = U / I\)), w którym potrzebny jest pomiar napięcia (\(U\)) i natężenia prądu (\(I\)).</li>
+                <li>Ta metoda jest bardziej uniwersalna, szczególnie w przypadku pośrednich parametrów, takich jak pojemność czy indukcyjność.</li>
+            </ul>
+        </div>
+
+        <button class="question">3. Schemat pomiaru rezystancji ✅</button>
+        <div class="answer">
+            <img src="./M1_1.png" alt="Schemat pomiaru rezystancji">
+            <ul>
+                <li><strong>Układ A (Duże rezystancje)</strong>: Stosowany, gdy rezystancja mierzonego elementu jest wysoka w porównaniu do rezystancji wewnętrznej amperomierza (\(R_x > R_a\)). W tej konfiguracji pomija się wpływ rezystancji amperomierza, minimalizując błąd przy dużych rezystancjach.</li>
+                <li><strong>Układ B (Małe rezystancje)</strong>: Używany przy niskich rezystancjach mierzonego elementu (\(R_x < R_v\)). Pomija się wpływ rezystancji wewnętrznej woltomierza, co jest korzystne dla dokładności przy niskich rezystancjach.</li>
+            </ul>
+
+            <h3>Zasada poprawności pomiaru napięcia i natężenia???</h3>
+            <ul>
+                <li><strong>Pomiar napięcia</strong> – woltomierz podłącza się równolegle do elementu obwodu; jego rezystancja wewnętrzna powinna być duża, aby minimalizować błąd pomiaru.</li>
+                <li><strong>Pomiar natężenia</strong> – amperomierz włącza się szeregowo, a jego rezystancja powinna być jak najmniejsza, aby nie wprowadzać istotnego błędu do obwodu.</li>
+            </ul>
+        </div>
+
+        <button class="question">4. Układ do technicznego pomiaru prądu ✅</button>
+        <div class="answer">
+            <img src="./M1_2.png" alt="Układ do technicznego pomiaru prądu">
+            <p>Metoda techniczna pomiaru prądu polega na poprawnym połączeniu amperomierza i woltomierza w obwodzie.</p>
+            <ul>
+                <li><strong>Rysunek 4a</strong>: Układ z pomiarem przy zadanej wartości prądu. W tym przypadku woltomierz mierzy sumę geometryczną napięć na kondensatorze i amperomierzu.</li>
+                <li><strong>Rysunek 4b</strong>: Układ z pomiarem przy zadanej wartości napięcia. Tutaj amperomierz wskazuje sumę geometryczną prądu płynącego przez kondensator oraz prądu płynącego przez woltomierz.</li>
+            </ul>
+            <p>Zazwyczaj przy tej metodzie nie uwzględnia się korekt wynikających z przyrządów pomiarowych.</p>
+        </div>
+
+        <button class="question">5. Wartość średnia, skuteczna i maksymalna prądu oraz napięcia okresowo zmiennego ✅</button>
+        <div class="answer">
+            <h3>Wartość średnia:</h3>
+            <p>To uśredniona wartość chwilowa prądu lub napięcia w jednym okresie. Dla sygnałów sinusoidalnych:</p>
+            <p>\[U_{śr} = \frac{2 \cdot U_m}{\pi} \approx 0,637 \cdot U_m\]</p>
+            <p>Jest przydatna do ogólnej oceny poziomu sygnału, ale nie pokazuje jego efektywności energetycznej.</p>
+
+            <h3>Wartość skuteczna:</h3>
+            <p>Odpowiada wartości prądu/napięcia stałego, który w tym samym czasie wywołałby taki sam efekt cieplny jak prąd/napięcie zmienne. Dla przebiegów sinusoidalnych:</p>
+            <p>\[U_{sk} = \frac{U_m}{\sqrt{2}} \approx 0,707 \cdot U_m\]</p>
+            <p>Wartość skuteczna jest kluczowa dla pomiarów, bo wskazuje na rzeczywistą moc dostarczaną do obwodu.</p>
+
+            <h3>Wartość maksymalna (szczytowa):</h3>
+            <p>Najwyższa wartość, jaką osiąga prąd lub napięcie w trakcie jednego okresu, oznaczana jako \(U_m\) lub \(I_m\). Jest istotna przy ocenie odporności elementów na szczytowe wartości, jednak nie mówi o realnej energii sygnału.</p>
+
+            <p><strong>Podsumowanie:</strong></p>
+            <ul>
+                <li>Wartość średnia informuje o ogólnym poziomie sygnału.</li>
+                <li>Wartość skuteczna pokazuje efektywność energetyczną.</li>
+                <li>Wartość maksymalna wskazuje na szczytowy punkt sygnału w okresie.</li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        document.querySelectorAll('.question').forEach(button => {
+            button.addEventListener('click', () => {
+                const answer = button.nextElementSibling;
+                answer.style.display = answer.style.display === 'block' ? 'none' : 'block';
+            });
+        });
+    </script>
+</body>
+
+</html>

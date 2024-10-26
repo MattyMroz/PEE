@@ -3,11 +3,97 @@ https://docs.google.com/spreadsheets/d/1C-5IATMDBbHs1orUkKg92lsSX73KOIlXjoMFXf41
 
 
 M1:
-1. Narysuj układ do prawdziwego mierzenia prądu (metodą techniczną?) ✅
-2. Wyjaśnij co oznacza wartość skuteczna prądu okresowo zmiennego ✅
-3. Zasada poprawności pomiaru napięcia i natężenia ✅
-4. Wartość średnia napięcia oraz wartość skuteczna napięcia ???
-5. Blad wzgledny, bezwgledny, graniczny ✅
+
+1. Blad wzgledny, bezwgledny, graniczny ✅
+
+    - **Błąd bezwzględny** (\(\Delta x\)) – różnica między wartością zmierzoną (\(x\)) a rzeczywistą (\(x_0\)), wyrażona jako:
+   Δx = x - x0  
+   Mówi o tym, jak daleko od prawdziwej wartości leży wynik.
+
+    - **Błąd względny** (\(\delta x\)) – stosunek błędu bezwzględnego do wartości rzeczywistej, najczęściej podawany w procentach:
+   δx = (Δx / x0) × 100%  
+   Pozwala ocenić, jak istotna jest różnica względem wielkości rzeczywistej.
+
+    - **Błąd graniczny** (\(\Delta_{gr}\)) – maksymalna dopuszczalna wartość błędu dla przyrządu w określonych warunkach (np. ciśnienie, temperatura, wilgotność). Można go wyznaczyć jako sumę procentów wartości wskazanej oraz zakresu pomiarowego:
+   Δgr x = (a% × x + b% × Zx)  
+   Określa największą możliwą odchyłkę dla danego zakresu przy poprawnym użytkowaniu przyrządu.
+
+1.2. INNE:
+
+    - **Zakres pomiarowy (Zx)**: Zakres, w którym miernik pracuje z ustaloną dokładnością.
+    - **Rozdzielczość (LSB)**: Najmniejsza wartość, jaką przyrząd jest w stanie wskazać.
+    - **Liczba cyfr znaczących**: Określa, ile pełnych cyfr od 0 do 9 może pojawić się na wyświetlaczu przyrządu.
+
+2. Metody pomiaru
+    - **Pomiar bezpośredni**
+        - To metoda, w której wartość mierzona jest bezpośrednio odczytywana z przyrządu.
+        - Przykłady: pomiar napięcia za pomocą woltomierza lub rezystancji omomierzem.
+        - Jest prosty, ale wymaga bezpośredniego podłączenia przyrządu do mierzonych wielkości.
+
+    - **Pomiar pośredni**
+        - W tej metodzie wartość mierzona nie jest odczytywana bezpośrednio, ale jest obliczana na podstawie innych, mierzonych wielkości.
+        - Przykład: pomiar rezystancji \( R_x \) za pomocą prawa Ohma (gdzie \( R_x = U / I \)), w którym potrzebny jest pomiar napięcia (\( U \)) i natężenia prądu (\( I \)).
+        - Ta metoda jest bardziej uniwersalna, szczególnie w przypadku pośrednich parametrów, takich jak pojemność czy indukcyjność.
+
+
+3. Schemat pomiaru rezystancji ✅
+    - ZDJĘCIE
+
+   - **Układ A (Duże rezystancje)**: Stosowany, gdy rezystancja mierzonego elementu jest wysoka w porównaniu do rezystancji wewnętrznej amperomierza (\( R_x > R_a \)). W tej konfiguracji pomija się wpływ rezystancji amperomierza, minimalizując błąd przy dużych rezystancjach.
+   - **Układ B (Małe rezystancje)**: Używany przy niskich rezystancjach mierzonego elementu (\( R_x < R_v \)). Pomija się wpływ rezystancji wewnętrznej woltomierza, co jest korzystne dla dokładności przy niskich rezystancjach.
+
+* Zasada poprawności pomiaru napięcia i natężenia ✅
+    - **Pomiar napięcia** – woltomierz podłącza się równolegle do elementu obwodu; jego rezystancja wewnętrzna powinna być duża, aby minimalizować błąd pomiaru.
+    - **Pomiar natężenia** – amperomierz włącza się szeregowo, a jego rezystancja powinna być jak najmniejsza, aby nie wprowadzać istotnego błędu do obwodu.
+
+
+
+4. Narysuj układ do prawdziwego mierzenia prądu (metodą techniczną?) ✅
+    - ZDJĘCIE
+    - Metoda techniczna pomiaru prądu polega na poprawnym połączeniu amperomierza i woltomierza w obwodzie.
+    - **Rysunek 4a**: Układ z pomiarem przy zadanej wartości prądu. W tym przypadku woltomierz mierzy sumę geometryczną napięć na kondensatorze i amperomierzu.
+    - **Rysunek 4b**: Układ z pomiarem przy zadanej wartości napięcia. Tutaj amperomierz wskazuje sumę geometryczną prądu płynącego przez kondensator oraz prądu płynącego przez woltomierz.
+    - Zazwyczaj przy tej metodzie nie uwzględnia się korekt wynikających z przyrządów pomiarowych.
+
+
+5. **Wartość średnia, skuteczna i maksymalna prądu oraz napięcia okresowo zmiennego**
+
+    - **Wartość średnia** – to uśredniona wartość chwilowa prądu lub napięcia w jednym okresie. Dla sygnałów sinusoidalnych oblicza się ją jako \( U_{śr} = \frac{2 \cdot U_m}{\pi} \approx 0,637 \cdot U_m \). Jest przydatna do ogólnej oceny poziomu sygnału, ale nie pokazuje jego efektywności energetycznej.
+
+    - **Wartość skuteczna** – odpowiada wartości prądu/napięcia stałego, który w tym samym czasie wywołałby taki sam efekt cieplny jak prąd/napięcie zmienne. Dla przebiegów sinusoidalnych jest to \( U_{sk} = \frac{U_m}{\sqrt{2}} \approx 0,707 \cdot U_m \). Wartość skuteczna jest kluczowa dla pomiarów, bo wskazuje na rzeczywistą moc dostarczaną do obwodu.
+
+    - **Wartość maksymalna (szczytowa)** – najwyższa wartość, jaką osiąga prąd lub napięcie w trakcie jednego okresu, oznaczana jako \( U_m \) lub \( I_m \). Jest istotna przy ocenie odporności elementów na szczytowe wartości, jednak nie mówi o realnej energii sygnału.
+
+    **Podsumowanie:**
+        - **Wartość średnia** informuje o ogólnym poziomie sygnału.
+        - **Wartość skuteczna** pokazuje efektywność energetyczną.
+        - **Wartość maksymalna** wskazuje na szczytowy punkt sygnału w okresie.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
