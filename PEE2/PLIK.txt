@@ -71,37 +71,112 @@ M1:
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 M3:
-1. Opisz niepewność pomiarową typu A i B ✅
-2. Niepewność standardowa typu A ✅
-3. Niepewność typu B ✅
-4. Niepewność rozszerzona ✅
+1. Pomiar i niepewność pomiaru
+    - Pomiar to zbiór operacji mających na celu wyznaczenie wartości mierzonej wielkości.
+    - Błąd pomiaru to różnica między wynikiem pomiaru a rzeczywistą wartością wielkości mierzonej. Ponieważ ta wartość jest nieznana, zamiast błędu mówimy o niepewności pomiaru.
+
+2. Niepewność pomiaru
+    - Jest parametrem charakteryzującym rozrzut wyników wokół mierzonej wartości.
+    - Wynik pomiaru jest kompletny, gdy podaje wartość mierzoną oraz przedział niepewności i poziom ufności (prawdopodobieństwo, że wynik mieści się w określonym przedziale).
+
+
+3. Źródła niepewności
+    - Niedoskonałości przyrządów, wzorców i stałych fizycznych.
+    - Niedoskonałości metod pomiarowych.
+    - Wpływ otoczenia i zmienność warunków środowiska.
+
+4. Usuwanie błędów
+    - Przed obliczeniem niepewności pomiarów należy usunąć błędy nadmierne i systematyczne.
+        - Błędy nadmierne – usuwane kryterium 3s, czyli eliminacja wyników odbiegających o ponad trzy odchylenia standardowe.
+        - Błędy systematyczne – usuwane na podstawie danych o dokładności przyrządów i metod pomiarowych.
+
+
+5. Estymata wartości i przedział niepewności
+    - Do oszacowania wielkości mierzonej wykonujemy szereg pomiarów i poddajemy je obróbce statystycznej.
+    - W wyniku otrzymujemy:
+        - Estymata punktowa – najczęściej średnia z pomiarów, która najlepiej odzwierciedla wartość prawdziwą.
+        - Przedział niepewności – przedział, w którym wartość mieści się z określonym poziomem ufności.
+
+6. Niepewność standardowa typu A i B ✅
+    - Zarówno niepewność standardowa typu A (uA), jak i typu B (uB) są miarami rozrzutu wyników pomiarów, ale różnią się sposobem ich obliczania i źródłami danych, na których się opierają.
+
+    - Niepewność standardowa typu A: ✅
+        - Obliczana na podstawie serii powtarzalnych pomiarów.
+        - Odzwierciedla błędy przypadkowe, które są nieprzewidywalne i zmieniają się w sposób losowy, wpływając na zmienność wyników.
+        - W praktyce uA jest równa odchyleniu standardowemu wartości średniej z serii pomiarów. Im więcej pomiarów wykonamy, tym dokładniejsze będzie oszacowanie.
+        Przykłądy:
+            - Niestałość parametrów układu pomiarowego (np. wahania temperatury, napięcia zasilania).
+            - Nieokreślone zmiany wielkości wpływających na pomiar (np. drgania, zakłócenia elektromagnetyczne).
+            - Przypadkowe zmiany wielkości mierzonych.
+    Wzór:
+        uₐ(xᵢ) = s(xᵢ)/√nᵢ = √[1/(nᵢ(nᵢ-1)) · ∑(xᵢₖ - x̄ᵢ)²]
+
+    - Niepewność standardowa typu B: ✅
+        - Obliczana na podstawie informacji pochodzących z:
+            - Dokumentacji technicznej przyrządu pomiarowego (np. dane producenta, świadectwa kalibracji).
+            - Doświadczenia z wcześniej prowadzonych pomiarów.
+            - Danych literaturowych.
+        - Odzwierciedla błędy systematyczne, które mają stałą wartość i znak, ale są nieznane.
+        Przykłady:
+            - Błędy narzędzi pomiarowych w różnych warunkach pracy.
+            - Błędy wynikające ze sprzężeń
+        - Do obliczenia uB najczęściej wykorzystuje się błąd graniczny (Δg), który jest sumą błędu wskazań i błędu odczytu.
+        Wartość uB zależy od założonego rozkładu prawdopodobieństwa błędu.
+    Wzór
+        uᵦ(xᵢ) = σ(Δxᵢ) = Δg/√3
+
+    uA i uB są dwoma różnymi rodzajami niepewności standardowej, które odzwierciedlają różne rodzaje błędów pomiarowych. Obie te wartości są niezbędne do obliczenia niepewności łącznej uC, która jest podstawą do obliczenia niepewności rozszerzonej (U). Niepewność rozszerzona określa przedział, w którym z zadanym prawdopodobieństwem znajduje się rzeczywista wartość mierzonej wielkości.
+
+7. Niepewność Łączna (uC) ✅?
+        (Niepewność standardowa pomiaru wielkości wejściowej X)
+    - Jest miarą rozrzutu wyników pomiaru
+    - Oblicza się ją jako sumę geometryczną niepewności standardowej typu A i typu B:
+        - uA: Jest obliczana na podstawie wielokrotnych pomiarów tej samej wielkości i odzwierciedla błędy przypadkowe.
+        - uB: Wynika z danych technicznych przyrządów pomiarowych, doświadczenia i danych literaturowych. Odzwierciedla błędy systematyczne.
+    Wzór:
+        uC = √(uA² + uB²)
+        u(xᵢ) = √[uₐ²(xᵢ) + uᵦ²(xᵢ)]
+
+8. Niepewność Rozszerzona (U)✅
+    Określa przedział, w którym spodziewamy się znaleźć prawdziwą wartość wielkości mierzonej z określonym poziomem ufności (p). Jest to ważna informacja, która pozwala na rzetelną ocenę wyników pomiarów.
+        - Uwzględnia zarówno błędy przypadkowe, jak i systematyczne
+        - Daje konkretny przedział, w którym znajduje się prawdziwa wartość, a nie tylko jedną, punktową estymatę.
+        - Uwzględnia poziom ufności, czyli prawdopodobieństwo, że prawdziwa wartość znajduje się w danym przedziale
+        - Jest łatwiejsza do interpretacji i pozwala na porównanie wyników pomiarów
+        Wzór:
+            U = kₚ ⋅ u꜀
+                kₚ - współczynnik rozszerzenia
+                u꜀ - niepewność łączna
+            U(y) = kₚ · u(y)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 M5:
 1. Schemat blokowy struktury systemu pomiarowego ✅

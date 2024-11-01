@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 10px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .question {
+            padding: 15px;
+            background-color: #007BFF;
+            color: #fff;
+            cursor: pointer;
+            border: none;
+            text-align: left;
+            width: 100%;
+            outline: none;
+            font-size: 14px;
+            font-weight: bold;
+            transition: background-color 0.3s, font-size 0.3s;
+            margin-bottom: 10px;
+            border-radius: 5px;
+        }
+
+        .question:hover {
+            background-color: #0056b3;
+        }
+
+        .answer {
+            padding: 15px;
+            display: none;
+            background-color: #f9f9f9;
+            border-top: 1px solid #ddd;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+    </style>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <h2>Zadanie M3</h2>
+
+        <button class="question">1. Pomiar i niepewność pomiaru ❌</button>
+        <div class="answer">
+            <p><strong>Pomiar:</strong> Zbiór operacji mających na celu wyznaczenie wartości mierzonej wielkości.</p>
+            <p><strong>Błąd pomiaru:</strong> Różnica między wynikiem pomiaru a rzeczywistą wartością wielkości mierzonej. Ponieważ ta wartość jest nieznana, zamiast błędu mówimy o niepewności pomiaru.</p>
+        </div>
+
+        <button class="question">2. Niepewność pomiaru ❌</button>
+        <div class="answer">
+            <p>Jest parametrem charakteryzującym rozrzut wyników wokół mierzonej wartości.</p>
+            <p>Wynik pomiaru jest kompletny, gdy podaje:</p>
+            <ul>
+                <li>Wartość mierzoną</li>
+                <li>Przedział niepewności</li>
+                <li>Poziom ufności (prawdopodobieństwo, że wynik mieści się w określonym przedziale)</li>
+            </ul>
+        </div>
+
+        <button class="question">3. Źródła niepewności ❌</button>
+        <div class="answer">
+            <p>Główne źródła niepewności to:</p>
+            <ul>
+                <li>Niedoskonałości przyrządów, wzorców i stałych fizycznych</li>
+                <li>Niedoskonałości metod pomiarowych</li>
+                <li>Wpływ otoczenia i zmienność warunków środowiska</li>
+            </ul>
+        </div>
+
+        <button class="question">4. Usuwanie błędów ❌</button>
+        <div class="answer">
+            <p>Przed obliczeniem niepewności pomiarów należy usunąć:</p>
+            <p><strong>Błędy nadmierne:</strong> Usuwane kryterium 3s, czyli eliminacja wyników odbiegających o ponad trzy odchylenia standardowe.</p>
+            <p><strong>Błędy systematyczne:</strong> Usuwane na podstawie danych o dokładności przyrządów i metod pomiarowych.</p>
+        </div>
+
+        <button class="question">5. Estymata wartości i przedział niepewności ❌</button>
+        <div class="answer">
+            <p>Do oszacowania wielkości mierzonej wykonujemy szereg pomiarów i poddajemy je obróbce statystycznej. W wyniku otrzymujemy:</p>
+            <ul>
+                <li><strong>Estymata punktowa:</strong> Najczęściej średnia z pomiarów, która najlepiej odzwierciedla wartość prawdziwą.</li>
+                <li><strong>Przedział niepewności:</strong> Przedział, w którym wartość mieści się z określonym poziomem ufności.</li>
+            </ul>
+        </div>
+
+        <button class="question">6. Niepewność standardowa typu A i B ✅</button>
+        <div class="answer">
+            <p>Zarówno niepewność standardowa typu A (uA), jak i typu B (uB) są miarami rozrzutu wyników pomiarów, ale różnią się sposobem ich obliczania i źródłami danych, na których się opierają.</p>
+            
+            <p><strong>Niepewność standardowa typu A:</strong></p>
+            <ul>
+                <li>Obliczana na podstawie serii powtarzalnych pomiarów</li>
+                <li>Odzwierciedla błędy przypadkowe, które są nieprzewidywalne i zmieniają się w sposób losowy, wpływając na zmienność wyników</li>
+                <li>W praktyce uA jest równa odchyleniu standardowemu wartości średniej z serii pomiarów. Im więcej pomiarów wykonamy, tym dokładniejsze będzie oszacowanie</li>
+            </ul>
+            <p>Przykłady:</p>
+            <ul>
+                <li>Niestałość parametrów układu pomiarowego (np. wahania temperatury, napięcia zasilania)</li>
+                <li>Nieokreślone zmiany wielkości wpływających na pomiar (np. drgania, zakłócenia elektromagnetyczne)</li>
+                <li>Przypadkowe zmiany wielkości mierzonych</li>
+            </ul>
+            <p>Wzór: \[u_a(x_i) = \frac{s(x_i)}{\sqrt{n_i}} = \sqrt{\frac{1}{n_i(n_i-1)} \sum(x_{ik} - \bar{x_i})^2}\]</p>
+            
+            <p><strong>Niepewność standardowa typu B:</strong></p>
+            <p>Obliczana na podstawie informacji pochodzących z:</p>
+            <ul>
+                <li>Dokumentacji technicznej przyrządu pomiarowego (np. dane producenta, świadectwa kalibracji)</li>
+                <li>Doświadczenia z wcześniej prowadzonych pomiarów</li>
+                <li>Danych literaturowych</li>
+            </ul>
+            <p>Odzwierciedla błędy systematyczne, które mają stałą wartość i znak, ale są nieznane.</p>
+            <p>Przykłady:</p>
+            <ul>
+                <li>Błędy narzędzi pomiarowych w różnych warunkach pracy</li>
+                <li>Błędy wynikające ze sprzężeń</li>
+            </ul>
+            <p>Do obliczenia uB najczęściej wykorzystuje się błąd graniczny (Δg), który jest sumą błędu wskazań i błędu odczytu.</p>
+            <p>Wartość uB zależy od założonego rozkładu prawdopodobieństwa błędu.</p>
+            <p>Wzór: \[u_b(x_i) = \sigma(\Delta x_i) = \frac{\Delta g}{\sqrt{3}}\]</p>
+        </div>
+
+        <button class="question">7. Niepewność łączna ✅</button>
+        <div class="answer">
+            <p><strong>Niepewność łączna (Niepewność standardowa pomiaru wielkości):</strong></p>
+            <p>Jest miarą rozrzutu wyników pomiaru.</p>
+            <p>Oblicza się ją jako sumę geometryczną niepewności standardowej typu A i typu B:</p>
+            <ul>
+                <li>uA: Jest obliczana na podstawie wielokrotnych pomiarów tej samej wielkości i odzwierciedla błędy przypadkowe</li>
+                <li>uB: Wynika z danych technicznych przyrządów pomiarowych, doświadczenia i danych literaturowych. Odzwierciedla błędy systematyczne</li>
+            </ul>
+            <p>Wzór: \[u_C = \sqrt{u_A^2 + u_B^2}\]</p>
+            <p>lub: \[u(x_i) = \sqrt{u_a^2(x_i) + u_b^2(x_i)}\]</p>
+        </div>
+
+        <button class="question">8. Niepewność rozszerzona ✅</button>
+        <div class="answer">
+            <p><strong>Niepewność rozszerzona:</strong> Określa przedział, w którym spodziewamy się znaleźć prawdziwą wartość wielkości mierzonej z określonym poziomem ufności (p). Jest to ważna informacja, która pozwala na rzetelną ocenę wyników pomiarów.</p>
+            <p>Cechy:</p>
+            <ul>
+                <li>Uwzględnia zarówno błędy przypadkowe, jak i systematyczne</li>
+                <li>Daje konkretny przedział, w którym znajduje się prawdziwa wartość, a nie tylko jedną, punktową estymatę</li>
+                <li>Uwzględnia poziom ufności, czyli prawdopodobieństwo, że prawdziwa wartość znajduje się w danym przedziale</li>
+                <li>Jest łatwiejsza do interpretacji i pozwala na porównanie wyników pomiarów</li>
+            </ul>
+            <p>Wzór: \[U = k_p \cdot u_C\]</p>
+            <p>gdzie:</p>
+            <ul>
+                <li>\(k_p\) - współczynnik rozszerzenia</li>
+                <li>\(u_C\) - niepewność łączna</li>
+            </ul>
+            <p>lub: \[U(y) = k_p \cdot u(y)\]</p>
+        </div>
+    </div>
+
+
+    <script>
+        document.querySelectorAll('.question').forEach(button => {
+            button.addEventListener('click', () => {
+                const answer = button.nextElementSibling;
+                answer.style.display = answer.style.display === 'block' ? 'none' : 'block';
+            });
+        });
+    </script>
+</body>
+
+</html>
