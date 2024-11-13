@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 10px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .question {
+            padding: 15px;
+            background-color: #007BFF;
+            color: #fff;
+            cursor: pointer;
+            border: none;
+            text-align: left;
+            width: 100%;
+            outline: none;
+            font-size: 14px;
+            font-weight: bold;
+            transition: background-color 0.3s, font-size 0.3s;
+            margin-bottom: 10px;
+            border-radius: 5px;
+        }
+
+        .question:hover {
+            background-color: #0056b3;
+        }
+
+        .answer {
+            padding: 15px;
+            display: none;
+            background-color: #f9f9f9;
+            border-top: 1px solid #ddd;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+    </style>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <h2>Zadanie M5</h2>
+
+        <button class="question">1. Schemat blokowy struktury systemu pomiarowego ✅</button>
+        <div class="answer">
+            <img src="M5_1.png" alt="Schemat blokowy struktury systemu pomiarowego" style="width:100%; margin: 10px 0;">
+            <p>Schemat blokowy struktury systemu pomiarowego przedstawia Rysunek 2 w źródle. System składa się z pięciu głównych elementów:</p>
+            <ul>
+                <li><strong>1. Jednostka centralna:</strong> Zarządza pracą całego systemu. Kontroluje przepływ informacji, szybkość i częstotliwość pomiarów oraz ustala warunki pomiaru. Działa zgodnie z ustalonym algorytmem, który może być stały lub modyfikowalny.</li>
+                <li><strong>2. Blok sensorów:</strong> Zamienia wielkości nieelektryczne na mierzalne wielkości elektryczne. Może również przekształcać wielkości elektryczne trudne do zmierzenia na łatwiejsze do pomiaru. W przypadku sensorów inteligentnych, jednostka centralna może wpływać na ich właściwości, takie jak kalibracja czy eliminacja zakłóceń.</li>
+                <li><strong>3. Moduł akwizycji:</strong> Zbiera i przekształca sygnały pomiarowe z postaci analogowej na cyfrową. Najczęściej poprzedza go kondycjonowanie sygnałów, np. wzmocnienie. Moduł akwizycji często zawiera multiplekser, który umożliwia pomiar sygnału z wielu sensorów za pomocą jednego przetwornika A/C. W systemach laboratoryjnych rolę modułu akwizycji pełnią karty pomiarowe (wewnętrzne z interfejsem PCI lub PCI Express) lub moduły rozszerzeń zewnętrznych z interfejsem USB.</li>
+                <li><strong>4. Moduł przetwarzania danych:</strong> Przetwarza dane cyfrowe zgodnie z wybranym algorytmem. W systemach przemysłowych do tego celu wykorzystuje się procesory sygnałowe. W przypadku komputerów osobistych, funkcje modułu przetwarzania realizuje sam komputer.</li>
+                <li><strong>5. Moduł komunikacji z użytkownikiem:</strong> Pozwala użytkownikowi na obserwację wyników pomiarów i parametryzację procesu pomiaru. Użytkownik komunikuje się z jednostką centralną za pośrednictwem tego modułu.</li>
+            </ul>
+        </div>
+
+        <button class="question">2. Konfiguracje komputerowych systemów pomiarowych ✅</button>
+        <div class="answer">
+
+            <p>Konfiguracja systemu pomiarowego określa sposób połączenia elementów i przepływ informacji. Wyróżniamy trzy podstawowe konfiguracje:</p>
+
+            <p><strong>Gwiazda:</strong></p>
+            <p>Wszystkie jednostki funkcjonalne są połączone bezpośrednio z jednostką centralną (komputerem lub sterownikiem).</p>
+            <p>Zalety:</p>
+            <ul>
+                <li>Niezależne sterowanie jednostkami</li>
+                <li>Awaria jednej nie wpływa na pozostałe</li>
+            </ul>
+            <p>Wady:</p>
+            <ul>
+                <li>Wymaga osobnych interfejsów dla każdej jednostki</li>
+                <li>Duża liczba kabli</li>
+            </ul>
+            <p>Przykład: System z interfejsem RS-232C lub USB.</p>
+
+            <p><strong>Magistrala:</strong></p>
+            <p>Wszystkie jednostki połączone wspólną magistralą. Każde urządzenie ma unikalny adres.</p>
+            <p>Zalety:</p>
+            <ul>
+                <li>Mniej kabli niż w gwieździe</li>
+                <li>Łatwa rozbudowa</li>
+            </ul>
+            <p>Wady:</p>
+            <ul>
+                <li>Awaria magistrali zatrzymuje system</li>
+                <li>Prędkość ograniczona najwolniejszym urządzeniem</li>
+            </ul>
+            <p>Przykład: System z interfejsem IEEE-488 (GPIB).</p>
+
+            <p><strong>Pętla (pierścień):</strong></p>
+            <p>Informacja przekazywana sekwencyjnie między jednostkami w pętli.</p>
+            <p>Zalety:</p>
+            <ul>
+                <li>Najmniej linii transmisyjnych</li>
+                <li>Prosta struktura</li>
+            </ul>
+            <p>Wady:</p>
+            <ul>
+                <li>Najniższa prędkość transmisji</li>
+                <li>Awaria jednego urządzenia może zatrzymać system</li>
+            </ul>
+        </div>
+
+        <button class="question">3. Opisz interfejs USB ✅</button>
+        <div class="answer">
+            <p>USB (Universal Serial Bus) to popularny interfejs do łączenia urządzeń peryferyjnych z komputerem. Definiuje parametry elektryczne, protokoły komunikacyjne i typy złączy.</p>
+
+            <p>Główne cechy USB:</p>
+            <ul>
+                <li>Automatyczne rozpoznawanie urządzeń</li>
+                <li>Możliwość zasilania urządzeń z portu</li>
+            </ul>
+
+            <p><strong>3.1. Standardy USB i ich szybkości:</strong></p>
+            <table>
+                <tr>
+                    <th>Standard USB</th>
+                    <th>Nazwa</th>
+                    <th>Maksymalna szybkość</th>
+                </tr>
+                <tr>
+                    <td>USB 1.0/1.1</td>
+                    <td>Low Speed</td>
+                    <td>1,5 Mb/s</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>Full Speed</td>
+                    <td>12 Mb/s</td>
+                </tr>
+                <tr>
+                    <td>USB 2.0</td>
+                    <td>High Speed</td>
+                    <td>480 Mb/s</td>
+                </tr>
+                <tr>
+                    <td>USB 3.0</td>
+                    <td>SuperSpeed</td>
+                    <td>5 Gb/s</td>
+                </tr>
+                <tr>
+                    <td>USB 3.1</td>
+                    <td>SuperSpeed+</td>
+                    <td>10 Gb/s</td>
+                </tr>
+                <tr>
+                    <td>USB 3.2</td>
+                    <td>SuperSpeed+</td>
+                    <td>10 i 20 Gb/s</td>
+                </tr>
+            </table>
+
+            <p><strong>3.2. Rodzaje USB i parametry transmisji</strong></p>
+            <p>Typy złączy:</p>
+            <ul>
+                <li>USB A/B: 4 styki (USB 1.x, 2.0)</li>
+                <li>Mini/Micro USB: 5 styków</li>
+                <li>USB 3.x: 9 styków</li>
+            </ul>
+
+            <p>Zasilanie:</p>
+            <ul>
+                <li>USB 1.X/2.0: 5V/500mA</li>
+                <li>USB 3.x: 5V/900mA</li>
+                <li>Porty ładowania: do 5A przy 20V</li>
+            </ul>
+
+            <p>Topologia:</p>
+            <ul>
+                <li>Struktura gwiaździsta/drzewiasta</li>
+                <li>Max 127 urządzeń</li>
+                <li>Max 5 poziomów</li>
+            </ul>
+        </div>
+
+        <button class="question">4. Struktura układu transmisyjnego z interfejsem RS-232C ???</button>
+        <img src="M5_2.png" alt="Konfiguracje komputerowych systemów pomiarowych" style="width:100%; margin: 10px 0;">
+        <div class="answer">
+            <p>Zdjęcie w źródle:</p>
+            <p>Dwie wersje układu:</p>
+            <p>a) Z modemami DCE:</p>
+            <ul>
+                <li>Dwa terminale DTE połączone przez modemy DCE</li>
+                <li>Modemy połączone kanałem transmisyjnym (linia telefoniczna, przewodowa, radiowa, optyczna)</li>
+            </ul>
+
+            <p>b) Bez urządzeń DCE:</p>
+            <ul>
+                <li>Funkcja modemu zrealizowana w urządzeniach końcowych</li>
+                <li>Obecnie częściej stosowana wersja</li>
+            </ul>
+        </div>
+
+        <button class="question">5. Szyny i liczba linii w IEEE-488 ???</button>
+        <div class="answer">
+            <p>Interfejs IEEE-488 zawiera:</p>
+
+            <p>1. Szyna danych (8 linii):</p>
+            <ul>
+                <li>DIO1 do DIO8</li>
+                <li>7 bitów na znaki ASCII</li>
+                <li>8 bit kontrolny</li>
+            </ul>
+
+            <p>2. Szyna sterowania (5 linii):</p>
+            <ul>
+                <li>IFC (Interface Clear)</li>
+                <li>ATN (Attention)</li>
+                <li>REN (Remote Enable)</li>
+                <li>SRQ (Service Request)</li>
+                <li>EOI (End Or Identify)</li>
+            </ul>
+
+            <p>3. Szyna koordynacji (3 linie):</p>
+            <ul>
+                <li>DAV (Data Valid)</li>
+                <li>NRFD (Not Ready For Data)</li>
+                <li>NDAC (Not Data Accepted)</li>
+            </ul>
+
+            <p>Dodatkowo: 8 linii masy (9 w IEC-625)</p>
+        </div>
+    </div>
+
+
+    <script>
+        document.querySelectorAll('.question').forEach(button => {
+            button.addEventListener('click', () => {
+                const answer = button.nextElementSibling;
+                answer.style.display = answer.style.display === 'block' ? 'none' : 'block';
+            });
+        });
+    </script>
+</body>
+
+</html>

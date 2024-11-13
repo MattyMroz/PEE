@@ -180,10 +180,204 @@ M3:
 
 M5:
 1. Schemat blokowy struktury systemu pomiarowego ✅
-2. Struktury pomiarowego systemu komputerowego ✅
-3. Standardy USB i ich szybkości ✅
-4. Opisz interfejs USB ✅
-5. Konfiguracje komputerowych systemów pomiarowych ???
+1.2. Narysować strukturę systemu pomiarowego ✅
+Przedstawiony na rysunku:
+
+Schemat blokowy struktury systemu pomiarowego przedstawia Rysunek 2 w źródle. System składa się z pięciu głównych elementów:
+
+    - 1. Jednostka centralna: Zarządza pracą całego systemu. Kontroluje przepływ informacji, szybkość i częstotliwość pomiarów oraz ustala warunki pomiaru. Działa zgodnie z ustalonym algorytmem, który może być stały lub modyfikowalny.
+
+    - 2. Blok sensorów: Zamienia wielkości nieelektryczne na mierzalne wielkości elektryczne. Może również przekształcać wielkości elektryczne trudne do zmierzenia na łatwiejsze do pomiaru. W przypadku sensorów inteligentnych, jednostka centralna może wpływać na ich właściwości, takie jak kalibracja czy eliminacja zakłóceń.
+
+    - 3. Moduł akwizycji: Zbiera i przekształca sygnały pomiarowe z postaci analogowej na cyfrową. Najczęściej poprzedza go kondycjonowanie sygnałów, np. wzmocnienie. Moduł akwizycji często zawiera multiplekser, który umożliwia pomiar sygnału z wielu sensorów za pomocą jednego przetwornika A/C. W systemach laboratoryjnych rolę modułu akwizycji pełnią karty pomiarowe (wewnętrzne z interfejsem PCI lub PCI Express) lub moduły rozszerzeń zewnętrznych z interfejsem USB.
+
+    - 4. Moduł przetwarzania danych: Przetwarza dane cyfrowe zgodnie z wybranym algorytmem. W systemach przemysłowych do tego celu wykorzystuje się procesory sygnałowe. W przypadku komputerów osobistych, funkcje modułu przetwarzania realizuje sam komputer.
+
+    - 5. Moduł komunikacji z użytkownikiem: Pozwala użytkownikowi na obserwację wyników pomiarów i parametryzację procesu pomiaru. Użytkownik komunikuje się z jednostką centralną za pośrednictwem tego modułu.
+
+
+
+
+
+2. Konfiguracje komputerowych systemów pomiarowych ✅
+Konfiguracja systemu pomiarowego określa sposób połączenia elementów i przepływ informacji. Wyróżniamy trzy podstawowe konfiguracje:
+
+Gwiazda:
+    Wszystkie jednostki funkcjonalne są połączone bezpośrednio z jednostką centralną (komputerem lub sterownikiem).
+
+    Zalety:
+        - Niezależne sterowanie jednostkami
+        - Awaria jednej nie wpływa na pozostałe
+
+    Wady:
+        - Wymaga osobnych interfejsów dla każdej jednostki
+        - Duża liczba kabli
+
+    Przykład: System z interfejsem RS-232C lub USB.
+
+Magistrala:
+    Wszystkie jednostki połączone wspólną magistralą. Każde urządzenie ma unikalny adres.
+
+    Zalety:
+        - Mniej kabli niż w gwieździe
+        - Łatwa rozbudowa
+
+    Wady:
+        - Awaria magistrali zatrzymuje system
+        - Prędkość ograniczona najwolniejszym urządzeniem
+
+    Przykład: System z interfejsem IEEE-488 (GPIB).
+
+Pętla (pierścień):
+    Informacja przekazywana sekwencyjnie między jednostkami w pętli.
+
+    Zalety:
+        - Najmniej linii transmisyjnych
+        - Prosta struktura
+
+    Wady:
+        - Najniższa prędkość transmisji
+        - Awaria jednego urządzenia może zatrzymać system
+
+
+
+
+3. Opisz interfejs USB ✅
+3.1. Standardy USB i ich szybkości ✅
+3.2. Rodzaje USB oraz maksymalne wartości graniczne transmisji danych ✅
+
+USB (Universal Serial Bus) to popularny interfejs do łączenia urządzeń peryferyjnych z komputerem. Definiuje parametry elektryczne, protokoły komunikacyjne i typy złączy.
+
+Główne cechy USB:
+    - Automatyczne rozpoznawanie urządzeń
+    - Możliwość zasilania urządzeń z portu
+
+3.1. Standardy USB i ich szybkości:
+
+Standard USB    | Nazwa          | Maksymalna szybkość
+----------------|----------------|---------------------------
+USB 1.0/1.1     | Low Speed      | 1,5 Mb/s
+                | Full Speed     | 12 Mb/s
+USB 2.0         | High Speed     | 480 Mb/s
+USB 3.0         | SuperSpeed     | 5 Gb/s
+USB 3.1         | SuperSpeed+    | 10 Gb/s
+USB 3.2         | SuperSpeed+    | 10 i 20 Gb/s
+
+3.2. Rodzaje USB i parametry transmisji
+
+Typy złączy:
+    - USB A/B: 4 styki (USB 1.x, 2.0)
+    - Mini/Micro USB: 5 styków
+    - USB 3.x: 9 styków
+
+Zasilanie:
+    - USB 1.X/2.0: 5V/500mA
+    - USB 3.x: 5V/900mA
+    - Porty ładowania: do 5A przy 20V
+
+Topologia:
+    - Struktura gwiaździsta/drzewiasta
+    - Max 127 urządzeń
+    - Max 5 poziomów
+
+
+4. Struktura układu transmisyjnego z interfejsem RS-232C ???
+Zdjęcie w źródle:
+Dwie wersje układu:
+a) Z modemami DCE:
+- Dwa terminale DTE połączone przez modemy DCE
+- Modemy połączone kanałem transmisyjnym (linia telefoniczna, przewodowa, radiowa, optyczna)
+
+b) Bez urządzeń DCE:
+- Funkcja modemu zrealizowana w urządzeniach końcowych
+- Obecnie częściej stosowana wersja
+
+5. Szyny i liczba linii w IEEE-488 ???
+
+Interfejs IEEE-488 zawiera:
+
+1. Szyna danych (8 linii):
+- DIO1 do DIO8
+- 7 bitów na znaki ASCII
+- 8 bit kontrolny
+
+2. Szyna sterowania (5 linii):
+- IFC (Interface Clear)
+- ATN (Attention)
+- REN (Remote Enable)
+- SRQ (Service Request)
+- EOI (End Or Identify)
+
+3. Szyna koordynacji (3 linie):
+- DAV (Data Valid)
+- NRFD (Not Ready For Data)
+- NDAC (Not Data Accepted)
+
+Dodatkowo: 8 linii masy (9 w IEC-625)
+
+
+
+
+
+
+
+
+
+
+
+
+
+1. Definicja i struktura
+Komputerowy system pomiarowy to zespół aparatury pomiarowej połączonej z komputerem, który, dzięki specjalistycznemu oprogramowaniu, umożliwia pozyskiwanie, prezentację, archiwizację, transmisję i dalsze przetwarzanie danych pomiarowych.
+
+"Komputerowy system pomiarowy można zdefiniować jako zespół aparatury pomiarowej połączonej ze sprzętem komputerowym, wyposażonym w specjalistyczne oprogramowanie do przetwarzania informacji pomiarowych w celu ich pozyskiwania, prezentacji, archiwizacji, transmisji i ewentualnego dalszego przetwarzania."
+
+Typowa struktura takiego systemu składa się z:
+
+Jednostki centralnej: najczęściej komputera osobistego lub sterownika przemysłowego,
+Bloku sensorów: przekształcających wielkości nieelektryczne na mierzalne wielkości elektryczne,
+Modułu akwizycji: odpowiedzialnego za zbieranie i przetwarzanie sygnałów pomiarowych na postać cyfrową,
+Modułu przetwarzania danych: realizującego cyfrową obróbkę sygnałów,
+Modułu komunikacji z użytkownikiem: umożliwiającego obserwację wyników i parametryzację procesu pomiarowego.
+2. Konfiguracje połączeń
+Elementy systemu pomiarowego można połączyć w trzech podstawowych konfiguracjach:
+
+Gwiazda: wszystkie jednostki funkcjonalne są połączone bezpośrednio z jednostką centralną.
+Zapewnia niezależne kontrolowanie jednostek, ale wymaga indywidualnych interfejsów.
+Przykład: system oparty na interfejsie RS-232C lub USB.
+Magistrala: jednostki łączą się z jednostką centralną za pośrednictwem jednego interfejsu.
+Identyfikacja jednostek odbywa się poprzez adresowanie.
+Przykład: system wykorzystujący interfejs IEEE-488.
+Pętla (pierścień): informacja z jednostki centralnej trafia kolejno do wszystkich jednostek.
+Wymaga adresowania urządzeń.
+Charakteryzuje się najmniejszą prędkością, ale wymaga najmniej linii do przesyłu danych.
+3. Interfejsy pomiarowe
+Interfejs pomiarowy to element łączący przyrząd pomiarowy z jednostką centralną. Dzielimy je na:
+
+Szeregowe: dane przesyłane są bit po bicie (np. RS-232C, EIA-485, USB, Ethernet).
+Równoległe: dane przesyłane są w postaci słów, najczęściej 8-bitowych (np. IEEE-488, VXI, PXI).
+Najpopularniejsze interfejsy:
+
+RS-232C: prosty i tani w realizacji, ale o niewielkiej prędkości transmisji. W nowych rozwiązaniach zastępowany przez USB, ale warstwa logiczna komunikacji często nadal opiera się na RS-232C.
+IEEE-488 (GPIB): standard w profesjonalnej aparaturze pomiarowej, charakteryzujący się dużą szybkością transmisji i odpornością na błędy.
+USB: uniwersalny i elastyczny, umożliwia podłączenie szerokiej gamy urządzeń peryferyjnych, w tym aparatury pomiarowej.
+SCPI (IEEE-488.2): standard formatu komend i danych, wykorzystywany do komunikacji poprzez różne interfejsy, nie tylko IEEE-488.
+4. Wyznaczanie niepewności pomiarowych
+W "Instrukcji _5M.pdf" opisano również metodykę wyznaczania niepewności pomiarowych:
+
+Niepewność typu A: wyznaczana na podstawie odchylenia standardowego średniej z n pomiarów.
+Niepewność typu B: wyznaczana na podstawie błędu granicznego przyrządu pomiarowego, podanego w dokumentacji producenta.
+Niepewność łączna: suma kwadratów niepewności typu A i B.
+Niepewność rozszerzona: obliczana z zależności U_p = k * u_C, gdzie współczynnik k zależy od charakteru rozkładu.
+
+
+
+
+
+
+
+
+
 
 
 M6:
