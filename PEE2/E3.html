@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 10px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .question {
+            padding: 15px;
+            background-color: #007BFF;
+            color: #fff;
+            cursor: pointer;
+            border: none;
+            text-align: left;
+            width: 100%;
+            outline: none;
+            font-size: 14px;
+            font-weight: bold;
+            transition: background-color 0.3s, font-size 0.3s;
+            margin-bottom: 10px;
+            border-radius: 5px;
+        }
+
+        .question:hover {
+            background-color: #0056b3;
+        }
+
+        .answer {
+            padding: 15px;
+            display: none;
+            background-color: #f9f9f9;
+            border-top: 1px solid #ddd;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 10px auto;
+        }
+    </style>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <h2>Zadanie E3</h2>
+
+        <button class="question">1. Podstawowe elementy obwodu ✅</button>
+        <div class="answer">
+            <h3>Rezystor (R)</h3>
+            <ul>
+                <li>Stawia opór przepływającemu prądowi</li>
+                <li>Rozprasza energię w postaci ciepła</li>
+                <li>Nie magazynuje energii</li>
+                <li>Charakterystyka liniowa: \(U = IR\)</li>
+            </ul>
+
+            <h3>Cewka (L)</h3>
+            <ul>
+                <li>Magazynuje energię w postaci pola magnetycznego</li>
+                <li>Wprowadza przesunięcie fazowe +90° (+π/2)</li>
+                <li>Prąd opóźniony względem napięcia</li>
+            </ul>
+
+            <h3>Kondensator (C)</h3>
+            <ul>
+                <li>Magazynuje energię w postaci pola elektrycznego</li>
+                <li>Wprowadza przesunięcie fazowe -90° (-π/2)</li>
+                <li>Prąd wyprzedza napięcie</li>
+            </ul>
+        </div>
+
+        <button class="question">2. Rodzaje połączeń ✅</button>
+        <div class="answer">
+            <ul>
+                <li>Szeregowe - elementy połączone jeden za drugim, ten sam prąd płynie przez wszystkie elementy</li>
+                <li>Równoległe - elementy połączone równolegle do źródła, to samo napięcie na wszystkich elementach</li>
+                <li>Mieszane - kombinacja połączeń szeregowych i równoległych</li>
+            </ul>
+            <img src="./E3_1.png" alt="Rodzaje połączeń">
+        </div>
+
+        <button class="question">3. Rezonans elektryczny ✅</button>
+        <div class="answer">
+            <p>Stan obwodu elektrycznego, w którym:</p>
+            <ul>
+                <li>Reaktancja wypadkowa = 0</li>
+                <li>Impedancja \(Z = R\)</li>
+                <li>Kąt przesunięcia fazowego \(φ = 0\)</li>
+                <li>Moc bierna \(Q = 0\)</li>
+                <li>Moc czynna \(P = UI\)</li>
+            </ul>
+            <p>Oznacza to, że cała energia ze źródła zamieniana jest na ciepło w rezystancji R.</p>
+            
+            <p>Rodzaje:</p>
+            <ul>
+                <li>Rezonans napięć - w obwodach szeregowych RLC</li>
+                <li>Rezonans prądów - w obwodach równoległych RLC</li>
+            </ul>
+        </div>
+
+        <button class="question">4. Rodzaje rezonansów ✅</button>
+        <div class="answer">
+            <h3>Rezonans napięć (szeregowy RLC):</h3>
+            <p>Charakterystyka:</p>
+            <ul>
+                <li>Minimalna impedancja (\(Z = R\))</li>
+                <li>Maksymalny prąd w obwodzie</li>
+                <li>Napięcie w fazie z prądem (\(φ = 0\))</li>
+                <li>\(U_L + U_C = 0\) (napięcia na L i C równoważą się)</li>
+                <li>\(X_L = X_C\) (równość reaktancji)</li>
+                <li>Wysokie napięcia na L i C</li>
+            </ul>
+            <p>Dobroć: \(Q = \frac{ωL}{R}\)</p>
+            <p>Częstotliwość rezonansowa: \(f_r = \frac{1}{2π\sqrt{LC}}\)</p>
+            <p>Przebieg prądu i napięcia w fazie: \(U = \sqrt{U_R^2 + (U_L - U_C)^2}\)</p>
+
+            <h3>Rezonans prądów (równoległy RLC):</h3>
+            <p>Charakterystyka:</p>
+            <ul>
+                <li>Maksymalna impedancja (\(Z = R\))</li>
+                <li>Minimalny prąd źródła</li>
+                <li>Prąd w fazie z napięciem (\(φ = 0\))</li>
+                <li>\(I_L = I_C\) (prądy w gałęziach L i C są równe)</li>
+                <li>\(X_L = X_C\) (równość reaktancji)</li>
+                <li>Wysokie prądy przez L i C</li>
+            </ul>
+            <p>Dobroć: \(Q = \frac{R}{ωL}\)</p>
+            <p>Częstotliwość rezonansowa: \(f_r = \frac{1}{2π\sqrt{LC}}\)</p>
+            <p>Przebieg prądu i napięcia w fazie: \(I = \sqrt{I_R^2 + (I_C - I_L)^2}\)</p>
+        </div>
+
+        <button class="question">5. Dobroć obwodu rezonansowego ✅</button>
+        <div class="answer">
+            <ul>
+                <li>\(Q = \frac{X_L}{R} = \frac{ωL}{R} = \frac{2πfL}{R}\)</li>
+                <li>Określa stosunek napięcia na indukcyjności do napięcia zasilającego w stanie rezonansu</li>
+                <li>Wpływa na ostrość krzywej rezonansowej - im większa dobroć, tym ostrzejsza krzywa</li>
+            </ul>
+        </div>
+
+        <button class="question">6. Zastosowania praktyczne ❌</button>
+        <div class="answer">
+            <h3>Filtracja i selektywność:</h3>
+            <ul>
+                <li>Wydzielanie i wybieranie sygnałów o określonej częstotliwości</li>
+                <li>Radiotechnika: dostrajanie odbiorników, selekcja częstotliwości</li>
+            </ul>
+            
+            <h3>Inne zastosowania:</h3>
+            <ul>
+                <li>Obwody rezonansowe: generacja sygnałów</li>
+                <li>Systemy energetyczne: kompensacja mocy biernej, poprawa współczynnika mocy</li>
+            </ul>
+        </div>
+
+        <button class="question">7. Pojęcia ❌</button>
+        <div class="answer">
+            <ul>
+                <li>Impedancja (Z): opór całkowity obwodu dla prądu przemiennego</li>
+                <li>Reaktancja (X): opór obwodu dla prądu przemiennego wynikający z obecności indukcyjności (XL) lub pojemności (XC)</li>
+                <li>Kąt przesunięcia fazowego (φ): różnica faz między napięciem a prądem w obwodzie</li>
+                <li>Krzywa rezonansowa: wykres zależności prądu (lub impedancji) od częstotliwości</li>
+                <li>Pasmo przepuszczania: zakres częstotliwości wokół częstotliwości rezonansowej, w którym prąd w obwodzie jest bliski wartości maksymalnej</li>
+                <li>Selektywność: zdolność obwodu do przepuszczania prądów o częstotliwościach zbliżonych do fr i tłumienia prądów o innych częstotliwościach</li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        document.querySelectorAll('.question').forEach(button => {
+            button.addEventListener('click', () => {
+                const answer = button.nextElementSibling;
+                answer.style.display = answer.style.display === 'block' ? 'none' : 'block';
+            });
+        });
+    </script>
+</body>
+
+</html>

@@ -682,6 +682,130 @@ Zasada działania:
 
 
 
+3E
+
+## Najważniejsze informacje z pliku PDF do nauki:
+
+*Rezonans w obwodach elektrycznych*
+
+
+*Rezonans napięć (obwód szeregowy RLC)*
+
+* *Charakterystyka:* Wzrost napięcia na cewce i kondensatorze, potencjalnie przekraczający napięcie zasilające (przepięcia).
+* *Dobroć obwodu (Qs):* 
+    * Qs = XL / R = ωL / R = 2πfL / R
+    * Określa stosunek napięcia na indukcyjności do napięcia zasilającego w stanie rezonansu.
+    * Wpływa na ostrość krzywej rezonansowej - im większa dobroć, tym ostrzejsza krzywa.
+
+*Rezonans prądów (obwód równoległy RLC)*
+
+* *Charakterystyka:* Prądy płynące przez cewkę i kondensator (IL, IC) mogą wielokrotnie przekraczać prąd dopływający do obwodu ze źródła.
+* *Dobroć obwodu (Qr):*
+    * Qr = IL / IR = IC / IR = R / ωL = RωC
+    * Określa stosunek prądu płynącego przez cewkę (lub kondensator) do prądu płynącego przez rezystancję w stanie rezonansu.
+
+*Pojęcia powiązane:*
+
+* *Impedancja (Z):* opór całkowity obwodu dla prądu przemiennego.
+* *Reaktancja (X):* opór obwodu dla prądu przemiennego wynikający z obecności indukcyjności (XL) lub pojemności (XC).
+* *Kąt przesunięcia fazowego (φ):* różnica faz między napięciem a prądem w obwodzie.
+* *Krzywa rezonansowa:* wykres zależności prądu (lub impedancji) od częstotliwości.
+* *Pasmo przepuszczania:* zakres częstotliwości wokół częstotliwości rezonansowej, w którym prąd w obwodzie jest bliski wartości maksymalnej.
+* *Selektywność:* zdolność obwodu do przepuszczania prądów o częstotliwościach zbliżonych do fr i tłumienia prądów o innych częstotliwościach.
+
+
+
+
+
+
+
+
+
+
+
+
+1. Podstawowe elementy obwodu
+    - Rezystor (R) - (stawia opór przepływającemu prądowi, rozprasza energię w postaci ciepła, nie magazynuje energii), Charakterystyka liniowa (U = IR)
+    - Cewka (L) - (magazynuje energię w postaci pola magnetycznego) - wprowadza przesunięcie fazowe +90° (+π/2)  (prąd opóźniony względem napięcia)
+    - Kondensator (C) - (magazynuje energię w postaci pola elektrycznego) - wprowadza przesunięcie fazowe -90° (-π/2) (prąd wyprzedza napięcie)
+
+2. Rodzaje połączeń
+    - Szeregowe - elementy połączone jeden za drugim, ten sam prąd płynie przez wszystkie elementy.
+    - Równoległe - elementy połączone równolegle do źródła, to samo napięcie na wszystkich elementach.
+    - Mieszane - kombinacja połączeń szeregowych i równoległych.
+    ZDJĘCIE!!! o nazwie E3_1.png
+
+
+3. Rezonans elektryczny
+    - Stan obwodu elektrycznego, w którym:
+        - reaktancja wypadkowa = 0
+        - impedancja Z = R
+        - kąt przesunięcia fazowego φ = 0
+        - moc bierna Q = 0
+        - moc czynna P = UI
+    - Oznacza to, że cała energia ze źródła zamieniana jest na ciepło w rezystancji R.
+    - Rodzaje:
+        - Rezonans napięć - w obwodach szeregowych RLC
+        - Rezonans prądów - w obwodach równoległych RLC
+
+4. Rodzaje rezonansów
+
+    Rezonans napięć (szeregowy RLC):
+        - Występuje w obwodach RLC połączonych szeregowo
+        - Charakterystyka:
+            • Minimalna impedancja (Z = R)
+            • Maksymalny prąd w obwodzie
+            • Napięcie w fazie z prądem (φ = 0)
+            • UL + UC = 0 (napięcia na L i C równoważą się)
+            • XL = XC (równość reaktancji)
+            • Wysokie napięcia na L i C
+        - Dobroć: Q = wL/R
+        - Częstotliwość rezonansowa: fr = 1/(2π√LC) (L - indukcyjność, C - pojemność)
+        - Przebieg prądu i napięcia w fazie: U = √(UR² + (UL - UC)²)
+
+    Rezonans prądów (równoległy RLC):
+        - Występuje w obwodach RLC połączonych równolegle
+        - Charakterystyka:
+            • Maksymalna impedancja (Z = R)
+            • Minimalny prąd źródła
+            • Prąd w fazie z napięciem (φ = 0)
+            • IL = IC (prądy w gałęziach L i C są równe)
+            • XL = XC (równość reaktancji)
+            • Wysokie prądy przez L i C
+        - Dobroć: Q = R/wL
+        - Częstotliwość rezonansowa: fr = 1/(2π√LC) (L - indukcyjność, C - pojemność)
+        - Przebieg prądu i napięcia w fazie: I = √(IR² + (IC - IL)²)
+
+
+5. Dobroć obwodu rezonansowego
+    - Q = XL/R = ωL/R = 2πfL/R
+    - Określa stosunek napięcia na indukcyjności do napięcia zasilającego w stanie rezonansu.
+    - Wpływa na ostrość krzywej rezonansowej - im większa dobroć, tym ostrzejsza krzywa.
+
+
+6. Zastosowania praktyczne
+    - Filtracja i selektywność: wydzielanie i wybieranie sygnałów o określonej częstotliwości
+        - Radiotechnika: dostrajanie odbiorników, selekcja częstotliwości
+    - Obwody rezonansowe: generacja sygnałów
+    - Systemy energetyczne: kompensacja mocy biernej, poprawa współczynnika mocy
+
+
+7. Pojęcia:
+    - Impedancja (Z): opór całkowity obwodu dla prądu przemiennego.
+    - Reaktancja (X): opór obwodu dla prądu przemiennego wynikający z obecności indukcyjności (XL) lub pojemności (XC).
+    - Kąt przesunięcia fazowego (φ): różnica faz między napięciem a prądem w obwodzie.
+    - Krzywa rezonansowa: wykres zależności prądu (lub impedancji) od częstotliwości.
+    - Pasmo przepuszczania: zakres częstotliwości wokół częstotliwości rezonansowej, w którym prąd w obwodzie jest bliski wartości maksymalnej.
+    - Selektywność: zdolność obwodu do przepuszczania prądów o częstotliwościach zbliżonych do fr i tłumienia prądów o innych częstotliwościach.
+
+
+
+
+
+
+
+
+
 
 
 
