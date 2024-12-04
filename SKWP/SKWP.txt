@@ -1,0 +1,233 @@
+1. W jakiej kolejności transformacji przeprowadzamy obrót punktu względem dowolnie wybranego innego punktu w przestrzeni 3D:
+
+Stworzenie układu lokalnego współrzędnych o początku w środku obrotu, stworzenie drugiego lokalnego nakładającego odpowiednie osie, obrót zasadniczy i transformacje odwrotne
+--------------------------------
+2. Macierz projekcji prostokątnej na płaszczyznę yz:
+
+- ma wartość "0" w pozycji 1,1 macierzy
+--------------------------------
+3. W projekcji aksonometrycznej izometrycznej współczynnik skrótu względem osi wynosi:
+- dla wszystkich osi 0,82
+--------------------------------
+
+4. Macierz odbicia w płaszczyźnie y-z to macierz która:
+- ma wartość "-1" w pozycji 1,1 macierzy
+
+|-1 0 0|
+|0  1 0|
+|0  0 1|
+--------------------------------
+5. Jaki warunek musi być spełniony aby skalowanie było skalowaniem równomiernym:
+- wszystkie współczynniki skalowania na diagonali muszą być takie same
+
+|k 0 0|
+|0 k 0|
+|0 0 k|
+--------------------------------
+6. W rzutowaniu perspektywicznym wszystkie promienie kształtujące rzut są do siebie:
+Leżą pod różnym kontem w stosunku do środka rzutowania
+--------------------------------
+
+7. Oblicz położenie po transformacji wierzchołków prostokąta A(3,0);B(6,0); C(3,2);D(6,2). Zastosuj przesunięcie o wektor [3,0].
+
+Przesunięcie o wektor [3,0] oznacza dodanie 3 do współrzędnej x każdego punktu
+
+A(3,0) + [3,0] = A'(6,0)
+B(6,0) + [3,0] = B'(9,0)
+C(3,2) + [3,0] = C'(6,2)
+D(6,2) + [3,0] = D'(9,2)
+
+A'(6,0) B'(9,0) C'(6,2) D'(9,2)
+--------------------------------
+8. Oblicz położenie po transformacji wierzchołków trójkąta A(1,1);B(4,2);C(1,3). Zastosuj odbicie względem osi X
+
+A(1,1) B(4,2) C(1,3) -> A(1,-1) B(4,-2) C(1,-3)
+--------------------------------
+9. Oblicz położenie po transformacji wierzchołków prostokąta A(3,0);B(6,0);C(3,2);D(6,2). Zastosuj obrót względem środka układu współrzędnych o kąt 90° odwrotnie do ruchu wskazówek zegara.
+
+Przy obrocie o 90° przeciwnie do ruchu wskazówek zegara:
+x' = -y
+y' = x
+
+A(3,0) B(6,0) C(3,2) D(6,2) -> A'(0,3) B'(0,6) C'(-2,3) D'(-2,6)
+bo
+A(3,0) → A(0,3)
+B(6,0) → B(0,6)
+C(3,2) → C(-2,3)
+D(6,2) → D(-2,6)
+--------------------------------
+10. Czy dla transformacji geometrycznej (nie deformacji) każdy punkt ma swoją jedyną reprezentację w zbiorze przekształconym oraz wszystkie punkty w zbiorze przekształconym mają swoją reprezentację w zbiorze pierwotnym? Czy zawsze możliwe jest przekształcenie odwrotne?
+
+TAK
+--------------------------------
+
+
+
+
+DEFINICJE:
+--------------------------------
+Wymiary przedmiotu równoległe do którejkolwiek osi ulegają jednakowemu skróceniu 0,816:1 (po zaokrągleniu 0,82:1) w stosunku do rysunku przedmiotu w rzutach prostokątnych. Wynika to z ustawienia krawędzi sześcianu względem rzutni π pod kątem 35,25°.
+--------------------------------
+Projekcja aksonometryczna dimetryczna:
+Wymiary przedmiotu równoległe do osi y' lub z' są przedstawiane bez skrótów, wymiary równoległe do osi x' ulegają skróceniu o połowę. (Dokładnie na osiach x',y',z' powinny być następujące skrócenia 0,47:0,94:0,94)
+--------------------------------
+Transformacja geometryczna może być traktowana
+ jako przekształcenie pomiędzy zbiorami punktów.
+ Najczęściej spotykaną jest transformacja wyłączna
+ jeden do jednego.
+Dla tej transformacji każdy punkt ma swoją
+ reprezentację w zbiorze przekształconym oraz
+ wszystkie punkty w zbiorze przekształconym mają
+ swoją reprezentację w zbiorze pierwotnym. Dla
+ takiego przekształcenia możliwe jest przekształcenie
+ odwrotne
+--------------------------------
+Rzutowanie to przekształcenia punktów z n wymiarowej przestrzeni, do przestrzeni o wymiarze mniejszym, najczęściej 3D do 2D.
+
+Podstawowe rodzaje rzutowania to rzutowanie planarne (zwane również równoległym) oraz rzutowanie perspektywiczne (prostokątne).
+
+Rzutowanie planarne:
+- Promienie rzutujące są równoległe
+- Środek rzutowania znajduje się w nieskończoności
+- Płaszczyzna rzutowania jest prostopadła do promieni rzutujących
+
+Rzutowanie perspektywiczne:
+- Promienie rzutujące zbiegają się w jednym punkcie (środku rzutowania)
+- Środek rzutowania znajduje się w skończonej odległości od płaszczyzny rzutowania
+- Płaszczyzna rzutowania jest prostopadła do osi optycznej
+--------------------------------
+Projekcja prostokątna:
+Macierze dla projekcji prostokątnej:
+
+Prxy = |1 0 0 0|
+       |0 1 0 0|
+       |0 0 0 0|
+       |0 0 0 1|
+
+Pryz = |0 0 0 0|
+       |0 1 0 0|
+       |0 0 1 0|
+       |0 0 0 1|
+
+Prxz = |1 0 0 0|
+       |0 0 0 0|
+       |0 0 1 0|
+       |0 0 0 1|
+--------------------------------
+Przesunięcie w 2D:
+
+P' = P + V
+gdzie:
+P' - punkt po przesunięciu
+P - punkt przed przesunięciem
+V - wektor przesunięcia
+np.: P(1,1) + V(2,3) -> P'(3,4)
+
+lub
+
+P|1|   V|2|   P'|3|
+ |1| +  |3| =   |4|
+
+--------------------------------
+Obrót w 2D:
+
+Macierz obrotu:
+|cos θ  -sin θ|
+|sin θ   cos θ|
+
+lub
+|cos θ  -sin θ  0|
+|sin θ   cos θ  0|
+|0      0      1|
+
+dla θ = 90° przeciwnie do ruchu wskazówek zegara
+|0  -1|
+|1   0|
+
+np.: P(6,2)
+mamy:
+|0  -1| * |6| = | 0 * 6 + -1 * 2| = |-2|
+|1   0|   |2|    | 1 * 6 + 0 * 2|    |6|
+
+P'(6,2)
+
+WYJAŚNIENIE - przeciwnie do ruchu wskazówek zegara to kierunek w którym normalnie rośnie wartość kąta, co oznacza, że jak mamy wykres sin i cos to idziemy w prawo odczytując wartości z wykresu, natomiast dla kierunku zgodnie z ruchem wskazówek zegara to idziemy w lewo odczytując wartości z wykresu
+czyli dla 90° (przeciwnie do ruchu wskazówek zegara) mamy cos(90°) = 0 i sin(90°) = 1
+ale dla 90° (zgodnie z ruchem wskazówek zegara) tak jakby -90° mamy cos(-90°) = 0 i sin(-90°) = -1
+Mając tą wiedzę wystarczy wstawić odpowiednie wartości do macierzy obrotu:
+
+przeciwnie do ruchu wskazówek zegara 90° to (+90°)
+zgodnie z ruchem wskazówek zegara 90° to (-90°)
+
+        90°
+         |
+         |
+180° ----+---- 0°
+         |
+         |
+       270°
+--------------------------------
+
+Odbicie w 2D (obrót o 180° wokół względem punktu / osi odniesienia):
+
+Macierz odbicia względem osi x:
+Rx = |-1  0  0|
+     | 0  1  0|
+     | 0  0  1| <- kolumna i wiersz 3 są bezużyteczne dla 2D
+
+Macierz odbicia względem osi y:
+Ry = | 1  0  0|
+     | 0 -1  0|
+     | 0  0  1|
+
+np.: P(3,2)
+odbicie względem osi x:
+|-1  0  0| * |3| = |-3|
+| 0  1  0|   |2|   | 2|
+| 0  0  1|   |0|   | 0|
+
+P'(-3,2)
+
+odbicie względem osi y:
+| 1  0  0| * |3| = | 3|
+| 0 -1  0|   |2|   |-2|
+| 0  0  1|   |0|   | 0|
+
+P'(3,-2)
+
+--------------------------------
+Skalowanie:
+
+Macierz skalowania:
+S = |μx  0  0|
+    | 0 μy  0|
+    | 0  0  1|
+
+np.: P(3,2) i μx=2, μy=3
+|2  0  0| * |3| = |6|
+|0  3  0|   |2|   |6|
+|0  0  1|   |0|   |0|
+
+P'(6,6)
+* Skalowanie równomiernie to gdy wszystkie współczynniki skalowania na diagonali są takie same, czyli np. μx=μy=μz
+--------------------------------
+Rozciąganie:
+
+Macierz rozciągania:
+S = |1  s  0|
+    |0  1  0|
+    |0  0  1|
+
+np.: P(x,y,1)
+|1  s  0| * |x| = |x + sy|
+|0  1  0|   |y|   |  y  |
+|0  0  1|   |1|   |  1  |
+
+P'(x+sy, y)
+
+np.: P(3,2) i s=2
+|1  2  0| * |3| = |3 + 2*2|
+|0  1  0|   |2|   |   2   |
+|0  0  1|   |1|   |   1   |
+
+P'(7,2)
