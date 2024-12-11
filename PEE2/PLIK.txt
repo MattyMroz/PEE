@@ -830,10 +830,61 @@ L4:
 2. Opisz jak dokonuje się zapisu / odczytu informacji przy pomocy nośnika magnetycznego ???
 
 L5:
-1. Opisz działanie monitora LCD ✅
-2. Co trzeba zrobić aby z diody LED zrobić diodę laserową ✅
+Zjawisko fotoelektryczne ✅
 
-LIM5:
-1. Zjawisko foto-elektryczne ✅
-2. Zjawisko luminescencji ???
+Zjawisko absorbcji energii fotonów przez materiał, co prowadzi do wzbudzenia elektronów i ich uwonlnienia lub zmiany stanu elektrycznego.
+
+Rodzaje:
+Zewnętrzne: Elektrony opuszczają materiał.
+Wewnętrzne: Elektrony przemieszczają się w obrębie materiału, zwiększając przewodność.
+
+Granice Zjawiska Fotoelektrycznego - Konduktywność
+Graniczna długość fali światła wyznacza energię fotonów, które mogą powodować zjawisko fotoelektryczne.
+
+
+Luminescencja ✅
+Emisja światła przez materiał pod wpływem energii innej niż cieplna.
+Czas trwania emisji zależy  od czasu przebywania elektronu w stanie wzbudzonym. Fluorescencja - krótki czas, Fosforescencja - długi czas.
+
+
+Rodzaje:
+Katodoluminescencja – bombardowanie luminoforu elektronami (np. lampy CRT).
+Elektroluminescencja – wzbudzanie elektronów przez pole elektryczne (np. diody LED).
+
+Zastosowania: Wyświetlacze, lampy, urządzenia optyczne.
+
+
+Zasada działania lasera ✅
+Mechanizm:
+Emisja wymuszona: Pobudzony atom emituje foton identyczny z padającym.
+Wzmocnienie światła dzięki inwersji obsadzeń.
+Budowa: Ośrodek aktywny, układ pompujący, rezonator optyczny.
+Zastosowania: Telekomunikacja, medycyna, elektronika.
+
+Optyczny zapis informacji ✅
+Polega na zapisywaniu danych na nośniku optycznym: CD, DVD, Blu-ray.
+Proces: Dane zapisane jako wgłębienia (pity) i wypukłości (landy).
+Zasada: Odbicie promienia lasera od landów i pitów zmienia jego intensywność, co pozwala odczytać informacje, sekwencja impulsów jest zamianiana na sygnały elektryczne, a potem cyfrowe.
+
+Działanie Monitora LCD ✅
+
+Elementy:
+Źródło światła (matryca LED/lampa fluorescencyjna).
+Warstwy polaryzatora i analizatora.
+Ciekłe kryształy - sterowane polem elektrycznym.
+Elektrody sterujące - generują pole elektryczne i sterują ciekłymi kryształami.
+Filtry barwne - nadają kolor poszczególnym pikselom.
+Zasada działania: Ciekłe kryształy zmieniają polaryzację światła pod wpływem napięcia, regulując polaryzację światła przechodzącego przez ekran. Spolaryzowane światło przechodzi przez filtry barwne tworząc obraz.
+
+
+Dioda LED jako dioda laserowa ✅
+
+Warunki:
+    - Złącze p-n z odpowiednimi warstwami półprzewodnikowymi.
+    - Rezonator optyczny z wypolerowanymi ściankami.
+    - Prąd progowy wystarczający do wzmocnienia emisji wymuszonej.
+
+Zmiany: Wzmocnienie emisji wymuszonej dzięki inwersji obsadzeń.
+
+
 

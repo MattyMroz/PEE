@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 10px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .question {
+            padding: 15px;
+            background-color: #007BFF;
+            color: #fff;
+            cursor: pointer;
+            border: none;
+            text-align: left;
+            width: 100%;
+            outline: none;
+            font-size: 14px;
+            font-weight: bold;
+            transition: background-color 0.3s, font-size 0.3s;
+            margin-bottom: 10px;
+            border-radius: 5px;
+        }
+
+        .question:hover {
+            background-color: #0056b3;
+        }
+
+        .answer {
+            padding: 15px;
+            display: none;
+            background-color: #f9f9f9;
+            border-top: 1px solid #ddd;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+    </style>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <h2>Zadanie L5</h2>
+
+        <button class="question">1. Zjawisko fotoelektryczne ✅</button>
+        <div class="answer">
+            <p>Zjawisko absorbcji energii fotonów przez materiał, co prowadzi do wzbudzenia elektronów i ich uwolnienia lub zmiany stanu elektrycznego.</p>
+            <p><strong>Rodzaje:</strong></p>
+            <ul>
+                <li>Zewnętrzne: Elektrony opuszczają materiał</li>
+                <li>Wewnętrzne: Elektrony przemieszczają się w obrębie materiału, zwiększając przewodność</li>
+            </ul>
+            <p><strong>Granice Zjawiska Fotoelektrycznego - Konduktywność:</strong><br>
+            Graniczna długość fali światła wyznacza energię fotonów, które mogą powodować zjawisko fotoelektryczne.</p>
+        </div>
+
+        <button class="question">2. Luminescencja ✅</button>
+        <div class="answer">
+            <p>Emisja światła przez materiał pod wpływem energii innej niż cieplna.</p>
+            <p>Czas trwania emisji zależy od czasu przebywania elektronu w stanie wzbudzonym:</p>
+            <ul>
+                <li>Fluorescencja - krótki czas</li>
+                <li>Fosforescencja - długi czas</li>
+            </ul>
+            <p><strong>Rodzaje:</strong></p>
+            <ul>
+                <li>Katodoluminescencja – bombardowanie luminoforu elektronami (np. lampy CRT)</li>
+                <li>Elektroluminescencja – wzbudzanie elektronów przez pole elektryczne (np. diody LED)</li>
+            </ul>
+            <p><strong>Zastosowania:</strong> Wyświetlacze, lampy, urządzenia optyczne.</p>
+        </div>
+
+        <button class="question">3. Zasada działania lasera ✅</button>
+        <div class="answer">
+            <p><strong>Mechanizm:</strong></p>
+            <ul>
+                <li>Emisja wymuszona: Pobudzony atom emituje foton identyczny z padającym</li>
+                <li>Wzmocnienie światła dzięki inwersji obsadzeń</li>
+            </ul>
+            <p><strong>Budowa:</strong> Ośrodek aktywny, układ pompujący, rezonator optyczny</p>
+            <p><strong>Zastosowania:</strong> Telekomunikacja, medycyna, elektronika</p>
+        </div>
+
+        <button class="question">4. Optyczny zapis informacji ✅</button>
+        <div class="answer">
+            <p>Polega na zapisywaniu danych na nośniku optycznym: CD, DVD, Blu-ray.</p>
+            <p><strong>Proces:</strong> Dane zapisane jako wgłębienia (pity) i wypukłości (landy).</p>
+            <p><strong>Zasada:</strong> Odbicie promienia lasera od landów i pitów zmienia jego intensywność, co pozwala odczytać informacje, sekwencja impulsów jest zamieniana na sygnały elektryczne, a potem cyfrowe.</p>
+        </div>
+
+        <button class="question">5. Działanie Monitora LCD ✅</button>
+        <div class="answer">
+            <p><strong>Elementy:</strong></p>
+            <ul>
+                <li>Źródło światła (matryca LED/lampa fluorescencyjna)</li>
+                <li>Warstwy polaryzatora i analizatora</li>
+                <li>Ciekłe kryształy - sterowane polem elektrycznym</li>
+                <li>Elektrody sterujące - generują pole elektryczne i sterują ciekłymi kryształami</li>
+                <li>Filtry barwne - nadają kolor poszczególnym pikselom</li>
+            </ul>
+            <p><strong>Zasada działania:</strong> Ciekłe kryształy zmieniają polaryzację światła pod wpływem napięcia, regulując polaryzację światła przechodzącego przez ekran. Spolaryzowane światło przechodzi przez filtry barwne tworząc obraz.</p>
+        </div>
+
+        <button class="question">6. Dioda LED jako dioda laserowa ✅</button>
+        <div class="answer">
+            <p><strong>Warunki:</strong></p>
+            <ul>
+                <li>Złącze p-n z odpowiednimi warstwami półprzewodnikowymi</li>
+                <li>Rezonator optyczny z wypolerowanymi ściankami</li>
+                <li>Prąd progowy wystarczający do wzmocnienia emisji wymuszonej</li>
+            </ul>
+            <p><strong>Zmiany:</strong> Wzmocnienie emisji wymuszonej dzięki inwersji obsadzeń.</p>
+        </div>
+
+
+    <script>
+        document.querySelectorAll('.question').forEach(button => {
+            button.addEventListener('click', () => {
+                const answer = button.nextElementSibling;
+                answer.style.display = answer.style.display === 'block' ? 'none' : 'block';
+            });
+        });
+    </script>
+</body>
+
+</html>
