@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 10px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .question {
+            padding: 15px;
+            background-color: #007BFF;
+            color: #fff;
+            cursor: pointer;
+            border: none;
+            text-align: left;
+            width: 100%;
+            outline: none;
+            font-size: 14px;
+            font-weight: bold;
+            transition: background-color 0.3s, font-size 0.3s;
+            margin-bottom: 10px;
+            border-radius: 5px;
+        }
+
+        .question:hover {
+            background-color: #0056b3;
+        }
+
+        .answer {
+            padding: 15px;
+            display: none;
+            background-color: #f9f9f9;
+            border-top: 1px solid #ddd;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+    </style>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <h2>Notatki do L1</h2>
+
+        <button class="question">1. Przewodnictwo Elektryczne</button>
+        <div class="answer">
+            <p><strong>Dobre przewodniki</strong> charakteryzują się dużą koncentracją nośników ładunku i ich mobilnością.</p>
+            <p><strong>Metale i stopy metali</strong> mają dużą konduktywność.</p>
+            
+            <button class="question">1.1 Co to jest Konduktywność elektryczna ✅</button>
+            <div class="answer">
+                <p><strong>Konduktywność elektryczna (γ)</strong>, inaczej przewodność właściwa, jest miarą tego, jak dobrze materiał przewodzi prąd elektryczny.</p>
+                <p>Jest odwrotnością rezystywności (γ = 1/ρ).</p>
+                <p>Im wyższa konduktywność, tym lepiej materiał przewodzi prąd.</p>
+                <p>Konduktywność zależy od liczby nośników ładunku w materiale i ich ruchliwości.</p>
+            </div>
+
+            <button class="question">1.2 Co to jest Rezystywność elektryczna ✅</button>
+            <div class="answer">
+                <p><strong>Rezystywność (ρ)</strong> jest miarą tego, jak bardzo materiał przeciwstawia się przepływowi prądu elektrycznego.</p>
+                <p>Jest odwrotnością konduktywności (ρ = 1/γ).</p>
+                <p>Im wyższa rezystywność, tym gorzej materiał przewodzi prąd.</p>
+                <p>Najlepszymi przewodnikami, charakteryzującymi się najniższą rezystywnością, są w kolejności: srebro, miedź, złoto i aluminium.</p>
+            </div>
+
+            <button class="question">1.3 Wymień dobre przewodniki prądu i podaj ich konduktywność ✅</button>
+            <div class="answer">
+                <p><strong>Najlepsze przewodniki to:</strong></p>
+                <ul>
+                    <li>srebro (γ₂₀ ~ 62 MS/m)</li>
+                    <li>miedź (γ₂₀ ~ 59 MS/m)</li>
+                    <li>złoto (γ₂₀ ~ 48 MS/m)</li>
+                    <li>aluminium (γ₂₀ ~ 37 MS/m)</li>
+                </ul>
+            </div>
+        </div>
+
+        <button class="question">2. Metale i Stopy Metali ❌</button>
+        <div class="answer">
+            <p><strong>Metale</strong> dobrze przewodzą prąd i ciepło, mają połysk, są plastyczne i odporne na uderzenia.</p>
+            <p>Ich właściwości wynikają z wiązań metalicznych, które umożliwiają swobodny ruch elektronów walencyjnych.</p>
+            <p>W metalach jest dużo elektronów przewodnictwa, a ich koncentracja nie zależy od temperatury.</p>
+            <p>Elektrony w metalach zachowują się jak gaz Fermiego i podlegają rozkładowi Fermiego-Diraca oraz zakazowi Pauliego.</p>
+        </div>
+
+        <button class="question">3. Różnice między rezystancją czystych metali a metali z domieszkami ✅</button>
+        <div class="answer">
+            <p>Rezystywność metali zależy od rozpraszania elektronów na fononach i defektach sieci krystalicznej.</p>
+            <p>W niskich temperaturach czyste metale mają niską rezystywność (rezystywność resztkowa).</p>
+            <p>Wraz ze wzrostem temperatury, rezystywność metali rośnie z powodu rozpraszania na fononach.</p>
+            <p>Zanieczyszczone metale mają wyższą rezystywność resztkową, niezależną od temperatury.</p>
+            <p>Rezystywność metali zanieczyszczonych rośnie wraz z temperaturą, ale jest wyższa niż dla metali czystych.</p>
+        </div>
+
+        <button class="question">4. Rozpraszanie Nośników Ładunku ❌</button>
+        <div class="answer">
+            <p>Ruch elektronów w polu elektrycznym jest ograniczany przez zderzenia z fononami (drganiami sieci krystalicznej) i defektami struktury.</p>
+            <p>Wyższa temperatura zwiększa drgania sieci, co intensyfikuje rozpraszanie elektronów.</p>
+            <p>Defekty sieci krystalicznej również rozpraszają elektrony.</p>
+            <p>Przepływ elektronów można porównać do ruchu w lepkim środowisku.</p>
+        </div>
+
+        <button class="question">5. Jak temperatura wpływa na rezystywność metali? ✅</button>
+        <div class="answer">
+            <p>Wraz ze wzrostem temperatury rezystywność metali rośnie.</p>
+            <p>Temperatura wpływa na przewodność poprzez zmianę średniej drogi swobodnej elektronów.</p>
+            <p>Rozpraszanie elektronów na fononach (drganiach sieci krystalicznej) zwiększa się wraz z temperaturą.</p>
+            <p>W niskich temperaturach dominuje rozpraszanie na defektach sieci (rezystywność resztkowa), niezależne od temperatury.</p>
+            <p>W wyższych temperaturach wzrasta rozpraszanie fononowe, proporcjonalne do temperatury.</p>
+            <p>Całkowita rezystywność to suma rezystywności resztkowej i fononowej.</p>
+            <p>W bardzo niskich temperaturach rezystywność rośnie proporcjonalnie do T⁵.</p>
+            <p><strong>Wykres:</strong > <img src="L1_1.png" alt="Wykres rezystywności metali w zależności od temperatury" style="max-width: 100%; height: auto;"/></p >
+        </div>
+
+        <button class="question">6. Co to temperatura współczynnika rezystancji ✅</button>
+        <div class="answer">
+            <p><strong>Temperaturowy współczynnik rezystancji (TWR)</strong> to parametr określający, jak bardzo zmienia się rezystancja materiału pod wpływem zmiany temperatury. Wyrażany jest jako względna zmiana rezystancji na jednostkę temperatury, zwykle w kelwinach (1/𝐾) lub stopniach Celsjusza (1/°C).</p>
+            <p><strong>Wzór dla TWR:</strong> α = (1/R₀) * (dR/dT).</p>
+            <p><strong>Gdzie:</strong></p>
+            <ul>
+                <li>R₀: rezystancja materiału w temperaturze odniesienia (np. 20°C),</li>
+                <li>(dR/dT): zmiana rezystancji w stosunku do temperatury.</li>
+            </ul>
+            <p><strong>Interpretacja:</strong></p>
+            <ul>
+                <li>Dodatni TWR: Rezystancja rośnie wraz z temperaturą (np. metale).</li>
+                <li>Ujemny TWR: Rezystancja maleje wraz z temperaturą (np. półprzewodniki, nadprzewodniki).</li>
+            </ul>
+        </div>
+
+        <button class="question">7. Reguła Mathiessena ✅</button>
+        <div class="answer">
+            <p><strong>Reguła Mathiessena</strong> opisuje, jak sumują się różne czynniki wpływające na rezystywność metalu.</p>
+            <p>Całkowita rezystywność (ρ) jest sumą rezystywności cząstkowych, wynikających z różnych mechanizmów rozpraszania elektronów.</p>
+            <p><strong>Wzór ogólny:</strong> ρ = ρ₁ + ρ₂ + ... + ρₙ, gdzie ρ₁, ρ₂ itd. to rezystywności od poszczególnych mechanizmów rozpraszania.</p>
+            <p><strong>Dla metali, najczęściej uwzględnia się:</strong></p>
+            <ul>
+                <li>Rezystywność resztkową (ρᵣ): niezależną od temperatury, spowodowaną rozpraszaniem na defektach sieci.</li>
+                <li>Rezystywność fononową (ρƒ): zależną od temperatury, spowodowaną rozpraszaniem na drganiach sieci (fononach).</li>
+            </ul>
+            <p><strong>Wzór dla metali:</strong> ρ(T) = ρᵣ + ρƒ(T).</p>
+            <p>Reguła pozwala oddzielnie analizować wpływ temperatury i defektów na przewodność elektryczną materiałów.</p>
+        </div>
+    </div>
+
+
+    <script>
+        document.querySelectorAll('.question').forEach(button => {
+            button.addEventListener('click', () => {
+                const answer = button.nextElementSibling;
+                answer.style.display = answer.style.display === 'block' ? 'none' : 'block';
+            });
+        });
+    </script>
+</body>
+
+</html>
