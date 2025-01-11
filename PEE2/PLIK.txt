@@ -911,13 +911,117 @@ Interpretacja:
 
 
 L2:
-1. Prąd upływu ✅
-2. Pojemność kondensatora ???
-3. Wymień składowe prądu w dielektryku ???
+1. Co to jest dielektryk? ✅
+
+Dielektryk to materiał, który w normalnych warunkach nie przewodzi prądu elektrycznego, czyli jest izolatorem. W swojej strukturze, przy braku zewnętrznych bodźców jonizujących, nie zawiera swobodnych ładunków elektrycznych (elektronów). Dielektryki mogą występować w stanie stałym, ciekłym lub gazowym.
+
+2. Wymień cechy dielektryka ✅
+Dielektryki charakteryzują się następującymi cechami:
+
+Wysoka rezystywność skrośna: Jest to opór, jaki materiał stawia przepływowi prądu elektrycznego w poprzek jego objętości. Dielektryki mają rezystywność skrośną większą niż 10^8 Ωm.
+
+Szerokie pasmo zabronione: Jest to zakres energii, w którym elektrony nie mogą przebywać. W dielektrykach pasmo zabronione jest szerokie, zazwyczaj większe niż 5 eV, co utrudnia przeskakiwanie elektronów do pasma przewodnictwa i tym samym przewodzenie prądu.
+
+Przewodnictwo jonowe: W dielektrykach przewodzenie prądu, jeśli w ogóle występuje, ma charakter jonowy, a nie elektronowy jak w metalach. Jest to ruch jonów pod wpływem pola elektrycznego.
+
+Zdolność do polaryzacji: Dielektryki, pod wpływem zewnętrznego pola elektrycznego, ulegają polaryzacji, czyli przesunięciu lub orientacji ładunków wewnątrz materiału.
+
+Przenikalność elektryczna: Dielektryki charakteryzują się zdolnością do gromadzenia ładunku elektrycznego w polu elektrycznym, co opisuje przenikalność elektryczna.
+
+Współczynnik strat dielektrycznych: Określa straty energii w dielektryku pod wpływem zmiennego pola elektrycznego.
+
+3. Wymień zastosowania dielektryka ✅
+
+Dielektryki mają szerokie zastosowanie w różnych dziedzinach, w tym:
+
+Izolatory elektryczne: Stosowane w urządzeniach elektrycznych i elektronicznych do izolowania przewodników od siebie i od obudowy, zapobiegając zwarciom i porażeniom.
+
+Wypełnienie kondensatorów: Dielektryki są kluczowym elementem kondensatorów, gdzie umieszczone są pomiędzy okładkami, zwiększając ich pojemność i zdolność do magazynowania energii.
+
+Materiały izolacyjne w kablach i przewodach: Chronią przed wyciekiem prądu i zapewniają bezpieczeństwo.
+
+Elementy w układach scalonych: Stosowane jako warstwy izolacyjne i dielektryczne w mikroelektronice.
+
+W medycynie: W urządzeniach diagnostycznych i terapeutycznych, gdzie wymagana jest izolacja elektryczna.
+
+W optyce: Niektóre dielektryki są wykorzystywane w elementach optycznych, takich jak soczewki i filtry.
+
+4. Opisz pojemność kondensatorów ✅
+
+Definicja: Pojemność kondensatora to zdolność do gromadzenia ładunku elektrycznego. Jest to stosunek ładunku zgromadzonego na okładkach kondensatora do napięcia między nimi.
+
+Wzór: Dla kondensatora płaskiego, pojemność (C) wyraża się wzorem:
+
+```
+C = ε * εr * S / d
+```
+gdzie:
+
+C - pojemność (w faradach)
+
+ε - przenikalność elektryczna próżni (stała elektryczna, ε₀ ≈ 8.854 x 10^-12 F/m)
+
+εr - przenikalność elektryczna względna dielektryka (bez jednostki)
+
+S - powierzchnia okładek kondensatora (w m²)
+
+d - odległość między okładkami (w m)
+
+Jednostka: Jednostką pojemności w układzie SI jest farad (F). W praktyce często używa się mniejszych jednostek, takich jak pikofarad (pF), nanofarad (nF) i mikrofarad (µF).
+
+Co wpływa na wartość pojemności:
+
+Przenikalność elektryczna względna (εr) dielektryka: Im wyższa przenikalność, tym większa pojemność.
+
+Powierzchnia okładek (S): Im większa powierzchnia okładek, tym większa pojemność.
+
+Odległość między okładkami (d): Im mniejsza odległość między okładkami, tym większa pojemność.
+
+5. Wymień składowe prądu w dielektryku ✅
+
+Prąd płynący przez dielektryk, zwłaszcza w warunkach nieustalonych (np. po włączeniu napięcia), składa się z trzech głównych składowych:
+
+Prąd ładowania (ic): Jest to prąd związany z procesem polaryzacji sprężystej dielektryka. Występuje na początku procesu ładowania kondensatora i szybko zanika.
+
+Prąd absorpcji (ia): Jest to prąd związany z polaryzacją relaksacyjną dielektryka. Zanika wolniej niż prąd ładowania.
+
+Prąd upływu (iu): Jest to prąd związany z ruchem swobodnych nośników ładunku (jonów i elektronów) w dielektryku. Jest to prąd stały, który płynie przez dielektryk w stanie ustalonym.
+
+
+
+
+
+
+1. Co to jest dielektryk
+2. Wymień cechy dielektryka
+3. Wymień zastosowania dielektryka
+4. Opisz pojemność kondensatorów(wzór, jednostka, co wpływa na jej wartość)
+5. Wymień składowe prądu w dielektryku.
+
+
+
+
+
+
+
 
 L4:
 1. Pętla histerezy magnetycznej i charakterystyczne punkty ✅
 2. Opisz jak dokonuje się zapisu / odczytu informacji przy pomocy nośnika magnetycznego ???
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 L5:
 Zjawisko fotoelektryczne ✅
