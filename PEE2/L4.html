@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 10px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .question {
+            padding: 15px;
+            background-color: #007BFF;
+            color: #fff;
+            cursor: pointer;
+            border: none;
+            text-align: left;
+            width: 100%;
+            outline: none;
+            font-size: 14px;
+            font-weight: bold;
+            transition: background-color 0.3s, font-size 0.3s;
+            margin-bottom: 10px;
+            border-radius: 5px;
+        }
+
+        .question:hover {
+            background-color: #0056b3;
+        }
+
+        .answer {
+            padding: 15px;
+            display: none;
+            background-color: #f9f9f9;
+            border-top: 1px solid #ddd;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 10px auto;
+        }
+    </style>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <h2>Zadanie L4</h2>
+
+        <button class="question">1. Co to jest pole magnetyczne? ❌</button>
+        <div class="answer">
+            <p><strong>Pole magnetyczne</strong> to właściwość przestrzeni, w której na namagnesowane obiekty lub ruchome ładunki elektryczne działają siły magnetyczne. Źródłami pola magnetycznego są: <strong>Ziemia, magnesy stałe, elektromagnesy</strong>. Siła oddziaływania zależy od <strong>natężenia pola magnetycznego</strong> oraz od właściwości magnetycznych obiektów. Pole magnetyczne jest wytwarzane zawsze tam, gdzie poruszają się ładunki elektryczne.</p>
+        </div>
+
+        <button class="question">2. Podział materiałów względem własności magnetycznej ✅</button>
+        <div class="answer">
+            <p><strong>Materiały magnetyczne dzielą się na:</strong></p>
+            <ul>
+                <li><strong>diamagnetyki</strong> (μr < 1, wektor magnetyzacji i natężenia pola są antyrównoległe)</li>
+                <li><strong>paramagnetyki</strong> (μr > 1, wektor magnetyzacji i natężenia pola są równoległe)</li>
+                <li><strong>ferromagnetyki</strong> (μr >> 1, wektor magnetyzacji i natężenia pola są równoległe, tworzą domeny magnetyczne)</li>
+            </ul>
+        </div>
+
+        <button class="question">3. Co to jest ferromagnetyk? ❌</button>
+        <div class="answer">
+            <p><strong>Ferromagnetyk</strong> to materiał, który charakteryzuje się silnymi właściwościami magnetycznymi, związanymi z występowaniem <strong>spontanicznego namagnesowania</strong>, czyli namagnesowania po ustąpieniu zewnętrznego pola magnetycznego. W ferromagnetykach tworzą się <strong>domeny magnetyczne</strong>.</p>
+        </div>
+
+        <button class="question">4. Podaj przykłady ferromagnetyków ❌</button>
+        <div class="answer">
+            <p>Do ferromagnetyków zalicza się między innymi:</p>
+            <ul>
+                <li>Żelazo</li>
+                <li>Kobalt</li>
+                <li>Nikiel</li>
+                <li>Niektóre ich stopy</li>
+                <li>Metale przejściowe (np. metale ziem rzadkich)</li>
+            </ul>
+        </div>
+
+        <button class="question">5. Zastosowanie ferromagnetyków ❌</button>
+        <div class="answer">
+            <p><strong>Zastosowania ferromagnetyków:</strong></p>
+            <ul>
+                <li>Materiały magnetycznie miękkie (np. blachy transformatorowe):
+                    <ul>
+                        <li>Budowa obwodów magnetycznych maszyn elektrycznych</li>
+                        <li>Transformatory</li>
+                        <li>Elektromagnesy</li>
+                    </ul>
+                </li>
+                <li>Materiały magnetycznie półtwarde:
+                    <ul>
+                        <li>Pamięci magnetyczne (np. dyski twarde)</li>
+                    </ul>
+                </li>
+                <li>Materiały magnetycznie twarde:
+                    <ul>
+                        <li>Magnesy trwałe</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+        <button class="question">6. Co to jest przenikliwość magnetyczna ✅</button>
+        <div class="answer">
+            <p><strong>Przenikalność magnetyczna</strong> (μ) to wielkość, która łączy <strong>indukcję</strong> i <strong>natężenie pola magnetycznego</strong>, określając właściwości magnetyczne ośrodka. Wartość przenikalności magnetycznej ferromagnetyków zależy od natężenia pola magnetycznego i temperatury.</p>
+        </div>
+
+        <button class="question">7. Co to jest pierwotna krzywa magnesowania? ✅</button>
+        <div class="answer">
+            <p><strong>Pierwotna krzywa magnesowania</strong> to graficzna interpretacja procesu magnesowania ferromagnetyka, przedstawiająca zależność <strong>indukcji magnetycznej (B)</strong> od <strong>natężenia pola magnetycznego (H)</strong>. Krzywą tę można podzielić na trzy etapy:</p>
+            <ul>
+                <li><strong>przesuwanie ścianek domen</strong> - w zakresie słabych pól powiększają się obszary spontanicznej magnetyzacji o kierunku zbliżonym do kierunku pola magnetycznego</li>
+                <li><strong>obracanie dipoli</strong> - w silniejszych polach momenty magnetyczne obszarów namagnesowania obracają się zgodnie z kierunkiem pola</li>
+                <li><strong>paraproces</strong> - ostatni etap, gdzie największa liczba obszarów ma kierunek zgodny z polem zewnętrznym</li>
+            </ul>
+            <p><strong>Szum Barkhausena:</strong> to skokowe zmiany namagnesowania podczas przesuwania ścianek domen.</p>
+            <img src="L4_1.png" alt="Krzywa magnesowania">
+        </div>
+
+        <button class="question">8. Co to jest pętla histerezy magnetycznej? ✅</button>
+        <div class="answer">
+            <p><strong>Pętla histerezy magnetycznej</strong> powstaje podczas zmniejszania natężenia pola magnetycznego po osiągnięciu nasycenia. Jest ona miarą nieodwracalności układu i stanowi "efekt pamięci" wykorzystywany w pamięciach magnetycznych.</p>
+            
+            <p><strong>Charakterystycznymi punktami pętli histerezy są:</strong></p>
+            <ul>
+                <li><strong>remanencja (Br)</strong> - indukcja magnetyczna pozostała po usunięciu zewnętrznego pola magnetycznego</li>
+                <li><strong>koercja (Hc)</strong> - natężenie pola magnetycznego potrzebne do rozmagnesowania materiału</li>
+            </ul>
+            <img src="L4_2.png" alt="Pętla histerezy">
+        </div>
+
+        <button class="question">9. Podział ferromagnetyków ze względu na właściwości magnetyczne ✅</button>
+        <div class="answer">
+            <p><strong>Ferromagnetyki dzielimy na:</strong></p>
+            <ul>
+                <li><strong>Magnetycznie miękkie</strong> - łatwo się magnesują, ale namagnesowanie zanika, charakteryzują się wąską pętlą histerezy i małą koercją</li>
+                <li><strong>Magnetycznie półtwarde</strong> - zachowują stan namagnesowania po usunięciu pola, mają stosunkowo niewielką koercję i dużą remanencję</li>
+                <li><strong>Magnetycznie twarde</strong> - trudno je namagnesować, ale trwale zachowują stan namagnesowania, mają szeroką pętlę histerezy i dużą koercję</li>
+            </ul>
+        </div>
+
+        <button class="question">10. Jak się zapisuje info na dyskach ✅</button>
+        <div class="answer">
+            <p>Zapis informacji na <strong>dyskach magnetycznych</strong> polega na zmianie namagnesowania cienkiej warstwy magnetycznej na nośniku. Zmiana kierunku namagnesowania reprezentuje <strong>jedynkę binarną</strong>, a brak zmiany <strong>zero logiczne</strong>. Zmiany namagnesowania dokonuje się za pomocą <strong>głowicy z przetwornikiem elektromagnetycznym</strong>.</p>
+            <p><strong>Proces zapisu/odczytu:</strong></p>
+            <ul>
+                <li>Zapis: dokonywany przez głowicę zapisującą wytwarzającą pole magnetyczne</li>
+                <li>Odczyt: realizowany przez czujnik GMR mierzący zmiany rezystancji wywołane zmianami namagnesowania nośnika</li>
+                <li>Czujnik GMR działa na zasadzie efektu gigantycznej magnetorezystancji</li>
+            </ul>
+        </div>
+
+    <script>
+        document.querySelectorAll('.question').forEach(button => {
+            button.addEventListener('click', () => {
+                const answer = button.nextElementSibling;
+                answer.style.display = answer.style.display === 'block' ? 'none' : 'block';
+            });
+        });
+    </script>
+</body>
+
+</html>

@@ -1006,14 +1006,75 @@ Prąd upływu (iu): Jest to prąd związany z ruchem swobodnych nośników ładu
 
 
 L4:
-1. Pętla histerezy magnetycznej i charakterystyczne punkty ✅
-2. Opisz jak dokonuje się zapisu / odczytu informacji przy pomocy nośnika magnetycznego ???
+
+Co to jest pole magnetyczne? ❌
+Pole magnetyczne to właściwość przestrzeni, w której na namagnesowane obiekty lub ruchome ładunki elektryczne działają siły magnetyczne. Źródłami pola magnetycznego są: Ziemia, magnesy stałe, elektromagnesy. Siła oddziaływania zależy od natężenia pola magnetycznego oraz od właściwości magnetycznych obiektów. Pole magnetyczne jest wytwarzane zawsze tam, gdzie poruszają się ładunki elektryczne.
+
+Podział materiałów względem własności magnetycznej. ✅
+Materiały magnetyczne dzielą się na:
+- diamagnetyki (μr < 1, wektor magnetyzacji i natężenia pola są antyrównoległe),
+- paramagnetyki (μr > 1, wektor magnetyzacji i natężenia pola są równoległe),
+- ferromagnetyki (μr >> 1, wektor magnetyzacji i natężenia pola są równoległe, tworzą domeny magnetyczne).
+
+Co to jest ferromagnetyk? ❌
+    Ferromagnetyk to materiał, który charakteryzuje się silnymi właściwościami magnetycznymi, związanymi z występowaniem spontanicznego namagnesowania, czyli namagnesowania po ustąpieniu zewnętrznego pola magnetycznego. W ferromagnetykach tworzą się domeny magnetyczne.
+
+Podaj przykłady ferromagnetyków. ❌
+    Do ferromagnetyków zalicza się między innymi: żelazo, kobalt, nikiel oraz niektóre ich stopy i metale przejściowe, np. metale ziem rzadkich.
 
 
 
 
+Zastosowanie ferromagnetyków. ❌
+    Ferromagnetyki, takie jak żelazo, kobalt i nikiel, są stosowane w pamięciach magnetycznych, np. dyskach twardych, taśmach i kartach, ze względu na ich zdolność do trwałego namagnesowania.
+
+    - Materiały magnetycznie miękkie, np. blachy transformatorowe, są wykorzystywane do budowy obwodów magnetycznych maszyn elektrycznych, transformatorów i elektromagnesów.
+    - Materiały magnetycznie półtwarde znajdują zastosowanie w pamięciach magnetycznych np. dyskach twardych.
+    - Materiały magnetycznie twarde są używane jako magnesy trwałe.
 
 
+
+Co to jest przenikliwość magnetyczna ✅
+    Przenikalność magnetyczna (μ) to wielkość, która łączy indukcję i natężenie pola magnetycznego, określając właściwości magnetyczne ośrodka. Wartość przenikalności magnetycznej ferromagnetyków zależy od natężenia pola magnetycznego i temperatury.
+
+
+Krzywa magnesowania ferromagnetyka:
+
+Co to jest pierwotna krzywa magnesowania? ✅
+    Pierwotna krzywa magnesowania to graficzna interpretacja procesu magnesowania ferromagnetyka, przedstawiająca zależność indukcji magnetycznej (B) od natężenia pola magnetycznego (H). Krzywą tę można podzielić na trzy etapy:
+        - przesuwanie ścianek domen - w zakresie słabych pól powiększają się obszary spontanicznej magnetyzacji o kierunku zbliżonym do kierunku pola magnetycznego,
+        - obracanie dipoli - w silniejszych polach momenty magnetyczne obszarów namagnesowania obracają się zgodnie z kierunkiem pola,
+        - paraproces - ostatni etap, gdzie największa liczba obszarów ma kierunek zgodny z polem zewnętrznym
+
+L4_1.png
+
+    Co to szum Barkhausena?
+    Szum Barkhausena to skokowe zmiany namagnesowania podczas przesuwania ścianek domen.
+
+Co to jest pętla histerezy magnetycznej? ✅
+    Pętla histerezy magnetycznej powstaje podczas zmniejszania natężenia pola magnetycznego po osiągnięciu nasycenia. Jest ona miarą nieodwracalności układu i stanowi "efekt pamięci" wykorzystywany w pamięciach magnetycznych.
+
+    Pętla histerezy magnetycznej i charakterystyczne punkty:
+        Charakterystycznymi punktami pętli histerezy są:
+        -remanencja (Br) - indukcja magnetyczna pozostała po usunięciu zewnętrznego pola magnetycznego
+        - koercja (Hc) - natężenie pola magnetycznego potrzebne do rozmagnesowania materiału.
+
+    Wykres pętli histerezy magnetycznej:
+        Wykres pętli histerezy magnetycznej przedstawia zależność indukcji magnetycznej (B) od natężenia pola magnetycznego (H) podczas procesu magnesowania i rozmagnesowania materiału. Kształt pętli pozwala sklasyfikować materiały magnetyczne na magnetycznie miękkie, półtwarde i twarde.
+
+L4_2.png
+
+Podział ferromagnetyków ze względu na właściwości magnetyczne. ✅
+    Ferromagnetyki można podzielić na:
+        - Magnetycznie miękkie - łatwo się magnesują, ale namagnesowanie zanika, charakteryzują się wąską pętlą histerezy i małą koercją.
+        - Magnetycznie półtwarde - zachowują stan namagnesowania po usunięciu pola, mają stosunkowo niewielką koercję i dużą remanencję.
+        - Magnetycznie twarde - trudno je namagnesować, ale trwale zachowują stan namagnesowania, mają szeroką pętlę histerezy i dużą koercję.
+
+Jak się zapisuje info na dyskach ✅
+    Zapis informacji na dyskach magnetycznych polega na zmianie namagnesowania cienkiej warstwy magnetycznej na nośniku. Zmiana kierunku namagnesowania reprezentuje jedynkę binarną, a brak zmiany zero logiczne. Zmiany namagnesowania dokonuje się za pomocą głowicy z przetwornikiem elektromagnetycznym.
+
+Opisz jak dokonuje się zapisu / odczytu informacji przy pomocy nośnika magnetycznego ✅
+    Zapis informacji odbywa się poprzez zmianę namagnesowania nośnika magnetycznego za pomocą głowicy zapisującej, która wytwarza pole magnetyczne. Odczyt danych odbywa się za pomocą czujnika GMR, który mierzy zmiany rezystancji wywołane zmianami namagnesowania nośnika. Czujnik GMR działa na zasadzie efektu gigantycznej magnetorezystancji
 
 
 
